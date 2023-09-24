@@ -24,7 +24,7 @@
       "cycleNum": 10,
       "Composition": [
         {
-          "phase": "CodeComplete",
+          "phase": "SceneComplete",
           "phaseType": "SimplePhase",
           "max_turn_step": 1,
           "need_reflect": "False"
@@ -32,18 +32,18 @@
       ]
     },
     {
-      "phase": "CodeReview",
+      "phase": "GameReview",
       "phaseType": "ComposedPhase",
       "cycleNum": 3,
       "Composition": [
         {
-          "phase": "CodeReviewComment",
+          "phase": "SceneReviewComment",
           "phaseType": "SimplePhase",
           "max_turn_step": 1,
           "need_reflect": "False"
         },
         {
-          "phase": "CodeReviewModification",
+          "phase": "SceneReviewModification",
           "phaseType": "SimplePhase",
           "max_turn_step": 1,
           "need_reflect": "False"
