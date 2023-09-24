@@ -1,0 +1,67 @@
+{
+  "chain": [
+    {
+      "phase": "DemandAnalysis",
+      "phaseType": "SimplePhase",
+      "max_turn_step": -1,
+      "need_reflect": "True"
+    },
+    {
+      "phase": "LanguageChoose",
+      "phaseType": "SimplePhase",
+      "max_turn_step": -1,
+      "need_reflect": "True"
+    },
+    {
+      "phase": "Coding",
+      "phaseType": "SimplePhase",
+      "max_turn_step": 1,
+      "need_reflect": "False"
+    },
+    {
+      "phase": "SceneCompleteAll",
+      "phaseType": "ComposedPhase",
+      "cycleNum": 10,
+      "Composition": [
+        {
+          "phase": "SceneComplete",
+          "phaseType": "SimplePhase",
+          "max_turn_step": 1,
+          "need_reflect": "False"
+        }
+      ]
+    },
+    {
+      "phase": "GameReview",
+      "phaseType": "ComposedPhase",
+      "cycleNum": 3,
+      "Composition": [
+        {
+          "phase": "SceneReviewComment",
+          "phaseType": "SimplePhase",
+          "max_turn_step": 1,
+          "need_reflect": "False"
+        },
+        {
+          "phase": "SceneReviewModification",
+          "phaseType": "SimplePhase",
+          "max_turn_step": 1,
+          "need_reflect": "False"
+        }
+      ]
+    }
+  ],
+  "recruitments": [
+    "Chief Executive Officer",
+    "Counselor",
+    "Chief Product Officer",
+    "Chief Game Designer",
+    "Game Scene Writer",
+    "Game Reviewer"
+  ],
+  "clear_structure": "True",
+  "brainstorming": "False",
+  "gui_design": "True",
+  "git_management": "False",
+  "self_improve": "False"
+}
