@@ -67,7 +67,6 @@
       "DOCSTRING",
       "'''",
       "SCENE",
-      
       "```",
       "As the {assistant_role}, to satisfy the complete function of our RPG game, you have to implement all methods in the {unimplemented_file} file which contains a unimplemented scene. Now, implement all methods of the {unimplemented_file} and all other scenes needed, then output the fully implemented scene, strictly following the required format."
     ]
