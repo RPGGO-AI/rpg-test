@@ -1,0 +1,29 @@
+Task:
+build a detective rpg game for me. I want to play as Sherlock Holmes 
+
+Config:
+ChatEnvConfig.clear_structure: True
+ChatEnvConfig.brainstorming: False
+
+
+Roster:
+Chief Executive Officer, Counselor, Chief Product Officer, Chief Game Designer, Game Scene Writer, Game Reviewer
+
+Modality:
+mobile app
+
+Ideas:
+
+
+Language:
+ Python
+
+Code_Version:
+5.0
+
+Proposed_images:
+0
+
+Incorporated_images:
+0
+

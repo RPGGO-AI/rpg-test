@@ -1,6 +1,17 @@
 {
+  "DemandAnalysis": {
+    "assistant_role_name": "Chief Product Officer",
+    "user_role_name": "Chief Executive Officer",
+    "phase_prompt": [
+      "ChatDev has made products in the following form before:",
+      "Document: can present information via .docx files.",
+      "PDF: can present information via .pdf files.",
+      "As the {assistant_role}, to satisfy the new user's demand and the product should be realizable, you should keep discussing with me to decide which product modality do we want the product to be?",
+      "Note that we must ONLY discuss the product modality and do not discuss anything else! Once we all have expressed our opinion(s) and agree with the results of the discussion unanimously, any of us must actively terminate the discussion by replying with only one line, which starts with a single word <INFO>, followed by our final product modality without any other words, e.g., \"<INFO> PowerPoint\"."
+    ]
+  },
   "LanguageChoose": {
-    "assistant_role_name": "Chief Game Designer",
+    "assistant_role_name": "Chief Product Officer",
     "user_role_name": "Chief Executive Officer",
     "phase_prompt": [
       "According to the new user's task and some creative brainstorm ideas listed below: ",

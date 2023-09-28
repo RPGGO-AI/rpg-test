@@ -335,7 +335,7 @@ class LanguageChoose(Phase):
         elif len(self.seminar_conclusion) > 0:
             chat_env.env_dict['language'] = self.seminar_conclusion
         else:
-            chat_env.env_dict['language'] = "Python"
+            chat_env.env_dict['language'] = "english"
         return chat_env
 
 
@@ -362,41 +362,41 @@ class Coding(Phase):
         return chat_env
 
 
-class ArtDesign(Phase):
-    def __init__(self, **kwargs):
-        super().__init__(**kwargs)
+# class ArtDesign(Phase):
+#     def __init__(self, **kwargs):
+#         super().__init__(**kwargs)
 
-    def update_phase_env(self, chat_env):
-        self.phase_env = {"task": chat_env.env_dict['task_prompt'],
-                          "language": chat_env.env_dict['language'],
-                          "codes": chat_env.get_codes()}
+#     def update_phase_env(self, chat_env):
+#         self.phase_env = {"task": chat_env.env_dict['task_prompt'],
+#                           "language": chat_env.env_dict['language'],
+#                           "codes": chat_env.get_codes()}
 
-    def update_chat_env(self, chat_env) -> ChatEnv:
-        chat_env.proposed_images = chat_env.get_proposed_images_from_message(self.seminar_conclusion)
-        log_and_print_online(
-            "**[Software Info]**:\n\n {}".format(get_info(chat_env.env_dict['directory'], self.log_filepath)))
-        return chat_env
+#     def update_chat_env(self, chat_env) -> ChatEnv:
+#         chat_env.proposed_images = chat_env.get_proposed_images_from_message(self.seminar_conclusion)
+#         log_and_print_online(
+#             "**[Software Info]**:\n\n {}".format(get_info(chat_env.env_dict['directory'], self.log_filepath)))
+#         return chat_env
 
 
-class ArtIntegration(Phase):
-    def __init__(self, **kwargs):
-        super().__init__(**kwargs)
+# class ArtIntegration(Phase):
+#     def __init__(self, **kwargs):
+#         super().__init__(**kwargs)
 
-    def update_phase_env(self, chat_env):
-        self.phase_env = {"task": chat_env.env_dict['task_prompt'],
-                          "language": chat_env.env_dict['language'],
-                          "codes": chat_env.get_codes(),
-                          "images": "\n".join(
-                              ["{}: {}".format(filename, chat_env.proposed_images[filename]) for
-                               filename in sorted(list(chat_env.proposed_images.keys()))])}
+#     def update_phase_env(self, chat_env):
+#         self.phase_env = {"task": chat_env.env_dict['task_prompt'],
+#                           "language": chat_env.env_dict['language'],
+#                           "codes": chat_env.get_codes(),
+#                           "images": "\n".join(
+#                               ["{}: {}".format(filename, chat_env.proposed_images[filename]) for
+#                                filename in sorted(list(chat_env.proposed_images.keys()))])}
 
-    def update_chat_env(self, chat_env) -> ChatEnv:
-        chat_env.update_codes(self.seminar_conclusion)
-        chat_env.rewrite_codes()
-        # chat_env.generate_images_from_codes()
-        log_and_print_online(
-            "**[Software Info]**:\n\n {}".format(get_info(chat_env.env_dict['directory'], self.log_filepath)))
-        return chat_env
+#     def update_chat_env(self, chat_env) -> ChatEnv:
+#         chat_env.update_codes(self.seminar_conclusion)
+#         chat_env.rewrite_codes()
+#         # chat_env.generate_images_from_codes()
+#         log_and_print_online(
+#             "**[Software Info]**:\n\n {}".format(get_info(chat_env.env_dict['directory'], self.log_filepath)))
+#         return chat_env
 
 
 class CodeComplete(Phase):
@@ -470,109 +470,109 @@ class CodeReviewModification(Phase):
         return chat_env
 
 
-class CodeReviewHuman(Phase):
-    def __init__(self, **kwargs):
-        super().__init__(**kwargs)
+# class CodeReviewHuman(Phase):
+#     def __init__(self, **kwargs):
+#         super().__init__(**kwargs)
 
-    def update_phase_env(self, chat_env):
-        self.phase_env.update({"task": chat_env.env_dict['task_prompt'],
-                               "modality": chat_env.env_dict['modality'],
-                               "ideas": chat_env.env_dict['ideas'],
-                               "language": chat_env.env_dict['language'],
-                               "codes": chat_env.get_codes()})
+#     def update_phase_env(self, chat_env):
+#         self.phase_env.update({"task": chat_env.env_dict['task_prompt'],
+#                                "modality": chat_env.env_dict['modality'],
+#                                "ideas": chat_env.env_dict['ideas'],
+#                                "language": chat_env.env_dict['language'],
+#                                "codes": chat_env.get_codes()})
 
-    def update_chat_env(self, chat_env) -> ChatEnv:
-        if "```".lower() in self.seminar_conclusion.lower():
-            chat_env.update_codes(self.seminar_conclusion)
-            chat_env.rewrite_codes()
-            log_and_print_online(
-                "**[Software Info]**:\n\n {}".format(get_info(chat_env.env_dict['directory'], self.log_filepath)))
-        return chat_env
+#     def update_chat_env(self, chat_env) -> ChatEnv:
+#         if "```".lower() in self.seminar_conclusion.lower():
+#             chat_env.update_codes(self.seminar_conclusion)
+#             chat_env.rewrite_codes()
+#             log_and_print_online(
+#                 "**[Software Info]**:\n\n {}".format(get_info(chat_env.env_dict['directory'], self.log_filepath)))
+#         return chat_env
 
-    def execute(self, chat_env, chat_turn_limit, need_reflect) -> ChatEnv:
-        self.update_phase_env(chat_env)
-        log_and_print_online(
-            f"**[Human-Agent-Interaction]**\n\n"
-            f"Now you can participate in the development of the software!\n"
-            f"The task is:  {chat_env.env_dict['task_prompt']}\n"
-            f"Please input your feedback (in one line). It can be bug report or new feature requirement.\n"
-            f"You are currently in the #{self.phase_env['cycle_index'] + 1} human feedback with a total of {self.phase_env['cycle_num']} feedbacks\n"
-            f"Press [Enter] to submit.\n"
-            f"You can type \"End\" to quit this mode at any time.\n"
-        )
-        provided_comments = input(">>> ")
-        self.phase_env["comments"] = provided_comments
-        log_and_print_online(
-            f"**[User Provided Comments]**\n\n In the #{self.phase_env['cycle_index'] + 1} of total {self.phase_env['cycle_num']} comments: \n\n" + provided_comments)
-        if provided_comments.lower() == "end":
-            return chat_env
+#     def execute(self, chat_env, chat_turn_limit, need_reflect) -> ChatEnv:
+#         self.update_phase_env(chat_env)
+#         log_and_print_online(
+#             f"**[Human-Agent-Interaction]**\n\n"
+#             f"Now you can participate in the development of the software!\n"
+#             f"The task is:  {chat_env.env_dict['task_prompt']}\n"
+#             f"Please input your feedback (in one line). It can be bug report or new feature requirement.\n"
+#             f"You are currently in the #{self.phase_env['cycle_index'] + 1} human feedback with a total of {self.phase_env['cycle_num']} feedbacks\n"
+#             f"Press [Enter] to submit.\n"
+#             f"You can type \"End\" to quit this mode at any time.\n"
+#         )
+#         provided_comments = input(">>> ")
+#         self.phase_env["comments"] = provided_comments
+#         log_and_print_online(
+#             f"**[User Provided Comments]**\n\n In the #{self.phase_env['cycle_index'] + 1} of total {self.phase_env['cycle_num']} comments: \n\n" + provided_comments)
+#         if provided_comments.lower() == "end":
+#             return chat_env
 
-        self.seminar_conclusion = \
-            self.chatting(chat_env=chat_env,
-                          task_prompt=chat_env.env_dict['task_prompt'],
-                          need_reflect=need_reflect,
-                          assistant_role_name=self.assistant_role_name,
-                          user_role_name=self.user_role_name,
-                          phase_prompt=self.phase_prompt,
-                          phase_name=self.phase_name,
-                          assistant_role_prompt=self.assistant_role_prompt,
-                          user_role_prompt=self.user_role_prompt,
-                          chat_turn_limit=chat_turn_limit,
-                          placeholders=self.phase_env,
-                          model_type=self.model_type)
-        chat_env = self.update_chat_env(chat_env)
-        return chat_env
+#         self.seminar_conclusion = \
+#             self.chatting(chat_env=chat_env,
+#                           task_prompt=chat_env.env_dict['task_prompt'],
+#                           need_reflect=need_reflect,
+#                           assistant_role_name=self.assistant_role_name,
+#                           user_role_name=self.user_role_name,
+#                           phase_prompt=self.phase_prompt,
+#                           phase_name=self.phase_name,
+#                           assistant_role_prompt=self.assistant_role_prompt,
+#                           user_role_prompt=self.user_role_prompt,
+#                           chat_turn_limit=chat_turn_limit,
+#                           placeholders=self.phase_env,
+#                           model_type=self.model_type)
+#         chat_env = self.update_chat_env(chat_env)
+#         return chat_env
 
 
-class TestErrorSummary(Phase):
-    def __init__(self, **kwargs):
-        super().__init__(**kwargs)
+# class TestErrorSummary(Phase):
+#     def __init__(self, **kwargs):
+#         super().__init__(**kwargs)
 
-    def update_phase_env(self, chat_env):
-        chat_env.generate_images_from_codes()
-        (exist_bugs_flag, test_reports) = chat_env.exist_bugs()
-        self.phase_env.update({"task": chat_env.env_dict['task_prompt'],
-                               "modality": chat_env.env_dict['modality'],
-                               "ideas": chat_env.env_dict['ideas'],
-                               "language": chat_env.env_dict['language'],
-                               "codes": chat_env.get_codes(),
-                               "test_reports": test_reports,
-                               "exist_bugs_flag": exist_bugs_flag})
-        log_and_print_online("**[Test Reports]**:\n\n{}".format(test_reports))
+#     def update_phase_env(self, chat_env):
+#         chat_env.generate_images_from_codes()
+#         (exist_bugs_flag, test_reports) = chat_env.exist_bugs()
+#         self.phase_env.update({"task": chat_env.env_dict['task_prompt'],
+#                                "modality": chat_env.env_dict['modality'],
+#                                "ideas": chat_env.env_dict['ideas'],
+#                                "language": chat_env.env_dict['language'],
+#                                "codes": chat_env.get_codes(),
+#                                "test_reports": test_reports,
+#                                "exist_bugs_flag": exist_bugs_flag})
+#         log_and_print_online("**[Test Reports]**:\n\n{}".format(test_reports))
 
-    def update_chat_env(self, chat_env) -> ChatEnv:
-        chat_env.env_dict['error_summary'] = self.seminar_conclusion
-        chat_env.env_dict['test_reports'] = self.phase_env['test_reports']
+#     def update_chat_env(self, chat_env) -> ChatEnv:
+#         chat_env.env_dict['error_summary'] = self.seminar_conclusion
+#         chat_env.env_dict['test_reports'] = self.phase_env['test_reports']
 
-        return chat_env
+#         return chat_env
 
-    def execute(self, chat_env, chat_turn_limit, need_reflect) -> ChatEnv:
-        self.update_phase_env(chat_env)
-        if "ModuleNotFoundError" in self.phase_env['test_reports']:
-            chat_env.fix_module_not_found_error(self.phase_env['test_reports'])
-            log_and_print_online(
-                f"Software Test Engineer found ModuleNotFoundError:\n{self.phase_env['test_reports']}\n")
-            pip_install_content = ""
-            for match in re.finditer(r"No module named '(\S+)'", self.phase_env['test_reports'], re.DOTALL):
-                module = match.group(1)
-                pip_install_content += "{}\n```{}\n{}\n```\n".format("cmd", "bash", f"pip install {module}")
-                log_and_print_online(f"Programmer resolve ModuleNotFoundError by:\n{pip_install_content}\n")
-            self.seminar_conclusion = "nothing need to do"
-        else:
-            self.seminar_conclusion = \
-                self.chatting(chat_env=chat_env,
-                              task_prompt=chat_env.env_dict['task_prompt'],
-                              need_reflect=need_reflect,
-                              assistant_role_name=self.assistant_role_name,
-                              user_role_name=self.user_role_name,
-                              phase_prompt=self.phase_prompt,
-                              phase_name=self.phase_name,
-                              assistant_role_prompt=self.assistant_role_prompt,
-                              user_role_prompt=self.user_role_prompt,
-                              chat_turn_limit=chat_turn_limit,
-                              placeholders=self.phase_env)
-        chat_env = self.update_chat_env(chat_env)
-        return chat_env
+#     def execute(self, chat_env, chat_turn_limit, need_reflect) -> ChatEnv:
+#         self.update_phase_env(chat_env)
+#         if "ModuleNotFoundError" in self.phase_env['test_reports']:
+#             chat_env.fix_module_not_found_error(self.phase_env['test_reports'])
+#             log_and_print_online(
+#                 f"Software Test Engineer found ModuleNotFoundError:\n{self.phase_env['test_reports']}\n")
+#             pip_install_content = ""
+#             for match in re.finditer(r"No module named '(\S+)'", self.phase_env['test_reports'], re.DOTALL):
+#                 module = match.group(1)
+#                 pip_install_content += "{}\n```{}\n{}\n```\n".format("cmd", "bash", f"pip install {module}")
+#                 log_and_print_online(f"Programmer resolve ModuleNotFoundError by:\n{pip_install_content}\n")
+#             self.seminar_conclusion = "nothing need to do"
+#         else:
+#             self.seminar_conclusion = \
+#                 self.chatting(chat_env=chat_env,
+#                               task_prompt=chat_env.env_dict['task_prompt'],
+#                               need_reflect=need_reflect,
+#                               assistant_role_name=self.assistant_role_name,
+#                               user_role_name=self.user_role_name,
+#                               phase_prompt=self.phase_prompt,
+#                               phase_name=self.phase_name,
+#                               assistant_role_prompt=self.assistant_role_prompt,
+#                               user_role_prompt=self.user_role_prompt,
+#                               chat_turn_limit=chat_turn_limit,
+#                               placeholders=self.phase_env)
+#         chat_env = self.update_chat_env(chat_env)
+#         return chat_env
 
 
 class TestModification(Phase):
@@ -598,38 +598,38 @@ class TestModification(Phase):
         return chat_env
 
 
-class EnvironmentDoc(Phase):
-    def __init__(self, **kwargs):
-        super().__init__(**kwargs)
+# class EnvironmentDoc(Phase):
+#     def __init__(self, **kwargs):
+#         super().__init__(**kwargs)
 
-    def update_phase_env(self, chat_env):
-        self.phase_env.update({"task": chat_env.env_dict['task_prompt'],
-                               "modality": chat_env.env_dict['modality'],
-                               "ideas": chat_env.env_dict['ideas'],
-                               "language": chat_env.env_dict['language'],
-                               "codes": chat_env.get_codes()})
+#     def update_phase_env(self, chat_env):
+#         self.phase_env.update({"task": chat_env.env_dict['task_prompt'],
+#                                "modality": chat_env.env_dict['modality'],
+#                                "ideas": chat_env.env_dict['ideas'],
+#                                "language": chat_env.env_dict['language'],
+#                                "codes": chat_env.get_codes()})
 
-    def update_chat_env(self, chat_env) -> ChatEnv:
-        chat_env._update_requirements(self.seminar_conclusion)
-        chat_env.rewrite_requirements()
-        log_and_print_online(
-            "**[Software Info]**:\n\n {}".format(get_info(chat_env.env_dict['directory'], self.log_filepath)))
-        return chat_env
+#     def update_chat_env(self, chat_env) -> ChatEnv:
+#         chat_env._update_requirements(self.seminar_conclusion)
+#         chat_env.rewrite_requirements()
+#         log_and_print_online(
+#             "**[Software Info]**:\n\n {}".format(get_info(chat_env.env_dict['directory'], self.log_filepath)))
+#         return chat_env
 
 
-class Manual(Phase):
-    def __init__(self, **kwargs):
-        super().__init__(**kwargs)
+# class Manual(Phase):
+#     def __init__(self, **kwargs):
+#         super().__init__(**kwargs)
 
-    def update_phase_env(self, chat_env):
-        self.phase_env.update({"task": chat_env.env_dict['task_prompt'],
-                               "modality": chat_env.env_dict['modality'],
-                               "ideas": chat_env.env_dict['ideas'],
-                               "language": chat_env.env_dict['language'],
-                               "codes": chat_env.get_codes(),
-                               "requirements": chat_env.get_requirements()})
+#     def update_phase_env(self, chat_env):
+#         self.phase_env.update({"task": chat_env.env_dict['task_prompt'],
+#                                "modality": chat_env.env_dict['modality'],
+#                                "ideas": chat_env.env_dict['ideas'],
+#                                "language": chat_env.env_dict['language'],
+#                                "codes": chat_env.get_codes(),
+#                                "requirements": chat_env.get_requirements()})
 
-    def update_chat_env(self, chat_env) -> ChatEnv:
-        chat_env._update_manuals(self.seminar_conclusion)
-        chat_env.rewrite_manuals()
-        return chat_env
+#     def update_chat_env(self, chat_env) -> ChatEnv:
+#         chat_env._update_manuals(self.seminar_conclusion)
+#         chat_env.rewrite_manuals()
+#         return chat_env
