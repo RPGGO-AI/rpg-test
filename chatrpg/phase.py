@@ -206,7 +206,7 @@ class Phase(ABC):
         if "recruiting" in phase_name:
             question = """Answer their final discussed conclusion (Yes or No) in the discussion without any other words, e.g., "Yes" """
         elif phase_name == "DemandAnalysis":
-            question = """Answer their final product modality in the discussion without any other words, e.g., "PowerPoint" """
+            question = """Answer their final product category in the discussion without any other words, e.g., "Mystery" """
         # elif phase_name in [PhaseType.BRAINSTORMING]:
         #     question = """Conclude three most creative and imaginative brainstorm ideas from the whole discussion, in the format: "1) *; 2) *; 3) *; where '*' represents a suggestion." """
         elif phase_name == "LanguageChoose":
@@ -316,7 +316,7 @@ class DemandAnalysis(Phase):
 
     def update_chat_env(self, chat_env) -> ChatEnv:
         if len(self.seminar_conclusion) > 0:
-            chat_env.env_dict['modality'] = self.seminar_conclusion.split("<INFO>")[-1].lower().replace(".", "").strip()
+            chat_env.env_dict['category'] = self.seminar_conclusion.split("<INFO>")[-1].lower().replace(".", "").strip()
         return chat_env
 
 
@@ -326,7 +326,7 @@ class LanguageChoose(Phase):
 
     def update_phase_env(self, chat_env):
         self.phase_env.update({"task": chat_env.env_dict['task_prompt'],
-                               "modality": chat_env.env_dict['modality'],
+                               "category": chat_env.env_dict['category'],
                                "ideas": chat_env.env_dict['ideas']})
 
     def update_chat_env(self, chat_env) -> ChatEnv:
@@ -339,26 +339,25 @@ class LanguageChoose(Phase):
         return chat_env
 
 
-class Coding(Phase):
+class SingleSceneWriting(Phase):
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
 
     def update_phase_env(self, chat_env):
-        gui = "" if not chat_env.config.gui_design \
-            else "The software should be equipped with graphical user interface (GUI) so that user can visually and graphically use it; so you must choose a GUI framework (e.g., in Python, you can implement GUI via tkinter, Pygame, Flexx, PyGUI, etc,)."
+        gui = ""
         self.phase_env.update({"task": chat_env.env_dict['task_prompt'],
-                               "modality": chat_env.env_dict['modality'],
+                               "category": chat_env.env_dict['category'],
                                "ideas": chat_env.env_dict['ideas'],
                                "language": chat_env.env_dict['language'],
                                "gui": gui})
 
     def update_chat_env(self, chat_env) -> ChatEnv:
         chat_env.update_codes(self.seminar_conclusion)
-        if len(chat_env.codes.codebooks.keys()) == 0:
-            raise ValueError("No Valid Codes.")
+        if len(chat_env.scripts.scriptbooks.keys()) == 0:
+            raise ValueError("No Valid Script.")
         chat_env.rewrite_codes()
         log_and_print_online(
-            "**[Software Info]**:\n\n {}".format(get_info(chat_env.env_dict['directory'], self.log_filepath)))
+            "**[Game Info]**:\n\n {}".format(get_info(chat_env.env_dict['directory'], self.log_filepath)))
         return chat_env
 
 
@@ -399,16 +398,16 @@ class Coding(Phase):
 #         return chat_env
 
 
-class CodeComplete(Phase):
+class SingleSceneComplete(Phase):
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
 
     def update_phase_env(self, chat_env):
         self.phase_env.update({"task": chat_env.env_dict['task_prompt'],
-                               "modality": chat_env.env_dict['modality'],
+                               "category": chat_env.env_dict['category'],
                                "ideas": chat_env.env_dict['ideas'],
                                "language": chat_env.env_dict['language'],
-                               "codes": chat_env.get_codes(),
+                               "scripts": chat_env.get_codes(),
                                "unimplemented_file": ""})
         unimplemented_file = ""
         for filename in self.phase_env['pyfiles']:
@@ -422,25 +421,25 @@ class CodeComplete(Phase):
 
     def update_chat_env(self, chat_env) -> ChatEnv:
         chat_env.update_codes(self.seminar_conclusion)
-        if len(chat_env.codes.codebooks.keys()) == 0:
-            raise ValueError("No Valid Codes.")
+        if len(chat_env.scripts.scriptbooks.keys()) == 0:
+            raise ValueError("No Valid Script.")
         chat_env.rewrite_codes()
         log_and_print_online(
             "**[Software Info]**:\n\n {}".format(get_info(chat_env.env_dict['directory'], self.log_filepath)))
         return chat_env
 
 
-class CodeReviewComment(Phase):
+class SingleSceneReviewComment(Phase):
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
 
     def update_phase_env(self, chat_env):
         self.phase_env.update(
             {"task": chat_env.env_dict['task_prompt'],
-             "modality": chat_env.env_dict['modality'],
+             "category": chat_env.env_dict['category'],
              "ideas": chat_env.env_dict['ideas'],
              "language": chat_env.env_dict['language'],
-             "codes": chat_env.get_codes(),
+             "scripts": chat_env.get_codes(),
              "images": ", ".join(chat_env.incorporated_images)})
 
     def update_chat_env(self, chat_env) -> ChatEnv:
@@ -448,16 +447,16 @@ class CodeReviewComment(Phase):
         return chat_env
 
 
-class CodeReviewModification(Phase):
+class SingleSceneModification(Phase):
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
 
     def update_phase_env(self, chat_env):
         self.phase_env.update({"task": chat_env.env_dict['task_prompt'],
-                               "modality": chat_env.env_dict['modality'],
+                               "category": chat_env.env_dict['category'],
                                "ideas": chat_env.env_dict['ideas'],
                                "language": chat_env.env_dict['language'],
-                               "codes": chat_env.get_codes(),
+                               "scripts": chat_env.get_codes(),
                                "comments": chat_env.env_dict['review_comments']})
 
     def update_chat_env(self, chat_env) -> ChatEnv:
@@ -575,27 +574,27 @@ class CodeReviewModification(Phase):
 #         return chat_env
 
 
-class TestModification(Phase):
-    def __init__(self, **kwargs):
-        super().__init__(**kwargs)
+# class TestModification(Phase):
+#     def __init__(self, **kwargs):
+#         super().__init__(**kwargs)
 
-    def update_phase_env(self, chat_env):
-        self.phase_env.update({"task": chat_env.env_dict['task_prompt'],
-                               "modality": chat_env.env_dict['modality'],
-                               "ideas": chat_env.env_dict['ideas'],
-                               "language": chat_env.env_dict['language'],
-                               "test_reports": chat_env.env_dict['test_reports'],
-                               "error_summary": chat_env.env_dict['error_summary'],
-                               "codes": chat_env.get_codes()
-                               })
+#     def update_phase_env(self, chat_env):
+#         self.phase_env.update({"task": chat_env.env_dict['task_prompt'],
+#                                "modality": chat_env.env_dict['modality'],
+#                                "ideas": chat_env.env_dict['ideas'],
+#                                "language": chat_env.env_dict['language'],
+#                                "test_reports": chat_env.env_dict['test_reports'],
+#                                "error_summary": chat_env.env_dict['error_summary'],
+#                                "codes": chat_env.get_codes()
+#                                })
 
-    def update_chat_env(self, chat_env) -> ChatEnv:
-        if "```".lower() in self.seminar_conclusion.lower():
-            chat_env.update_codes(self.seminar_conclusion)
-            chat_env.rewrite_codes()
-            log_and_print_online(
-                "**[Software Info]**:\n\n {}".format(get_info(chat_env.env_dict['directory'], self.log_filepath)))
-        return chat_env
+#     def update_chat_env(self, chat_env) -> ChatEnv:
+#         if "```".lower() in self.seminar_conclusion.lower():
+#             chat_env.update_codes(self.seminar_conclusion)
+#             chat_env.rewrite_codes()
+#             log_and_print_online(
+#                 "**[Software Info]**:\n\n {}".format(get_info(chat_env.env_dict['directory'], self.log_filepath)))
+#         return chat_env
 
 
 # class EnvironmentDoc(Phase):

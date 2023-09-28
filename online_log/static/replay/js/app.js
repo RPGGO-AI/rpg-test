@@ -5,8 +5,8 @@ coordSet["Chief Executive Officer"] = {
     "top": "-315px",
     "left": "280px"
 };
-coordSet["Chief Product Officer"] = {
-    "character": "Chief Product Officer",
+coordSet["Game Producer"] = {
+    "character": "Game Producer",
     "imgid": "left",
     "top": "-165px",
     "left": "110px"
@@ -17,37 +17,37 @@ coordSet["Chief Human Resource Officer"] = {
     "top": "-305px",
     "left": "55px"
 };
-coordSet["Code Reviewer"] = {
-    "character": "Code Reviewer",
+coordSet["Script Tester"] = {
+    "character": "Script Tester",
     "imgid": "left",
     "top": "-185px",
     "left": "500px"
 };
-coordSet["Programmer"] = {
-    "character": "Programmer",
+coordSet["Script Writer"] = {
+    "character": "Script Writer",
     "imgid": "right",
     "top": "-80px",
     "left": "300px"
 };
-coordSet["Chief Technology Officer"] = {
-    "character": "Chief Technology Officer",
-    "imgid": "right",
-    "top": "-130px",
-    "left": "340px"
-};
-coordSet["Chief Creative Officer"] = {
-    "character": "Chief Creative Officer",
-    "imgid": "right",
-    "top": "-95px",
-    "left": "205px"
-}
-coordSet["Software Test Engineer"] = {
-    "character": "Software Test Engineer",
-    "imgid": "right",
-    "top": "-90px",
-    "left": "470px"
+// coordSet["Chief Technology Officer"] = {
+//     "character": "Chief Technology Officer",
+//     "imgid": "right",
+//     "top": "-130px",
+//     "left": "340px"
+// };
+// coordSet["Chief Creative Officer"] = {
+//     "character": "Chief Creative Officer",
+//     "imgid": "right",
+//     "top": "-95px",
+//     "left": "205px"
+// }
+// coordSet["Software Test Engineer"] = {
+//     "character": "Software Test Engineer",
+//     "imgid": "right",
+//     "top": "-90px",
+//     "left": "470px"
 
-}
+// }
 coordSet["User"] = {
     "character": "User",
     "imgid": "left",
@@ -60,12 +60,12 @@ coordSet["Counselor"] = {
     "top": "-360px",
     "left": "420px"
 }
-coordSet["Prompt Engineer"] = {
-    "character": "Prompt Engineer",
-    "imgid": "right",
-    "top": "-320px",
-    "left": "20px"
-}
+// coordSet["Prompt Engineer"] = {
+//     "character": "Prompt Engineer",
+//     "imgid": "right",
+//     "top": "-320px",
+//     "left": "20px"
+// }
 const Softwareinfo = {
     "duration": "-1",
     "cost": "-1",

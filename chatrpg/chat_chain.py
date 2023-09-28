@@ -194,7 +194,7 @@ class ChatChain:
             for filename in os.listdir(directory):
                 file_path = os.path.join(directory, filename)
                 # logs with error trials are left in WareHouse/
-                if os.path.isfile(file_path) and not filename.endswith(".py") and not filename.endswith(".log"):
+                if os.path.isfile(file_path) and not filename.endswith(".md") and not filename.endswith(".log"):
                     os.remove(file_path)
                     print("{} Removed.".format(file_path))
 

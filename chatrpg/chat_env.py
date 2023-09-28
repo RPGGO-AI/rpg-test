@@ -5,11 +5,11 @@ import signal
 import subprocess
 import time
 from typing import Dict
+from chatrpg.scripts import Scripts
 
 import openai
 import requests
 
-from chatrpg.codes import Codes
 from chatrpg.documents import Documents
 from chatrpg.roster import Roster
 from chatrpg.utils import log_and_print_online
@@ -36,7 +36,7 @@ class ChatEnv:
     def __init__(self, chat_env_config: ChatEnvConfig):
         self.config = chat_env_config
         self.roster: Roster = Roster()
-        self.codes: Codes = Codes()
+        self.scripts: Scripts = Scripts()
         self.proposed_images: Dict[str, str] = {}
         self.incorporated_images: Dict[str, str] = {}
         self.requirements: Documents = Documents()
@@ -44,7 +44,7 @@ class ChatEnv:
         self.env_dict = {
             "directory": "",
             "task_prompt": "",
-            "modality": "",
+            "category": "",
             "ideas": "",
             "language": "",
             "review_comments": "",
@@ -63,7 +63,7 @@ class ChatEnv:
     def set_directory(self, directory):
         assert len(self.env_dict['directory']) == 0
         self.env_dict['directory'] = directory
-        self.codes.directory = directory
+        self.scripts.directory = directory
         self.requirements.directory = directory
         self.manuals.directory = directory
 
@@ -141,16 +141,16 @@ class ChatEnv:
         self.roster._print_employees()
 
     def update_codes(self, generated_content):
-        self.codes._update_codes(generated_content)
+        self.scripts._update(generated_content)
 
     def rewrite_codes(self) -> None:
-        self.codes._rewrite_codes(self.config.git_management)
+        self.scripts._rewrite(self.config.git_management)
 
     def get_codes(self) -> str:
-        return self.codes._get_codes()
+        return self.scripts._get()
 
     def _load_from_hardware(self, directory) -> None:
-        self.codes._load_from_hardware(directory)
+        self.scripts._load_from_hardware(directory)
 
     def _update_requirements(self, generated_content):
         self.requirements._update_docs(generated_content)
@@ -179,10 +179,10 @@ class ChatEnv:
             writer.write("{}:\n{}\n\n".format("Task", self.env_dict['task_prompt']))
             writer.write("{}:\n{}\n\n".format("Config", self.config.__str__()))
             writer.write("{}:\n{}\n\n".format("Roster", ", ".join(self.roster.agents)))
-            writer.write("{}:\n{}\n\n".format("Modality", self.env_dict['modality']))
+            writer.write("{}:\n{}\n\n".format("Category", self.env_dict['category']))
             writer.write("{}:\n{}\n\n".format("Ideas", self.env_dict['ideas']))
             writer.write("{}:\n{}\n\n".format("Language", self.env_dict['language']))
-            writer.write("{}:\n{}\n\n".format("Code_Version", self.codes.version))
+            writer.write("{}:\n{}\n\n".format("Code_Version", self.scripts.version))
             writer.write("{}:\n{}\n\n".format("Proposed_images", len(self.proposed_images.keys())))
             writer.write("{}:\n{}\n\n".format("Incorporated_images", len(self.incorporated_images.keys())))
         print(os.path.join(directory, meta_filename), "Wrote")

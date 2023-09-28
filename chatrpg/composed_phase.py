@@ -162,31 +162,31 @@ class ComposedPhase(ABC):
         return chat_env
 
 
-class Art(ComposedPhase):
+# class Art(ComposedPhase):
+#     def __init__(self, **kwargs):
+#         super().__init__(**kwargs)
+
+#     def update_phase_env(self, chat_env):
+#         pass
+
+#     def update_chat_env(self, chat_env):
+#         return chat_env
+
+#     def break_cycle(self, chat_env) -> bool:
+#         return False
+
+
+class SingleSceneCompleteAll(ComposedPhase):
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
 
     def update_phase_env(self, chat_env):
-        pass
-
-    def update_chat_env(self, chat_env):
-        return chat_env
-
-    def break_cycle(self, chat_env) -> bool:
-        return False
-
-
-class CodeCompleteAll(ComposedPhase):
-    def __init__(self, **kwargs):
-        super().__init__(**kwargs)
-
-    def update_phase_env(self, chat_env):
-        pyfiles = [filename for filename in os.listdir(chat_env.env_dict['directory']) if filename.endswith(".py")]
+        spfiles = [filename for filename in os.listdir(chat_env.env_dict['directory']) if filename.endswith(".md")]
         num_tried = defaultdict(int)
-        num_tried.update({filename: 0 for filename in pyfiles})
+        num_tried.update({filename: 0 for filename in spfiles})
         self.phase_env.update({
             "max_num_implement": 5,
-            "pyfiles": pyfiles,
+            "pyfiles": spfiles,
             "num_tried": num_tried
         })
 
@@ -200,7 +200,7 @@ class CodeCompleteAll(ComposedPhase):
             return False
 
 
-class CodeReview(ComposedPhase):
+class SingleSceneReview(ComposedPhase):
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
 
@@ -217,21 +217,21 @@ class CodeReview(ComposedPhase):
             return False
 
 
-class HumanAgentInteraction(ComposedPhase):
-    def __init__(self, **kwargs):
-        super().__init__(**kwargs)
+# class HumanAgentInteraction(ComposedPhase):
+#     def __init__(self, **kwargs):
+#         super().__init__(**kwargs)
 
-    def update_phase_env(self, chat_env):
-        self.phase_env.update({"modification_conclusion": "", "comments": ""})
+#     def update_phase_env(self, chat_env):
+#         self.phase_env.update({"modification_conclusion": "", "comments": ""})
 
-    def update_chat_env(self, chat_env):
-        return chat_env
+#     def update_chat_env(self, chat_env):
+#         return chat_env
 
-    def break_cycle(self, phase_env) -> bool:
-        if "<INFO> Finished".lower() in phase_env['modification_conclusion'].lower() or phase_env["comments"].lower() == "end":
-            return True
-        else:
-            return False
+#     def break_cycle(self, phase_env) -> bool:
+#         if "<INFO> Finished".lower() in phase_env['modification_conclusion'].lower() or phase_env["comments"].lower() == "end":
+#             return True
+#         else:
+#             return False
 
 
 class Test(ComposedPhase):

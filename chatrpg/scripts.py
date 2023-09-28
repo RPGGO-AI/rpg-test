@@ -4,12 +4,12 @@ import re
 from chatrpg.utils import log_and_print_online
 import difflib
 
-class Codes:
+class Scripts:
     def __init__(self, generated_content=""):
         self.directory: str = None
         self.version: float = 1.0
         self.generated_content: str = generated_content
-        self.codebooks = {}
+        self.scriptbooks = {}
 
         def extract_filename_from_line(lines):
             file_name = ""
@@ -18,45 +18,50 @@ class Codes:
                 file_name = file_name.lower()
             return file_name
 
-        def extract_filename_from_code(code):
+        def extract_filename_from_scene(code):
             file_name = ""
             regex_extract = r"class (\S+?):\n"
             matches_extract = re.finditer(regex_extract, code, re.DOTALL)
             for match_extract in matches_extract:
                 file_name = match_extract.group(1)
-            file_name = file_name.lower().split("(")[0] + ".py"
+            file_name = file_name.lower().split("(")[0] + ".md"
             return file_name
 
         if generated_content != "":
-            regex = r"(.+?)\n```.*?\n(.*?)```"
+            print("generated content = " + generated_content)
+            print("fuck")
+            regex = r"(.+?)\n## .*?\n(.*?) ##"
             matches = re.finditer(regex, self.generated_content, re.DOTALL)
             for match in matches:
                 code = match.group(2)
-                if "CODE" in code:
+
+                print("code = " + code)
+                if "SCENE" in code:
                     continue
                 group1 = match.group(1)
+                print("group1 = " + group1)
                 filename = extract_filename_from_line(group1)
-                if "__main__" in code:
-                    filename = "main.py"
+                # if "__main__" in code:
+                #     filename = "main.md"
                 if filename == "":  # post-processing
-                    filename = extract_filename_from_code(code)
+                    filename = extract_filename_from_scene(code)
                 assert filename != ""
                 if filename is not None and code is not None and len(filename) > 0 and len(code) > 0:
-                    self.codebooks[filename] = self._format_code(code)
+                    self.scriptbooks[filename] = self._format(code)
 
-    def _format_code(self, code):
+    def _format(self, code):
         code = "\n".join([line for line in code.split("\n") if len(line.strip()) > 0])
         return code
 
-    def _update_codes(self, generated_content):
-        new_codes = Codes(generated_content)
+    def _update(self, generated_content):
+        new_codes = Scripts(generated_content)
         differ = difflib.Differ()
-        for key in new_codes.codebooks.keys():
-            if key not in self.codebooks.keys() or self.codebooks[key] != new_codes.codebooks[key]:
+        for key in new_codes.scriptbooks.keys():
+            if key not in self.scriptbooks.keys() or self.scriptbooks[key] != new_codes.scriptbooks[key]:
                 update_codes_content = "**[Update Codes]**\n\n"
                 update_codes_content += "{} updated.\n".format(key)
-                old_codes_content = self.codebooks[key] if key in self.codebooks.keys() else "# None"
-                new_codes_content = new_codes.codebooks[key]
+                old_codes_content = self.scriptbooks[key] if key in self.scriptbooks.keys() else "# None"
+                new_codes_content = new_codes.scriptbooks[key]
 
                 lines_old = old_codes_content.splitlines()
                 lines_new = new_codes_content.splitlines()
@@ -69,9 +74,9 @@ class Codes:
 '''\n""" + unified_diff + "\n```"
 
                 log_and_print_online(update_codes_content)
-                self.codebooks[key] = new_codes.codebooks[key]
+                self.scriptbooks[key] = new_codes.scriptbooks[key]
 
-    def _rewrite_codes(self, git_management) -> None:
+    def _rewrite(self, git_management) -> None:
         directory = self.directory
         rewrite_codes_content = "**[Rewrite Codes]**\n\n"
         if os.path.exists(directory) and len(os.listdir(directory)) > 0:
@@ -80,10 +85,10 @@ class Codes:
             os.mkdir(self.directory)
             rewrite_codes_content += "{} Created\n".format(directory)
 
-        for filename in self.codebooks.keys():
+        for filename in self.scriptbooks.keys():
             filepath = os.path.join(directory, filename)
             with open(filepath, "w", encoding="utf-8") as writer:
-                writer.write(self.codebooks[filename])
+                writer.write(self.scriptbooks[filename])
                 rewrite_codes_content += os.path.join(directory, filename) + " Wrote\n"
 
         if git_management:
@@ -94,19 +99,19 @@ class Codes:
 
         log_and_print_online(rewrite_codes_content)
 
-    def _get_codes(self) -> str:
+    def _get(self) -> str:
         content = ""
-        for filename in self.codebooks.keys():
+        for filename in self.scriptbooks.keys():
             content += "{}\n```{}\n{}\n```\n\n".format(filename,
-                                                       "python" if filename.endswith(".py") else filename.split(".")[
-                                                           -1], self.codebooks[filename])
+                                                       "python" if filename.endswith(".md") else filename.split(".")[
+                                                           -1], self.scriptbooks[filename])
         return content
 
     def _load_from_hardware(self, directory) -> None:
-        assert len([filename for filename in os.listdir(directory) if filename.endswith(".py")]) > 0
+        assert len([filename for filename in os.listdir(directory) if filename.endswith(".md")]) > 0
         for root, directories, filenames in os.walk(directory):
             for filename in filenames:
-                if filename.endswith(".py"):
+                if filename.endswith(".md"):
                     code = open(os.path.join(directory, filename), "r", encoding="utf-8").read()
-                    self.codebooks[filename] = self._format_code(code)
-        log_and_print_online("{} files read from {}".format(len(self.codebooks.keys()), directory))
+                    self.scriptbooks[filename] = self._format(code)
+        log_and_print_online("{} files read from {}".format(len(self.scriptbooks.keys()), directory))

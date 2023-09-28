@@ -1,0 +1,1 @@
+Welcome to the intriguing world of Sherlock Holmes! In this RPG game, you will step into the shoes of the legendary detective Sherlock Holmes and embark on a thrilling adventure with a child companion. Together, you will solve the mystery of the missing necklace.

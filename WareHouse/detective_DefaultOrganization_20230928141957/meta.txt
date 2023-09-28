@@ -1,0 +1,29 @@
+Task:
+build a rpg game for me. I want to play as Sherlock Holmes and together with a child 
+
+Config:
+ChatEnvConfig.clear_structure: True
+ChatEnvConfig.brainstorming: False
+
+
+Roster:
+Chief Executive Officer, Counselor, Game Producer, Script Writer, Script Tester
+
+Category:
+mystery
+
+Ideas:
+
+
+Language:
+ English
+
+Code_Version:
+2.0
+
+Proposed_images:
+0
+
+Incorporated_images:
+0
+

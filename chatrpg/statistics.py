@@ -24,7 +24,7 @@ def get_info(dir, log_filepath):
         filenames = os.listdir(dir)
         # print(filenames)
 
-        num_code_files = len([filename for filename in filenames if filename.endswith(".py")])
+        num_code_files = len([filename for filename in filenames if filename.endswith(".md")])
         # print("num_code_files:", num_code_files)
 
         num_png_files = len([filename for filename in filenames if filename.endswith(".png")])
@@ -32,7 +32,7 @@ def get_info(dir, log_filepath):
 
         num_doc_files = 0
         for filename in filenames:
-            if filename.endswith(".py") or filename.endswith(".png"):
+            if filename.endswith(".md") or filename.endswith(".png"):
                 continue
             if os.path.isfile(os.path.join(dir, filename)):
                 # print(filename)
@@ -62,7 +62,7 @@ def get_info(dir, log_filepath):
 
         code_lines = 0
         for filename in filenames:
-            if filename.endswith(".py"):
+            if filename.endswith(".md"):
                 # print("......filename:", filename)
                 lines = open(os.path.join(dir, filename), "r", encoding="utf8").read().split("\n")
                 code_lines += len([line for line in lines if len(line.strip()) > 0])
