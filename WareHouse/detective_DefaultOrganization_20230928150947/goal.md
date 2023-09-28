@@ -1,0 +1,4 @@
+Objective: Find the Missing Heir and Uncover the Truth
+In Sherlock Holmes and the Mysterious Case of the Missing Heir, your primary goal is to locate Lord Reginald Worthington's missing son and unravel the truth behind his disappearance. As Sherlock Holmes, you must employ your keen observation, deductive reasoning, and problem-solving abilities to solve the mystery.
+Throughout the game, you will gather clues, interrogate suspects, and explore various locations in Victorian London. Your ultimate aim is to piece together the puzzle, identify the culprit, and ensure the safe return of the missing heir.
+Be prepared to face numerous challenges, encounter red herrings, and navigate through intricate plot twists. The fate of the missing heir and the reputation of Sherlock Holmes rest in your hands. Can you crack the case and bring justice to the Worthington family?

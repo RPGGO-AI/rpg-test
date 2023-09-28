@@ -1,0 +1,1854 @@
+[2023-28-09 15:12:13 INFO] **[Preprocessing]**
+
+**ChatRPG Starts** (20230928151213)
+
+**Timestamp**: 20230928151213
+
+**config_path**: /mnt/c/Users/leizh/Src/rpg-test/CompanyConfig/RPG/ChatChainConfig.json
+
+**config_phase_path**: /mnt/c/Users/leizh/Src/rpg-test/CompanyConfig/RPG/PhaseConfig.json
+
+**config_role_path**: /mnt/c/Users/leizh/Src/rpg-test/CompanyConfig/RPG/RoleConfig.json
+
+**task_prompt**: 做一个福尔摩斯的探案游戏，我扮演福尔摩斯，破一个案子 
+
+**project_name**: detective
+
+**Log File**: /mnt/c/Users/leizh/Src/rpg-test/WareHouse/detective_DefaultOrganization_20230928151213.log
+
+**ChatRPGConfig**:
+ ChatEnvConfig.clear_structure: True
+ChatEnvConfig.brainstorming: False
+
+
+**ChatGPTConfig**:
+ ChatGPTConfig(temperature=0.2, top_p=1.0, n=1, stream=False, stop=None, max_tokens=None, presence_penalty=0.0, frequency_penalty=0.0, logit_bias={}, user='')
+
+
+
+[2023-28-09 15:12:13 INFO] System: **[chatting]**
+
+| Parameter | Value |
+| --- | --- |
+| **task_prompt** | 做一个福尔摩斯的探案游戏，我扮演福尔摩斯，破一个案子  |
+| **need_reflect** | True |
+| **assistant_role_name** | Game Producer |
+| **user_role_name** | Chief Executive Officer |
+| **phase_prompt** | ChatRPG has made RPG games in following categories: Mystery: focus on solving puzzles or unraveling unknown events. Players often have to gather clues, interview characters, and make deductions to solve a mystery. Narrative: emphasize story and character development. These games often have intricate plotlines and deep character interactions that drive the story forward. Detective: players assume the role of a detective, investigating and solving various cases. Players must analyze evidence, interrogate suspects, and follow leads to uncover the truth. Murder: These games center around one or more murder cases. Players may need to investigate crime scenes, find evidence, and identify the murderer. Puzzle: Emphasize problem-solving and logic. Players encounter a series of puzzles or challenges that they must solve to progress through the game. Treasure Hunting: Involves searching for hidden treasures. Players explore diverse environments, decipher clues, and overcome obstacles to discover valuable items or locations. Escape: Focus on the player's ability to escape from confined spaces or situations. Players must explore their surroundings, find clues, and solve puzzles to find a way out. As the {assistant_role}, to satisfy the new user's demand and the game should be realizable, you should keep discussing with me to decide which category we want the rpg game to be? Note that we must ONLY discuss the rpg category and do not discuss anything else! Once we all have expressed our opinion(s) and agree with the results of the discussion unanimously, any of us must actively terminate the discussion by replying with only one line, which starts with a single word , followed by our final game category without any other words, e.g., " Detective". |
+| **phase_name** | DemandAnalysis |
+| **assistant_role_prompt** | {chatrpg_prompt} You are Game Producer. we are both working at ChatRPG. We share a common interest in collaborating to successfully complete a task assigned by a new customer. You are very familiar to RPG Game and successfully built multiple successful rpg game before. You will make high-level decisions for the overarching game structure that closely align with the customer's requirements, while you work alongside the organization's game staff members to perform everyday operations. Here is a new customer's task: {task}. To complete the task, You must write a response that appropriately solves the requested instruction based on your expertise and customer's needs. |
+| **user_role_prompt** | {chatrpg_prompt} You are Chief Executive Officer. Now, we are both working at ChatRPG and we share a common interest in collaborating to successfully complete a task assigned by a new customer. Your main responsibilities include being an active decision-maker on customers' demands and other key policy issues, leader, manager, and executor. Your decision-making role involves high-level decisions about policy and strategy; and your communicator role can involve speaking to the organization's management and employees. Here is a new customer's task: {task}. To complete the task, I will give you one or more instructions, and you must help me to write a specific solution that appropriately solves the requested instruction based on your expertise and my needs. |
+| **chat_turn_limit** | 10 |
+| **placeholders** | {} |
+| **model_type** | ModelType.GPT_3_5_TURBO |
+
+[2023-28-09 15:12:13 INFO] System: **[RolePlaying]**
+
+| Parameter | Value |
+| --- | --- |
+| **assistant_role_name** | Game Producer |
+| **user_role_name** | Chief Executive Officer |
+| **assistant_role_prompt** | {chatrpg_prompt} You are Game Producer. we are both working at ChatRPG. We share a common interest in collaborating to successfully complete a task assigned by a new customer. You are very familiar to RPG Game and successfully built multiple successful rpg game before. You will make high-level decisions for the overarching game structure that closely align with the customer's requirements, while you work alongside the organization's game staff members to perform everyday operations. Here is a new customer's task: {task}. To complete the task, You must write a response that appropriately solves the requested instruction based on your expertise and customer's needs. |
+| **user_role_prompt** | {chatrpg_prompt} You are Chief Executive Officer. Now, we are both working at ChatRPG and we share a common interest in collaborating to successfully complete a task assigned by a new customer. Your main responsibilities include being an active decision-maker on customers' demands and other key policy issues, leader, manager, and executor. Your decision-making role involves high-level decisions about policy and strategy; and your communicator role can involve speaking to the organization's management and employees. Here is a new customer's task: {task}. To complete the task, I will give you one or more instructions, and you must help me to write a specific solution that appropriately solves the requested instruction based on your expertise and my needs. |
+| **task_prompt** | 做一个福尔摩斯的探案游戏，我扮演福尔摩斯，破一个案子  |
+| **with_task_specify** | False |
+| **model_type** | ModelType.GPT_3_5_TURBO |
+
+[2023-28-09 15:12:13 INFO] Chief Executive Officer: **[Start Chat]**
+
+[ChatRPG is a game studio powered by multiple intelligent agents, such as chief executive officer, chief human resources officer, chief product officer, chief game designer, etc, with a multi-agent organizational structure and the mission of "changing the digital world through gaming".
+You are Game Producer. we are both working at ChatRPG. We share a common interest in collaborating to successfully complete a task assigned by a new customer.
+You are very familiar to RPG Game and successfully built multiple successful rpg game before. You will make high-level decisions for the overarching game structure that closely align with the customer's requirements, while you work alongside the organization's game staff members to perform everyday operations.
+Here is a new customer's task: 做一个福尔摩斯的探案游戏，我扮演福尔摩斯，破一个案子 .
+To complete the task, You must write a response that appropriately solves the requested instruction based on your expertise and customer's needs.]
+
+ChatRPG has made RPG games in following categories:
+
+Mystery: focus on solving puzzles or unraveling unknown events. Players often have to gather clues, interview characters, and make deductions to solve a mystery.
+
+Narrative: emphasize story and character development. These games often have intricate plotlines and deep character interactions that drive the story forward.
+
+Detective: players assume the role of a detective, investigating and solving various cases. Players must analyze evidence, interrogate suspects, and follow leads to uncover the truth.
+
+Murder: These games center around one or more murder cases. Players may need to investigate crime scenes, find evidence, and identify the murderer.
+
+Puzzle: Emphasize problem-solving and logic. Players encounter a series of puzzles or challenges that they must solve to progress through the game.
+
+Treasure Hunting: Involves searching for hidden treasures. Players explore diverse environments, decipher clues, and overcome obstacles to discover valuable items or locations.
+
+Escape: Focus on the player's ability to escape from confined spaces or situations. Players must explore their surroundings, find clues, and solve puzzles to find a way out.
+
+As the Game Producer, to satisfy the new user's demand and the game should be realizable, you should keep discussing with me to decide which category we want the rpg game to be?
+
+Note that we must ONLY discuss the rpg category and do not discuss anything else! Once we all have expressed our opinion(s) and agree with the results of the discussion unanimously, any of us must actively terminate the discussion by replying with only one line, which starts with a single word <INFO>, followed by our final game category without any other words, e.g., "<INFO> Detective".
+
+[2023-28-09 15:12:14 INFO] **[OpenAI_Usage_Info Receive]**
+prompt_tokens: 562
+completion_tokens: 66
+total_tokens: 628
+
+
+[2023-28-09 15:12:16 INFO] **[OpenAI_Usage_Info Receive]**
+prompt_tokens: 650
+completion_tokens: 84
+total_tokens: 734
+
+
+[2023-28-09 15:12:16 INFO] Game Producer: **Game Producer<->Chief Executive Officer on : DemandAnalysis, turn 0**
+
+[ChatRPG is a game studio powered by multiple intelligent agents, such as chief executive officer, chief human resources officer, chief product officer, chief game designer, etc, with a multi-agent organizational structure and the mission of "changing the digital world through gaming".
+You are Chief Executive Officer. Now, we are both working at ChatRPG and we share a common interest in collaborating to successfully complete a task assigned by a new customer.
+Your main responsibilities include being an active decision-maker on customers' demands and other key policy issues, leader, manager, and executor. Your decision-making role involves high-level decisions about policy and strategy; and your communicator role can involve speaking to the organization's management and employees.
+Here is a new customer's task: 做一个福尔摩斯的探案游戏，我扮演福尔摩斯，破一个案子 .
+To complete the task, I will give you one or more instructions, and you must help me to write a specific solution that appropriately solves the requested instruction based on your expertise and my needs.]
+
+I think for this particular task, the best category for the RPG game would be "Detective". It aligns perfectly with the customer's request of playing as Sherlock Holmes and solving a case. The detective category allows players to investigate, analyze evidence, and make deductions, which are all essential elements of a Sherlock Holmes-style game.
+
+[2023-28-09 15:12:16 INFO] Chief Executive Officer: **Game Producer<->Chief Executive Officer on : DemandAnalysis, turn 0**
+
+[ChatRPG is a game studio powered by multiple intelligent agents, such as chief executive officer, chief human resources officer, chief product officer, chief game designer, etc, with a multi-agent organizational structure and the mission of "changing the digital world through gaming".
+You are Game Producer. we are both working at ChatRPG. We share a common interest in collaborating to successfully complete a task assigned by a new customer.
+You are very familiar to RPG Game and successfully built multiple successful rpg game before. You will make high-level decisions for the overarching game structure that closely align with the customer's requirements, while you work alongside the organization's game staff members to perform everyday operations.
+Here is a new customer's task: 做一个福尔摩斯的探案游戏，我扮演福尔摩斯，破一个案子 .
+To complete the task, You must write a response that appropriately solves the requested instruction based on your expertise and customer's needs.]
+
+I agree with you. The "Detective" category would be the most suitable choice for this task. It provides the perfect framework for players to step into the shoes of Sherlock Holmes and engage in a thrilling investigation. This category will allow us to incorporate elements such as analyzing clues, interrogating suspects, and ultimately solving the case. It will provide an immersive and engaging experience for the player, fulfilling the customer's request.
+
+[2023-28-09 15:12:16 INFO] **[OpenAI_Usage_Info Receive]**
+prompt_tokens: 720
+completion_tokens: 4
+total_tokens: 724
+
+
+[2023-28-09 15:12:16 INFO] Game Producer: **Game Producer<->Chief Executive Officer on : DemandAnalysis, turn 1**
+
+[ChatRPG is a game studio powered by multiple intelligent agents, such as chief executive officer, chief human resources officer, chief product officer, chief game designer, etc, with a multi-agent organizational structure and the mission of "changing the digital world through gaming".
+You are Chief Executive Officer. Now, we are both working at ChatRPG and we share a common interest in collaborating to successfully complete a task assigned by a new customer.
+Your main responsibilities include being an active decision-maker on customers' demands and other key policy issues, leader, manager, and executor. Your decision-making role involves high-level decisions about policy and strategy; and your communicator role can involve speaking to the organization's management and employees.
+Here is a new customer's task: 做一个福尔摩斯的探案游戏，我扮演福尔摩斯，破一个案子 .
+To complete the task, I will give you one or more instructions, and you must help me to write a specific solution that appropriately solves the requested instruction based on your expertise and my needs.]
+
+<INFO> Detective
+
+[2023-28-09 15:12:16 INFO] **[Seminar Conclusion]**:
+
+ <INFO> Detective
+
+[2023-28-09 15:12:16 INFO] System: **[chatting]**
+
+| Parameter | Value |
+| --- | --- |
+| **task_prompt** | 做一个福尔摩斯的探案游戏，我扮演福尔摩斯，破一个案子  |
+| **need_reflect** | True |
+| **assistant_role_name** | Game Producer |
+| **user_role_name** | Chief Executive Officer |
+| **phase_prompt** | According to the new user's task and some creative brainstorm ideas listed below:  Task: "{task}". Category: "{category}". Ideas: "{ideas}". We have decided to complete the task through a rpg game.  As the {assistant_role}, to satisfy the new user's input and make the story readable and playable for user, you should propose a concrete user language to write the script, like english, chinese, japanese etc.  Note that we must ONLY discuss the writing language and do not discuss anything else! Once we all have expressed our opinion(s) and agree with the results of the discussion unanimously, any of us must actively terminate the discussion and conclude the best language we have discussed without any other words or reasons, return only one line using the format: " " where "" represents a language. |
+| **phase_name** | LanguageChoose |
+| **assistant_role_prompt** | {chatrpg_prompt} You are Game Producer. we are both working at ChatRPG. We share a common interest in collaborating to successfully complete a task assigned by a new customer. You are very familiar to RPG Game and successfully built multiple successful rpg game before. You will make high-level decisions for the overarching game structure that closely align with the customer's requirements, while you work alongside the organization's game staff members to perform everyday operations. Here is a new customer's task: {task}. To complete the task, You must write a response that appropriately solves the requested instruction based on your expertise and customer's needs. |
+| **user_role_prompt** | {chatrpg_prompt} You are Chief Executive Officer. Now, we are both working at ChatRPG and we share a common interest in collaborating to successfully complete a task assigned by a new customer. Your main responsibilities include being an active decision-maker on customers' demands and other key policy issues, leader, manager, and executor. Your decision-making role involves high-level decisions about policy and strategy; and your communicator role can involve speaking to the organization's management and employees. Here is a new customer's task: {task}. To complete the task, I will give you one or more instructions, and you must help me to write a specific solution that appropriately solves the requested instruction based on your expertise and my needs. |
+| **chat_turn_limit** | 10 |
+| **placeholders** | {'task': '做一个福尔摩斯的探案游戏，我扮演福尔摩斯，破一个案子 ', 'category': 'detective', 'ideas': ''} |
+| **model_type** | ModelType.GPT_3_5_TURBO |
+
+[2023-28-09 15:12:16 INFO] System: **[RolePlaying]**
+
+| Parameter | Value |
+| --- | --- |
+| **assistant_role_name** | Game Producer |
+| **user_role_name** | Chief Executive Officer |
+| **assistant_role_prompt** | {chatrpg_prompt} You are Game Producer. we are both working at ChatRPG. We share a common interest in collaborating to successfully complete a task assigned by a new customer. You are very familiar to RPG Game and successfully built multiple successful rpg game before. You will make high-level decisions for the overarching game structure that closely align with the customer's requirements, while you work alongside the organization's game staff members to perform everyday operations. Here is a new customer's task: {task}. To complete the task, You must write a response that appropriately solves the requested instruction based on your expertise and customer's needs. |
+| **user_role_prompt** | {chatrpg_prompt} You are Chief Executive Officer. Now, we are both working at ChatRPG and we share a common interest in collaborating to successfully complete a task assigned by a new customer. Your main responsibilities include being an active decision-maker on customers' demands and other key policy issues, leader, manager, and executor. Your decision-making role involves high-level decisions about policy and strategy; and your communicator role can involve speaking to the organization's management and employees. Here is a new customer's task: {task}. To complete the task, I will give you one or more instructions, and you must help me to write a specific solution that appropriately solves the requested instruction based on your expertise and my needs. |
+| **task_prompt** | 做一个福尔摩斯的探案游戏，我扮演福尔摩斯，破一个案子  |
+| **with_task_specify** | False |
+| **model_type** | ModelType.GPT_3_5_TURBO |
+
+[2023-28-09 15:12:16 INFO] Chief Executive Officer: **[Start Chat]**
+
+[ChatRPG is a game studio powered by multiple intelligent agents, such as chief executive officer, chief human resources officer, chief product officer, chief game designer, etc, with a multi-agent organizational structure and the mission of "changing the digital world through gaming".
+You are Game Producer. we are both working at ChatRPG. We share a common interest in collaborating to successfully complete a task assigned by a new customer.
+You are very familiar to RPG Game and successfully built multiple successful rpg game before. You will make high-level decisions for the overarching game structure that closely align with the customer's requirements, while you work alongside the organization's game staff members to perform everyday operations.
+Here is a new customer's task: 做一个福尔摩斯的探案游戏，我扮演福尔摩斯，破一个案子 .
+To complete the task, You must write a response that appropriately solves the requested instruction based on your expertise and customer's needs.]
+
+According to the new user's task and some creative brainstorm ideas listed below: 
+
+Task: "做一个福尔摩斯的探案游戏，我扮演福尔摩斯，破一个案子 ".
+
+Category: "detective".
+
+Ideas: "".
+
+We have decided to complete the task through a rpg game. 
+
+As the Game Producer, to satisfy the new user's input and make the story readable and playable for user, you should propose a concrete user language to write the script, like english, chinese, japanese etc. 
+
+Note that we must ONLY discuss the writing language and do not discuss anything else! Once we all have expressed our opinion(s) and agree with the results of the discussion unanimously, any of us must actively terminate the discussion and conclude the best language we have discussed without any other words or reasons, return only one line using the format: "<INFO> *" where "*" represents a language.
+
+[2023-28-09 15:12:16 INFO] **[OpenAI_Usage_Info Receive]**
+prompt_tokens: 421
+completion_tokens: 4
+total_tokens: 425
+
+
+[2023-28-09 15:12:16 INFO] Game Producer: **Game Producer<->Chief Executive Officer on : LanguageChoose, turn 0**
+
+[ChatRPG is a game studio powered by multiple intelligent agents, such as chief executive officer, chief human resources officer, chief product officer, chief game designer, etc, with a multi-agent organizational structure and the mission of "changing the digital world through gaming".
+You are Chief Executive Officer. Now, we are both working at ChatRPG and we share a common interest in collaborating to successfully complete a task assigned by a new customer.
+Your main responsibilities include being an active decision-maker on customers' demands and other key policy issues, leader, manager, and executor. Your decision-making role involves high-level decisions about policy and strategy; and your communicator role can involve speaking to the organization's management and employees.
+Here is a new customer's task: 做一个福尔摩斯的探案游戏，我扮演福尔摩斯，破一个案子 .
+To complete the task, I will give you one or more instructions, and you must help me to write a specific solution that appropriately solves the requested instruction based on your expertise and my needs.]
+
+<INFO> Chinese
+
+[2023-28-09 15:12:16 INFO] **[Seminar Conclusion]**:
+
+ <INFO> Chinese
+
+[2023-28-09 15:12:16 INFO] System: **[chatting]**
+
+| Parameter | Value |
+| --- | --- |
+| **task_prompt** | 做一个福尔摩斯的探案游戏，我扮演福尔摩斯，破一个案子  |
+| **need_reflect** | False |
+| **assistant_role_name** | Script Writer |
+| **user_role_name** | Game Producer |
+| **phase_prompt** | According to the new user's task and our RPG game designs listed below:  Task: "{task}". Category: "{category}". Language: "{language}" Ideas:"{ideas}" We have decided to complete the task through a rpg game via {language}. As the {assistant_role}, to satisfy the new user's demands, you should write a script to construct the rpg game Think step by step and reason yourself to the right decisions to make sure we get it right. You will first lay out the game by different parts, like background, goal, characters, props that will be necessary, as well as a quick comment on their purpose. Each part is a separated file Then you will output the content of each file. Each file must strictly follow a markdown block format, where the following tokens must be replaced such that "FILENAME" is the lowercase game part name including the language as the file extension, "LANGUAGE" in the language, and "SCRIPT" is the original designed game script text: FILENAME ```LANGUAGE SCRIPT ``` You will start with the "background" file, then finish other files one by one. Please note that the RPG design should be fully understandable by LLM. Ensure to design all the details around the story and character. No placeholders. |
+| **phase_name** | SingleSceneWriting |
+| **assistant_role_prompt** | {chatrpg_prompt} You are Game Script Writer. we are both working at ChatRPG. We share a common interest in collaborating to successfully complete a task assigned by a new customer. You can write/create rpg game by providing a detailed script for the scene so that LLM can understand the script and play with the customer. You have extensive game design and background writing experience in many varieties of RPG games, such as trpg, crpg, jrpg, Murder mystery etc,. Here is a new customer's task: {task}. To complete the task, you must write a response that appropriately solves the requested instruction based on your expertise and customer's needs. |
+| **user_role_prompt** | {chatrpg_prompt} You are Game Producer. we are both working at ChatRPG. We share a common interest in collaborating to successfully complete a task assigned by a new customer. You are very familiar to RPG Game and successfully built multiple successful rpg game before. You will make high-level decisions for the overarching game structure that closely align with the customer's requirements, while you work alongside the organization's game staff members to perform everyday operations. Here is a new customer's task: {task}. To complete the task, You must write a response that appropriately solves the requested instruction based on your expertise and customer's needs. |
+| **chat_turn_limit** | 1 |
+| **placeholders** | {'task': '做一个福尔摩斯的探案游戏，我扮演福尔摩斯，破一个案子 ', 'category': 'detective', 'ideas': '', 'language': ' Chinese', 'gui': ''} |
+| **model_type** | ModelType.GPT_3_5_TURBO |
+
+[2023-28-09 15:12:16 INFO] System: **[RolePlaying]**
+
+| Parameter | Value |
+| --- | --- |
+| **assistant_role_name** | Script Writer |
+| **user_role_name** | Game Producer |
+| **assistant_role_prompt** | {chatrpg_prompt} You are Game Script Writer. we are both working at ChatRPG. We share a common interest in collaborating to successfully complete a task assigned by a new customer. You can write/create rpg game by providing a detailed script for the scene so that LLM can understand the script and play with the customer. You have extensive game design and background writing experience in many varieties of RPG games, such as trpg, crpg, jrpg, Murder mystery etc,. Here is a new customer's task: {task}. To complete the task, you must write a response that appropriately solves the requested instruction based on your expertise and customer's needs. |
+| **user_role_prompt** | {chatrpg_prompt} You are Game Producer. we are both working at ChatRPG. We share a common interest in collaborating to successfully complete a task assigned by a new customer. You are very familiar to RPG Game and successfully built multiple successful rpg game before. You will make high-level decisions for the overarching game structure that closely align with the customer's requirements, while you work alongside the organization's game staff members to perform everyday operations. Here is a new customer's task: {task}. To complete the task, You must write a response that appropriately solves the requested instruction based on your expertise and customer's needs. |
+| **task_prompt** | 做一个福尔摩斯的探案游戏，我扮演福尔摩斯，破一个案子  |
+| **with_task_specify** | False |
+| **model_type** | ModelType.GPT_3_5_TURBO |
+
+[2023-28-09 15:12:16 INFO] Game Producer: **[Start Chat]**
+
+[ChatRPG is a game studio powered by multiple intelligent agents, such as chief executive officer, chief human resources officer, chief product officer, chief game designer, etc, with a multi-agent organizational structure and the mission of "changing the digital world through gaming".
+You are Game Script Writer. we are both working at ChatRPG. We share a common interest in collaborating to successfully complete a task assigned by a new customer.
+You can write/create rpg game by providing a detailed script for the scene so that LLM can understand the script and play with the customer. You have extensive game design and background writing experience in many varieties of RPG games, such as trpg, crpg, jrpg, Murder mystery etc,.
+Here is a new customer's task: 做一个福尔摩斯的探案游戏，我扮演福尔摩斯，破一个案子 .
+To complete the task, you must write a response that appropriately solves the requested instruction based on your expertise and customer's needs.]
+
+According to the new user's task and our RPG game designs listed below: 
+
+Task: "做一个福尔摩斯的探案游戏，我扮演福尔摩斯，破一个案子 ".
+
+Category: "detective".
+
+Language: " Chinese"
+
+Ideas:""
+
+We have decided to complete the task through a rpg game via  Chinese. As the Script Writer, to satisfy the new user's demands, you should write a script to construct the rpg game
+
+Think step by step and reason yourself to the right decisions to make sure we get it right.
+
+You will first lay out the game by different parts, like background, goal, characters, props that will be necessary, as well as a quick comment on their purpose. Each part is a separated file
+
+Then you will output the content of each file. Each file must strictly follow a markdown block format, where the following tokens must be replaced such that "FILENAME" is the lowercase game part name including the language as the file extension, "LANGUAGE" in the language, and "SCRIPT" is the original designed game script text:
+
+FILENAME
+
+```LANGUAGE
+
+SCRIPT
+
+```
+
+You will start with the "background" file, then finish other files one by one.
+
+Please note that the RPG design should be fully understandable by LLM. Ensure to design all the details around the story and character. No placeholders.
+
+[2023-28-09 15:12:42 INFO] **[OpenAI_Usage_Info Receive]**
+prompt_tokens: 524
+completion_tokens: 1820
+total_tokens: 2344
+
+
+[2023-28-09 15:12:42 INFO] Script Writer: **Script Writer<->Game Producer on : SingleSceneWriting, turn 0**
+
+[ChatRPG is a game studio powered by multiple intelligent agents, such as chief executive officer, chief human resources officer, chief product officer, chief game designer, etc, with a multi-agent organizational structure and the mission of "changing the digital world through gaming".
+You are Game Producer. we are both working at ChatRPG. We share a common interest in collaborating to successfully complete a task assigned by a new customer.
+You are very familiar to RPG Game and successfully built multiple successful rpg game before. You will make high-level decisions for the overarching game structure that closely align with the customer's requirements, while you work alongside the organization's game staff members to perform everyday operations.
+Here is a new customer's task: 做一个福尔摩斯的探案游戏，我扮演福尔摩斯，破一个案子 .
+To complete the task, You must write a response that appropriately solves the requested instruction based on your expertise and customer's needs.]
+
+background.md
+
+```Chinese
+
+福尔摩斯的探案游戏背景
+
+在维多利亚时代的伦敦，福尔摩斯是一位著名的侦探，以其聪明才智和独特的推理能力而闻名于世。他的助手华生博士是他的忠实伙伴，与他一起解决了许多复杂的谜题和案件。
+
+在这个游戏中，你将扮演福尔摩斯，面临一起神秘的谋杀案。一位富有的商人在他的豪宅中被发现死亡，没有任何明显的线索。你的任务是解开这个谜团，找出凶手并为受害者伸张正义。
+
+你将需要运用你的观察力、推理能力和调查技巧来收集证据、审问嫌疑人，并分析线索以揭示真相。你将遇到各种各样的人物，包括目击者、嫌疑人和其他相关人员，他们可能会提供有关案件的重要信息。
+
+准备好了吗，福尔摩斯？开始你的探案之旅吧！
+
+```
+
+goal.md
+
+```Chinese
+
+福尔摩斯的探案游戏目标
+
+你的目标是解开这起神秘的谋杀案，找出凶手并为受害者伸张正义。通过收集证据、审问嫌疑人和分析线索，你需要找到真相并将凶手绳之以法。
+
+在整个游戏过程中，你将面临各种挑战和难题，需要运用你的观察力、推理能力和调查技巧来解决。你需要仔细分析每个线索，与各个相关人员交谈，并在隐藏的细节中找到关键信息。
+
+只有通过深入调查和正确的推理，你才能揭示真相，找到凶手并完成你的使命。你的决策和行动将决定案件的结局，所以要谨慎行事，不要错过任何重要线索。
+
+祝你好运，福尔摩斯！
+
+```
+
+characters.md
+
+```Chinese
+
+福尔摩斯的探案游戏角色
+
+1. 福尔摩斯（玩家角色）- 你将扮演福尔摩斯，一位聪明才智的侦探。你拥有敏锐的观察力和卓越的推理能力，是解决这起谋杀案的唯一希望。
+
+2. 华生博士（助手角色）- 华生博士是福尔摩斯的忠实伙伴和助手。他将与你一起调查案件，提供帮助和关键信息。
+
+3. 商人（受害者角色）- 商人是这起谋杀案的受害者。他在自己的豪宅中被发现死亡，你需要找出凶手并为他伸张正义。
+
+4. 嫌疑人（非玩家角色）- 游戏中将有多个嫌疑人，他们可能与谋杀案有关。你需要审问他们，收集证据，并找出真正的凶手。
+
+5. 目击者（非玩家角色）- 目击者可能提供关于案件的重要信息。你需要与他们交谈，了解他们的观察和见证。
+
+6. 其他相关人员（非玩家角色）- 游戏中还会有其他与案件相关的人员，他们可能提供线索或帮助你解决难题。
+
+每个角色都有自己的特点和背景故事，你需要与他们互动并利用他们的信息来推动故事的发展。
+
+```
+
+props.md
+
+```Chinese
+
+福尔摩斯的探案游戏道具
+
+1. 推理笔记本 - 你将用推理笔记本记录收集到的线索、嫌疑人的证词和其他重要信息。这将帮助你整理思路、分析线索和推理出真相。
+
+2. 收集工具 - 你将使用各种收集工具，如放大镜、指纹粉末和显微镜，来寻找隐藏的线索和证据。这些工具将帮助你发现关键信息并解开谜团。
+
+3. 证据袋 - 你将用证据袋收集和保管收集到的证据。这些证据可能包括物品、文件、照片等，它们将成为你解决案件的重要依据。
+
+4. 问询技巧 - 你将使用问询技巧来与嫌疑人和目击者交谈，获取他们的证词和观察。通过合理的提问和观察，你可以获得有关案件的重要信息。
+
+5. 地图和平面图 - 你将使用地图和平面图来了解案发现场和其他相关地点的布局。这将帮助你理清线索和推理案件的发展。
+
+这些道具将成为你解决谋杀案的工具和辅助物品。合理利用它们，你将更有可能找到真相并成功破案。
+
+```
+
+comment.md
+
+```Chinese
+
+福尔摩斯的探案游戏注释
+
+这个游戏将带你进入福尔摩斯的世界，让你亲身体验作为一名侦探的刺激和挑战。你将需要运用你的观察力、推理能力和调查技巧来解决这起神秘的谋杀案。
+
+通过与各个角色互动、收集证据和分析线索，你将逐渐揭开真相并找出凶手。你的决策和行动将决定案件的结局，所以要谨慎行事，不要错过任何重要线索。
+
+这个游戏将考验你的观察力、推理能力和决策能力。准备好迎接挑战了吗？让我们一起开始福尔摩斯的探案之旅吧！
+
+```
+
+With these files, LLM will have all the necessary information to understand and play the RPG game as requested by the new user.
+
+[2023-28-09 15:12:42 INFO] **[Seminar Conclusion]**:
+
+ background.md
+
+```Chinese
+
+福尔摩斯的探案游戏背景
+
+在维多利亚时代的伦敦，福尔摩斯是一位著名的侦探，以其聪明才智和独特的推理能力而闻名于世。他的助手华生博士是他的忠实伙伴，与他一起解决了许多复杂的谜题和案件。
+
+在这个游戏中，你将扮演福尔摩斯，面临一起神秘的谋杀案。一位富有的商人在他的豪宅中被发现死亡，没有任何明显的线索。你的任务是解开这个谜团，找出凶手并为受害者伸张正义。
+
+你将需要运用你的观察力、推理能力和调查技巧来收集证据、审问嫌疑人，并分析线索以揭示真相。你将遇到各种各样的人物，包括目击者、嫌疑人和其他相关人员，他们可能会提供有关案件的重要信息。
+
+准备好了吗，福尔摩斯？开始你的探案之旅吧！
+
+```
+
+goal.md
+
+```Chinese
+
+福尔摩斯的探案游戏目标
+
+你的目标是解开这起神秘的谋杀案，找出凶手并为受害者伸张正义。通过收集证据、审问嫌疑人和分析线索，你需要找到真相并将凶手绳之以法。
+
+在整个游戏过程中，你将面临各种挑战和难题，需要运用你的观察力、推理能力和调查技巧来解决。你需要仔细分析每个线索，与各个相关人员交谈，并在隐藏的细节中找到关键信息。
+
+只有通过深入调查和正确的推理，你才能揭示真相，找到凶手并完成你的使命。你的决策和行动将决定案件的结局，所以要谨慎行事，不要错过任何重要线索。
+
+祝你好运，福尔摩斯！
+
+```
+
+characters.md
+
+```Chinese
+
+福尔摩斯的探案游戏角色
+
+1. 福尔摩斯（玩家角色）- 你将扮演福尔摩斯，一位聪明才智的侦探。你拥有敏锐的观察力和卓越的推理能力，是解决这起谋杀案的唯一希望。
+
+2. 华生博士（助手角色）- 华生博士是福尔摩斯的忠实伙伴和助手。他将与你一起调查案件，提供帮助和关键信息。
+
+3. 商人（受害者角色）- 商人是这起谋杀案的受害者。他在自己的豪宅中被发现死亡，你需要找出凶手并为他伸张正义。
+
+4. 嫌疑人（非玩家角色）- 游戏中将有多个嫌疑人，他们可能与谋杀案有关。你需要审问他们，收集证据，并找出真正的凶手。
+
+5. 目击者（非玩家角色）- 目击者可能提供关于案件的重要信息。你需要与他们交谈，了解他们的观察和见证。
+
+6. 其他相关人员（非玩家角色）- 游戏中还会有其他与案件相关的人员，他们可能提供线索或帮助你解决难题。
+
+每个角色都有自己的特点和背景故事，你需要与他们互动并利用他们的信息来推动故事的发展。
+
+```
+
+props.md
+
+```Chinese
+
+福尔摩斯的探案游戏道具
+
+1. 推理笔记本 - 你将用推理笔记本记录收集到的线索、嫌疑人的证词和其他重要信息。这将帮助你整理思路、分析线索和推理出真相。
+
+2. 收集工具 - 你将使用各种收集工具，如放大镜、指纹粉末和显微镜，来寻找隐藏的线索和证据。这些工具将帮助你发现关键信息并解开谜团。
+
+3. 证据袋 - 你将用证据袋收集和保管收集到的证据。这些证据可能包括物品、文件、照片等，它们将成为你解决案件的重要依据。
+
+4. 问询技巧 - 你将使用问询技巧来与嫌疑人和目击者交谈，获取他们的证词和观察。通过合理的提问和观察，你可以获得有关案件的重要信息。
+
+5. 地图和平面图 - 你将使用地图和平面图来了解案发现场和其他相关地点的布局。这将帮助你理清线索和推理案件的发展。
+
+这些道具将成为你解决谋杀案的工具和辅助物品。合理利用它们，你将更有可能找到真相并成功破案。
+
+```
+
+comment.md
+
+```Chinese
+
+福尔摩斯的探案游戏注释
+
+这个游戏将带你进入福尔摩斯的世界，让你亲身体验作为一名侦探的刺激和挑战。你将需要运用你的观察力、推理能力和调查技巧来解决这起神秘的谋杀案。
+
+通过与各个角色互动、收集证据和分析线索，你将逐渐揭开真相并找出凶手。你的决策和行动将决定案件的结局，所以要谨慎行事，不要错过任何重要线索。
+
+这个游戏将考验你的观察力、推理能力和决策能力。准备好迎接挑战了吗？让我们一起开始福尔摩斯的探案之旅吧！
+
+```
+
+With these files, LLM will have all the necessary information to understand and play the RPG game as requested by the new user.
+
+[2023-28-09 15:12:42 INFO] **[Update Codes]**
+
+background.md updated.
+
+
+```
+'''
+
+'''
+--- Old
++++ New
+@@ -1 +1,5 @@
+-# None
++福尔摩斯的探案游戏背景
++在维多利亚时代的伦敦，福尔摩斯是一位著名的侦探，以其聪明才智和独特的推理能力而闻名于世。他的助手华生博士是他的忠实伙伴，与他一起解决了许多复杂的谜题和案件。
++在这个游戏中，你将扮演福尔摩斯，面临一起神秘的谋杀案。一位富有的商人在他的豪宅中被发现死亡，没有任何明显的线索。你的任务是解开这个谜团，找出凶手并为受害者伸张正义。
++你将需要运用你的观察力、推理能力和调查技巧来收集证据、审问嫌疑人，并分析线索以揭示真相。你将遇到各种各样的人物，包括目击者、嫌疑人和其他相关人员，他们可能会提供有关案件的重要信息。
++准备好了吗，福尔摩斯？开始你的探案之旅吧！
+```
+
+[2023-28-09 15:12:42 INFO] **[Update Codes]**
+
+goal.md updated.
+
+
+```
+'''
+
+'''
+--- Old
++++ New
+@@ -1 +1,5 @@
+-# None
++福尔摩斯的探案游戏目标
++你的目标是解开这起神秘的谋杀案，找出凶手并为受害者伸张正义。通过收集证据、审问嫌疑人和分析线索，你需要找到真相并将凶手绳之以法。
++在整个游戏过程中，你将面临各种挑战和难题，需要运用你的观察力、推理能力和调查技巧来解决。你需要仔细分析每个线索，与各个相关人员交谈，并在隐藏的细节中找到关键信息。
++只有通过深入调查和正确的推理，你才能揭示真相，找到凶手并完成你的使命。你的决策和行动将决定案件的结局，所以要谨慎行事，不要错过任何重要线索。
++祝你好运，福尔摩斯！
+```
+
+[2023-28-09 15:12:42 INFO] **[Update Codes]**
+
+characters.md updated.
+
+
+```
+'''
+
+'''
+--- Old
++++ New
+@@ -1 +1,8 @@
+-# None
++福尔摩斯的探案游戏角色
++1. 福尔摩斯（玩家角色）- 你将扮演福尔摩斯，一位聪明才智的侦探。你拥有敏锐的观察力和卓越的推理能力，是解决这起谋杀案的唯一希望。
++2. 华生博士（助手角色）- 华生博士是福尔摩斯的忠实伙伴和助手。他将与你一起调查案件，提供帮助和关键信息。
++3. 商人（受害者角色）- 商人是这起谋杀案的受害者。他在自己的豪宅中被发现死亡，你需要找出凶手并为他伸张正义。
++4. 嫌疑人（非玩家角色）- 游戏中将有多个嫌疑人，他们可能与谋杀案有关。你需要审问他们，收集证据，并找出真正的凶手。
++5. 目击者（非玩家角色）- 目击者可能提供关于案件的重要信息。你需要与他们交谈，了解他们的观察和见证。
++6. 其他相关人员（非玩家角色）- 游戏中还会有其他与案件相关的人员，他们可能提供线索或帮助你解决难题。
++每个角色都有自己的特点和背景故事，你需要与他们互动并利用他们的信息来推动故事的发展。
+```
+
+[2023-28-09 15:12:42 INFO] **[Update Codes]**
+
+props.md updated.
+
+
+```
+'''
+
+'''
+--- Old
++++ New
+@@ -1 +1,7 @@
+-# None
++福尔摩斯的探案游戏道具
++1. 推理笔记本 - 你将用推理笔记本记录收集到的线索、嫌疑人的证词和其他重要信息。这将帮助你整理思路、分析线索和推理出真相。
++2. 收集工具 - 你将使用各种收集工具，如放大镜、指纹粉末和显微镜，来寻找隐藏的线索和证据。这些工具将帮助你发现关键信息并解开谜团。
++3. 证据袋 - 你将用证据袋收集和保管收集到的证据。这些证据可能包括物品、文件、照片等，它们将成为你解决案件的重要依据。
++4. 问询技巧 - 你将使用问询技巧来与嫌疑人和目击者交谈，获取他们的证词和观察。通过合理的提问和观察，你可以获得有关案件的重要信息。
++5. 地图和平面图 - 你将使用地图和平面图来了解案发现场和其他相关地点的布局。这将帮助你理清线索和推理案件的发展。
++这些道具将成为你解决谋杀案的工具和辅助物品。合理利用它们，你将更有可能找到真相并成功破案。
+```
+
+[2023-28-09 15:12:42 INFO] **[Update Codes]**
+
+comment.md updated.
+
+
+```
+'''
+
+'''
+--- Old
++++ New
+@@ -1 +1,4 @@
+-# None
++福尔摩斯的探案游戏注释
++这个游戏将带你进入福尔摩斯的世界，让你亲身体验作为一名侦探的刺激和挑战。你将需要运用你的观察力、推理能力和调查技巧来解决这起神秘的谋杀案。
++通过与各个角色互动、收集证据和分析线索，你将逐渐揭开真相并找出凶手。你的决策和行动将决定案件的结局，所以要谨慎行事，不要错过任何重要线索。
++这个游戏将考验你的观察力、推理能力和决策能力。准备好迎接挑战了吗？让我们一起开始福尔摩斯的探案之旅吧！
+```
+
+[2023-28-09 15:12:42 INFO] **[Rewrite Codes]**
+
+/mnt/c/Users/leizh/Src/rpg-test/WareHouse/detective_DefaultOrganization_20230928151213/background.md Wrote
+/mnt/c/Users/leizh/Src/rpg-test/WareHouse/detective_DefaultOrganization_20230928151213/goal.md Wrote
+/mnt/c/Users/leizh/Src/rpg-test/WareHouse/detective_DefaultOrganization_20230928151213/characters.md Wrote
+/mnt/c/Users/leizh/Src/rpg-test/WareHouse/detective_DefaultOrganization_20230928151213/props.md Wrote
+/mnt/c/Users/leizh/Src/rpg-test/WareHouse/detective_DefaultOrganization_20230928151213/comment.md Wrote
+
+
+[2023-28-09 15:12:42 INFO] **[Game Info]**:
+
+ 
+
+💰**cost**=$0.016543
+
+🔨**version_updates**=-1
+
+📃**num_code_files**=5
+
+🏞**num_png_files**=0
+
+📚**num_doc_files**=4
+
+📃**code_lines**=29
+
+📋**env_lines**=-1
+
+📒**manual_lines**=-1
+
+🗣**num_utterances**=8
+
+🤔**num_self_reflections**=0
+
+❓**num_prompt_tokens**=2877
+
+❗**num_completion_tokens**=1978
+
+🌟**num_total_tokens**=4855
+
+[2023-28-09 15:12:42 INFO] **[Execute Detail]**
+
+execute SimplePhase:[SingleSceneComplete] in ComposedPhase:[SingleSceneCompleteAll], cycle 0
+
+[2023-28-09 15:12:42 INFO] **[Execute Detail]**
+
+execute SimplePhase:[SingleSceneReviewComment] in ComposedPhase:[SingleSceneReview], cycle 0
+
+[2023-28-09 15:12:42 INFO] System: **[chatting]**
+
+| Parameter | Value |
+| --- | --- |
+| **task_prompt** | 做一个福尔摩斯的探案游戏，我扮演福尔摩斯，破一个案子  |
+| **need_reflect** | False |
+| **assistant_role_name** | Script Tester |
+| **user_role_name** | Script Writer |
+| **phase_prompt** | According to the new user's task and our game designs:  Task: "{task}". Category: "{category}". Language: "{language}" Ideas: "{ideas}" Scripts: "{scripts}" As the {assistant_role}, to make the game operable by LLM without further writing, ChatRPG have formulated the following regulations: 1) scene should have a goal 2) scene should have characters, and new character should have detailed description including background, occupation, plot, characteristics, loopholes,timelines, objective etc. 3) scene should have background story world; 4) no potential logical bugs; 5) The entire game design conforms to the tasks proposed by the user; 6) most importantly, do not only check the errors in the scene, but also the logic of the scene. Make sure that LLM can understand and replay this scene script and interact with users for an immersive rpg experience; Now, you should check the above regulations one by one and review the scenes in detail, propose one comment with the highest priority about the scenes, and give me instructions on how to fix. Tell me your comment with the highest priority and corresponding suggestions on revision. If the scenes are perfect and you have no comment on them, return only one line like " Finished". |
+| **phase_name** | SingleSceneReviewComment |
+| **assistant_role_prompt** | {chatrpg_prompt} You are Game Script Tester. we are both working at ChatRPG. We share a common interest in collaborating to successfully complete a task assigned by a new customer. You can help Script Writer to dryrun game scripts for story verification, role verification, logic verification, and offer proposals to improve the game design and to enhance the quality and playability of the game script. Here is a new customer's task: {task}. To complete the task, you must write a response that appropriately solves the requested instruction based on your expertise and customer's needs. |
+| **user_role_prompt** | {chatrpg_prompt} You are Game Script Writer. we are both working at ChatRPG. We share a common interest in collaborating to successfully complete a task assigned by a new customer. You can write/create rpg game by providing a detailed script for the scene so that LLM can understand the script and play with the customer. You have extensive game design and background writing experience in many varieties of RPG games, such as trpg, crpg, jrpg, Murder mystery etc,. Here is a new customer's task: {task}. To complete the task, you must write a response that appropriately solves the requested instruction based on your expertise and customer's needs. |
+| **chat_turn_limit** | 1 |
+| **placeholders** | {'cycle_num': 3, 'modification_conclusion': '', 'cycle_index': 0, 'task': '做一个福尔摩斯的探案游戏，我扮演福尔摩斯，破一个案子 ', 'category': 'detective', 'ideas': '', 'language': ' Chinese', 'scripts': 'background.md\nenglish\n福尔摩斯的探案游戏背景\n在维多利亚时代的伦敦，福尔摩斯是一位著名的侦探，以其聪明才智和独特的推理能力而闻名于世。他的助手华生博士是他的忠实伙伴，与他一起解决了许多复杂的谜题和案件。\n在这个游戏中，你将扮演福尔摩斯，面临一起神秘的谋杀案。一位富有的商人在他的豪宅中被发现死亡，没有任何明显的线索。你的任务是解开这个谜团，找出凶手并为受害者伸张正义。\n你将需要运用你的观察力、推理能力和调查技巧来收集证据、审问嫌疑人，并分析线索以揭示真相。你将遇到各种各样的人物，包括目击者、嫌疑人和其他相关人员，他们可能会提供有关案件的重要信息。\n准备好了吗，福尔摩斯？开始你的探案之旅吧！\n\n\ngoal.md\nenglish\n福尔摩斯的探案游戏目标\n你的目标是解开这起神秘的谋杀案，找出凶手并为受害者伸张正义。通过收集证据、审问嫌疑人和分析线索，你需要找到真相并将凶手绳之以法。\n在整个游戏过程中，你将面临各种挑战和难题，需要运用你的观察力、推理能力和调查技巧来解决。你需要仔细分析每个线索，与各个相关人员交谈，并在隐藏的细节中找到关键信息。\n只有通过深入调查和正确的推理，你才能揭示真相，找到凶手并完成你的使命。你的决策和行动将决定案件的结局，所以要谨慎行事，不要错过任何重要线索。\n祝你好运，福尔摩斯！\n\n\ncharacters.md\nenglish\n福尔摩斯的探案游戏角色\n1. 福尔摩斯（玩家角色）- 你将扮演福尔摩斯，一位聪明才智的侦探。你拥有敏锐的观察力和卓越的推理能力，是解决这起谋杀案的唯一希望。\n2. 华生博士（助手角色）- 华生博士是福尔摩斯的忠实伙伴和助手。他将与你一起调查案件，提供帮助和关键信息。\n3. 商人（受害者角色）- 商人是这起谋杀案的受害者。他在自己的豪宅中被发现死亡，你需要找出凶手并为他伸张正义。\n4. 嫌疑人（非玩家角色）- 游戏中将有多个嫌疑人，他们可能与谋杀案有关。你需要审问他们，收集证据，并找出真正的凶手。\n5. 目击者（非玩家角色）- 目击者可能提供关于案件的重要信息。你需要与他们交谈，了解他们的观察和见证。\n6. 其他相关人员（非玩家角色）- 游戏中还会有其他与案件相关的人员，他们可能提供线索或帮助你解决难题。\n每个角色都有自己的特点和背景故事，你需要与他们互动并利用他们的信息来推动故事的发展。\n\n\nprops.md\nenglish\n福尔摩斯的探案游戏道具\n1. 推理笔记本 - 你将用推理笔记本记录收集到的线索、嫌疑人的证词和其他重要信息。这将帮助你整理思路、分析线索和推理出真相。\n2. 收集工具 - 你将使用各种收集工具，如放大镜、指纹粉末和显微镜，来寻找隐藏的线索和证据。这些工具将帮助你发现关键信息并解开谜团。\n3. 证据袋 - 你将用证据袋收集和保管收集到的证据。这些证据可能包括物品、文件、照片等，它们将成为你解决案件的重要依据。\n4. 问询技巧 - 你将使用问询技巧来与嫌疑人和目击者交谈，获取他们的证词和观察。通过合理的提问和观察，你可以获得有关案件的重要信息。\n5. 地图和平面图 - 你将使用地图和平面图来了解案发现场和其他相关地点的布局。这将帮助你理清线索和推理案件的发展。\n这些道具将成为你解决谋杀案的工具和辅助物品。合理利用它们，你将更有可能找到真相并成功破案。\n\n\ncomment.md\nenglish\n福尔摩斯的探案游戏注释\n这个游戏将带你进入福尔摩斯的世界，让你亲身体验作为一名侦探的刺激和挑战。你将需要运用你的观察力、推理能力和调查技巧来解决这起神秘的谋杀案。\n通过与各个角色互动、收集证据和分析线索，你将逐渐揭开真相并找出凶手。你的决策和行动将决定案件的结局，所以要谨慎行事，不要错过任何重要线索。\n这个游戏将考验你的观察力、推理能力和决策能力。准备好迎接挑战了吗？让我们一起开始福尔摩斯的探案之旅吧！\n\n\n', 'images': ''} |
+| **model_type** | ModelType.GPT_3_5_TURBO |
+
+[2023-28-09 15:12:42 INFO] System: **[RolePlaying]**
+
+| Parameter | Value |
+| --- | --- |
+| **assistant_role_name** | Script Tester |
+| **user_role_name** | Script Writer |
+| **assistant_role_prompt** | {chatrpg_prompt} You are Game Script Tester. we are both working at ChatRPG. We share a common interest in collaborating to successfully complete a task assigned by a new customer. You can help Script Writer to dryrun game scripts for story verification, role verification, logic verification, and offer proposals to improve the game design and to enhance the quality and playability of the game script. Here is a new customer's task: {task}. To complete the task, you must write a response that appropriately solves the requested instruction based on your expertise and customer's needs. |
+| **user_role_prompt** | {chatrpg_prompt} You are Game Script Writer. we are both working at ChatRPG. We share a common interest in collaborating to successfully complete a task assigned by a new customer. You can write/create rpg game by providing a detailed script for the scene so that LLM can understand the script and play with the customer. You have extensive game design and background writing experience in many varieties of RPG games, such as trpg, crpg, jrpg, Murder mystery etc,. Here is a new customer's task: {task}. To complete the task, you must write a response that appropriately solves the requested instruction based on your expertise and customer's needs. |
+| **task_prompt** | 做一个福尔摩斯的探案游戏，我扮演福尔摩斯，破一个案子  |
+| **with_task_specify** | False |
+| **model_type** | ModelType.GPT_3_5_TURBO |
+
+[2023-28-09 15:12:42 INFO] Script Writer: **[Start Chat]**
+
+[ChatRPG is a game studio powered by multiple intelligent agents, such as chief executive officer, chief human resources officer, chief product officer, chief game designer, etc, with a multi-agent organizational structure and the mission of "changing the digital world through gaming".
+You are Game Script Tester. we are both working at ChatRPG. We share a common interest in collaborating to successfully complete a task assigned by a new customer.
+You can help Script Writer to dryrun game scripts for story verification, role verification, logic verification, and offer proposals to improve the game design and to enhance the quality and playability of the game script.
+Here is a new customer's task: 做一个福尔摩斯的探案游戏，我扮演福尔摩斯，破一个案子 .
+To complete the task, you must write a response that appropriately solves the requested instruction based on your expertise and customer's needs.]
+
+According to the new user's task and our game designs: 
+Task: "做一个福尔摩斯的探案游戏，我扮演福尔摩斯，破一个案子 ".
+Category: "detective".
+Language: " Chinese"
+Ideas: ""
+Scripts:
+"background.md
+```english
+福尔摩斯的探案游戏背景
+在维多利亚时代的伦敦，福尔摩斯是一位著名的侦探，以其聪明才智和独特的推理能力而闻名于世。他的助手华生博士是他的忠实伙伴，与他一起解决了许多复杂的谜题和案件。
+在这个游戏中，你将扮演福尔摩斯，面临一起神秘的谋杀案。一位富有的商人在他的豪宅中被发现死亡，没有任何明显的线索。你的任务是解开这个谜团，找出凶手并为受害者伸张正义。
+你将需要运用你的观察力、推理能力和调查技巧来收集证据、审问嫌疑人，并分析线索以揭示真相。你将遇到各种各样的人物，包括目击者、嫌疑人和其他相关人员，他们可能会提供有关案件的重要信息。
+准备好了吗，福尔摩斯？开始你的探案之旅吧！
+```
+
+goal.md
+```english
+福尔摩斯的探案游戏目标
+你的目标是解开这起神秘的谋杀案，找出凶手并为受害者伸张正义。通过收集证据、审问嫌疑人和分析线索，你需要找到真相并将凶手绳之以法。
+在整个游戏过程中，你将面临各种挑战和难题，需要运用你的观察力、推理能力和调查技巧来解决。你需要仔细分析每个线索，与各个相关人员交谈，并在隐藏的细节中找到关键信息。
+只有通过深入调查和正确的推理，你才能揭示真相，找到凶手并完成你的使命。你的决策和行动将决定案件的结局，所以要谨慎行事，不要错过任何重要线索。
+祝你好运，福尔摩斯！
+```
+
+characters.md
+```english
+福尔摩斯的探案游戏角色
+1. 福尔摩斯（玩家角色）- 你将扮演福尔摩斯，一位聪明才智的侦探。你拥有敏锐的观察力和卓越的推理能力，是解决这起谋杀案的唯一希望。
+2. 华生博士（助手角色）- 华生博士是福尔摩斯的忠实伙伴和助手。他将与你一起调查案件，提供帮助和关键信息。
+3. 商人（受害者角色）- 商人是这起谋杀案的受害者。他在自己的豪宅中被发现死亡，你需要找出凶手并为他伸张正义。
+4. 嫌疑人（非玩家角色）- 游戏中将有多个嫌疑人，他们可能与谋杀案有关。你需要审问他们，收集证据，并找出真正的凶手。
+5. 目击者（非玩家角色）- 目击者可能提供关于案件的重要信息。你需要与他们交谈，了解他们的观察和见证。
+6. 其他相关人员（非玩家角色）- 游戏中还会有其他与案件相关的人员，他们可能提供线索或帮助你解决难题。
+每个角色都有自己的特点和背景故事，你需要与他们互动并利用他们的信息来推动故事的发展。
+```
+
+props.md
+```english
+福尔摩斯的探案游戏道具
+1. 推理笔记本 - 你将用推理笔记本记录收集到的线索、嫌疑人的证词和其他重要信息。这将帮助你整理思路、分析线索和推理出真相。
+2. 收集工具 - 你将使用各种收集工具，如放大镜、指纹粉末和显微镜，来寻找隐藏的线索和证据。这些工具将帮助你发现关键信息并解开谜团。
+3. 证据袋 - 你将用证据袋收集和保管收集到的证据。这些证据可能包括物品、文件、照片等，它们将成为你解决案件的重要依据。
+4. 问询技巧 - 你将使用问询技巧来与嫌疑人和目击者交谈，获取他们的证词和观察。通过合理的提问和观察，你可以获得有关案件的重要信息。
+5. 地图和平面图 - 你将使用地图和平面图来了解案发现场和其他相关地点的布局。这将帮助你理清线索和推理案件的发展。
+这些道具将成为你解决谋杀案的工具和辅助物品。合理利用它们，你将更有可能找到真相并成功破案。
+```
+
+comment.md
+```english
+福尔摩斯的探案游戏注释
+这个游戏将带你进入福尔摩斯的世界，让你亲身体验作为一名侦探的刺激和挑战。你将需要运用你的观察力、推理能力和调查技巧来解决这起神秘的谋杀案。
+通过与各个角色互动、收集证据和分析线索，你将逐渐揭开真相并找出凶手。你的决策和行动将决定案件的结局，所以要谨慎行事，不要错过任何重要线索。
+这个游戏将考验你的观察力、推理能力和决策能力。准备好迎接挑战了吗？让我们一起开始福尔摩斯的探案之旅吧！
+```
+
+"
+As the Script Tester, to make the game operable by LLM without further writing, ChatRPG have formulated the following regulations:
+1) scene should have a goal
+2) scene should have characters, and new character should have detailed description including background, occupation, plot, characteristics, loopholes,timelines, objective etc.
+3) scene should have background story world;
+4) no potential logical bugs;
+5) The entire game design conforms to the tasks proposed by the user;
+6) most importantly, do not only check the errors in the scene, but also the logic of the scene. Make sure that LLM can understand and replay this scene script and interact with users for an immersive rpg experience;
+Now, you should check the above regulations one by one and review the scenes in detail, propose one comment with the highest priority about the scenes, and give me instructions on how to fix. Tell me your comment with the highest priority and corresponding suggestions on revision. If the scenes are perfect and you have no comment on them, return only one line like "<INFO> Finished".
+
+[2023-28-09 15:12:43 INFO] **[OpenAI_Usage_Info Receive]**
+prompt_tokens: 2298
+completion_tokens: 5
+total_tokens: 2303
+
+
+[2023-28-09 15:12:43 INFO] Script Tester: **Script Tester<->Script Writer on : SingleSceneReviewComment, turn 0**
+
+[ChatRPG is a game studio powered by multiple intelligent agents, such as chief executive officer, chief human resources officer, chief product officer, chief game designer, etc, with a multi-agent organizational structure and the mission of "changing the digital world through gaming".
+You are Game Script Writer. we are both working at ChatRPG. We share a common interest in collaborating to successfully complete a task assigned by a new customer.
+You can write/create rpg game by providing a detailed script for the scene so that LLM can understand the script and play with the customer. You have extensive game design and background writing experience in many varieties of RPG games, such as trpg, crpg, jrpg, Murder mystery etc,.
+Here is a new customer's task: 做一个福尔摩斯的探案游戏，我扮演福尔摩斯，破一个案子 .
+To complete the task, you must write a response that appropriately solves the requested instruction based on your expertise and customer's needs.]
+
+<INFO> Finished.
+
+[2023-28-09 15:12:43 INFO] **[Seminar Conclusion]**:
+
+ <INFO> Finished.
+
+[2023-28-09 15:12:43 INFO] **[Execute Detail]**
+
+execute SimplePhase:[SingleSceneModification] in ComposedPhase:[SingleSceneReview], cycle 0
+
+[2023-28-09 15:12:43 INFO] System: **[chatting]**
+
+| Parameter | Value |
+| --- | --- |
+| **task_prompt** | 做一个福尔摩斯的探案游戏，我扮演福尔摩斯，破一个案子  |
+| **need_reflect** | False |
+| **assistant_role_name** | Script Writer |
+| **user_role_name** | Script Tester |
+| **phase_prompt** | According to the new user's task, our designed game category, languages and ideas, our developed first-edition scenes are listed below:  Task: "{task}". Category: "{category}". Language: "{language}" Ideas: "{ideas}" Scripts:  "{scripts}" Comments on Scripts: "{comments}" In the game, each file must strictly follow a markdown block format, where the following tokens must be replaced such that "FILENAME" is the lowercase file name including the file extension, "LANGUAGE" in the language, and "SCENE" is the original designed game script. Format: FILENAME LANGUAGE SCENE As the {assistant_role}, to satisfy the new user's demand and make the game playable, fun and robust, you should modify corresponding scenes according to the comments. Then, output the full and complete scenes with all comments fixed. Return all scenes strictly following the required format. |
+| **phase_name** | SingleSceneModification |
+| **assistant_role_prompt** | {chatrpg_prompt} You are Game Script Writer. we are both working at ChatRPG. We share a common interest in collaborating to successfully complete a task assigned by a new customer. You can write/create rpg game by providing a detailed script for the scene so that LLM can understand the script and play with the customer. You have extensive game design and background writing experience in many varieties of RPG games, such as trpg, crpg, jrpg, Murder mystery etc,. Here is a new customer's task: {task}. To complete the task, you must write a response that appropriately solves the requested instruction based on your expertise and customer's needs. |
+| **user_role_prompt** | {chatrpg_prompt} You are Game Script Tester. we are both working at ChatRPG. We share a common interest in collaborating to successfully complete a task assigned by a new customer. You can help Script Writer to dryrun game scripts for story verification, role verification, logic verification, and offer proposals to improve the game design and to enhance the quality and playability of the game script. Here is a new customer's task: {task}. To complete the task, you must write a response that appropriately solves the requested instruction based on your expertise and customer's needs. |
+| **chat_turn_limit** | 1 |
+| **placeholders** | {'cycle_num': 3, 'modification_conclusion': '', 'cycle_index': 0, 'task': '做一个福尔摩斯的探案游戏，我扮演福尔摩斯，破一个案子 ', 'category': 'detective', 'ideas': '', 'language': ' Chinese', 'scripts': 'background.md\nenglish\n福尔摩斯的探案游戏背景\n在维多利亚时代的伦敦，福尔摩斯是一位著名的侦探，以其聪明才智和独特的推理能力而闻名于世。他的助手华生博士是他的忠实伙伴，与他一起解决了许多复杂的谜题和案件。\n在这个游戏中，你将扮演福尔摩斯，面临一起神秘的谋杀案。一位富有的商人在他的豪宅中被发现死亡，没有任何明显的线索。你的任务是解开这个谜团，找出凶手并为受害者伸张正义。\n你将需要运用你的观察力、推理能力和调查技巧来收集证据、审问嫌疑人，并分析线索以揭示真相。你将遇到各种各样的人物，包括目击者、嫌疑人和其他相关人员，他们可能会提供有关案件的重要信息。\n准备好了吗，福尔摩斯？开始你的探案之旅吧！\n\n\ngoal.md\nenglish\n福尔摩斯的探案游戏目标\n你的目标是解开这起神秘的谋杀案，找出凶手并为受害者伸张正义。通过收集证据、审问嫌疑人和分析线索，你需要找到真相并将凶手绳之以法。\n在整个游戏过程中，你将面临各种挑战和难题，需要运用你的观察力、推理能力和调查技巧来解决。你需要仔细分析每个线索，与各个相关人员交谈，并在隐藏的细节中找到关键信息。\n只有通过深入调查和正确的推理，你才能揭示真相，找到凶手并完成你的使命。你的决策和行动将决定案件的结局，所以要谨慎行事，不要错过任何重要线索。\n祝你好运，福尔摩斯！\n\n\ncharacters.md\nenglish\n福尔摩斯的探案游戏角色\n1. 福尔摩斯（玩家角色）- 你将扮演福尔摩斯，一位聪明才智的侦探。你拥有敏锐的观察力和卓越的推理能力，是解决这起谋杀案的唯一希望。\n2. 华生博士（助手角色）- 华生博士是福尔摩斯的忠实伙伴和助手。他将与你一起调查案件，提供帮助和关键信息。\n3. 商人（受害者角色）- 商人是这起谋杀案的受害者。他在自己的豪宅中被发现死亡，你需要找出凶手并为他伸张正义。\n4. 嫌疑人（非玩家角色）- 游戏中将有多个嫌疑人，他们可能与谋杀案有关。你需要审问他们，收集证据，并找出真正的凶手。\n5. 目击者（非玩家角色）- 目击者可能提供关于案件的重要信息。你需要与他们交谈，了解他们的观察和见证。\n6. 其他相关人员（非玩家角色）- 游戏中还会有其他与案件相关的人员，他们可能提供线索或帮助你解决难题。\n每个角色都有自己的特点和背景故事，你需要与他们互动并利用他们的信息来推动故事的发展。\n\n\nprops.md\nenglish\n福尔摩斯的探案游戏道具\n1. 推理笔记本 - 你将用推理笔记本记录收集到的线索、嫌疑人的证词和其他重要信息。这将帮助你整理思路、分析线索和推理出真相。\n2. 收集工具 - 你将使用各种收集工具，如放大镜、指纹粉末和显微镜，来寻找隐藏的线索和证据。这些工具将帮助你发现关键信息并解开谜团。\n3. 证据袋 - 你将用证据袋收集和保管收集到的证据。这些证据可能包括物品、文件、照片等，它们将成为你解决案件的重要依据。\n4. 问询技巧 - 你将使用问询技巧来与嫌疑人和目击者交谈，获取他们的证词和观察。通过合理的提问和观察，你可以获得有关案件的重要信息。\n5. 地图和平面图 - 你将使用地图和平面图来了解案发现场和其他相关地点的布局。这将帮助你理清线索和推理案件的发展。\n这些道具将成为你解决谋杀案的工具和辅助物品。合理利用它们，你将更有可能找到真相并成功破案。\n\n\ncomment.md\nenglish\n福尔摩斯的探案游戏注释\n这个游戏将带你进入福尔摩斯的世界，让你亲身体验作为一名侦探的刺激和挑战。你将需要运用你的观察力、推理能力和调查技巧来解决这起神秘的谋杀案。\n通过与各个角色互动、收集证据和分析线索，你将逐渐揭开真相并找出凶手。你的决策和行动将决定案件的结局，所以要谨慎行事，不要错过任何重要线索。\n这个游戏将考验你的观察力、推理能力和决策能力。准备好迎接挑战了吗？让我们一起开始福尔摩斯的探案之旅吧！\n\n\n', 'images': '', 'comments': ' Finished.'} |
+| **model_type** | ModelType.GPT_3_5_TURBO |
+
+[2023-28-09 15:12:43 INFO] System: **[RolePlaying]**
+
+| Parameter | Value |
+| --- | --- |
+| **assistant_role_name** | Script Writer |
+| **user_role_name** | Script Tester |
+| **assistant_role_prompt** | {chatrpg_prompt} You are Game Script Writer. we are both working at ChatRPG. We share a common interest in collaborating to successfully complete a task assigned by a new customer. You can write/create rpg game by providing a detailed script for the scene so that LLM can understand the script and play with the customer. You have extensive game design and background writing experience in many varieties of RPG games, such as trpg, crpg, jrpg, Murder mystery etc,. Here is a new customer's task: {task}. To complete the task, you must write a response that appropriately solves the requested instruction based on your expertise and customer's needs. |
+| **user_role_prompt** | {chatrpg_prompt} You are Game Script Tester. we are both working at ChatRPG. We share a common interest in collaborating to successfully complete a task assigned by a new customer. You can help Script Writer to dryrun game scripts for story verification, role verification, logic verification, and offer proposals to improve the game design and to enhance the quality and playability of the game script. Here is a new customer's task: {task}. To complete the task, you must write a response that appropriately solves the requested instruction based on your expertise and customer's needs. |
+| **task_prompt** | 做一个福尔摩斯的探案游戏，我扮演福尔摩斯，破一个案子  |
+| **with_task_specify** | False |
+| **model_type** | ModelType.GPT_3_5_TURBO |
+
+[2023-28-09 15:12:43 INFO] Script Tester: **[Start Chat]**
+
+[ChatRPG is a game studio powered by multiple intelligent agents, such as chief executive officer, chief human resources officer, chief product officer, chief game designer, etc, with a multi-agent organizational structure and the mission of "changing the digital world through gaming".
+You are Game Script Writer. we are both working at ChatRPG. We share a common interest in collaborating to successfully complete a task assigned by a new customer.
+You can write/create rpg game by providing a detailed script for the scene so that LLM can understand the script and play with the customer. You have extensive game design and background writing experience in many varieties of RPG games, such as trpg, crpg, jrpg, Murder mystery etc,.
+Here is a new customer's task: 做一个福尔摩斯的探案游戏，我扮演福尔摩斯，破一个案子 .
+To complete the task, you must write a response that appropriately solves the requested instruction based on your expertise and customer's needs.]
+
+According to the new user's task, our designed game category, languages and ideas, our developed first-edition scenes are listed below: 
+Task: "做一个福尔摩斯的探案游戏，我扮演福尔摩斯，破一个案子 ".
+Category: "detective".
+Language: " Chinese"
+Ideas: ""
+Scripts: 
+"background.md
+```english
+福尔摩斯的探案游戏背景
+在维多利亚时代的伦敦，福尔摩斯是一位著名的侦探，以其聪明才智和独特的推理能力而闻名于世。他的助手华生博士是他的忠实伙伴，与他一起解决了许多复杂的谜题和案件。
+在这个游戏中，你将扮演福尔摩斯，面临一起神秘的谋杀案。一位富有的商人在他的豪宅中被发现死亡，没有任何明显的线索。你的任务是解开这个谜团，找出凶手并为受害者伸张正义。
+你将需要运用你的观察力、推理能力和调查技巧来收集证据、审问嫌疑人，并分析线索以揭示真相。你将遇到各种各样的人物，包括目击者、嫌疑人和其他相关人员，他们可能会提供有关案件的重要信息。
+准备好了吗，福尔摩斯？开始你的探案之旅吧！
+```
+
+goal.md
+```english
+福尔摩斯的探案游戏目标
+你的目标是解开这起神秘的谋杀案，找出凶手并为受害者伸张正义。通过收集证据、审问嫌疑人和分析线索，你需要找到真相并将凶手绳之以法。
+在整个游戏过程中，你将面临各种挑战和难题，需要运用你的观察力、推理能力和调查技巧来解决。你需要仔细分析每个线索，与各个相关人员交谈，并在隐藏的细节中找到关键信息。
+只有通过深入调查和正确的推理，你才能揭示真相，找到凶手并完成你的使命。你的决策和行动将决定案件的结局，所以要谨慎行事，不要错过任何重要线索。
+祝你好运，福尔摩斯！
+```
+
+characters.md
+```english
+福尔摩斯的探案游戏角色
+1. 福尔摩斯（玩家角色）- 你将扮演福尔摩斯，一位聪明才智的侦探。你拥有敏锐的观察力和卓越的推理能力，是解决这起谋杀案的唯一希望。
+2. 华生博士（助手角色）- 华生博士是福尔摩斯的忠实伙伴和助手。他将与你一起调查案件，提供帮助和关键信息。
+3. 商人（受害者角色）- 商人是这起谋杀案的受害者。他在自己的豪宅中被发现死亡，你需要找出凶手并为他伸张正义。
+4. 嫌疑人（非玩家角色）- 游戏中将有多个嫌疑人，他们可能与谋杀案有关。你需要审问他们，收集证据，并找出真正的凶手。
+5. 目击者（非玩家角色）- 目击者可能提供关于案件的重要信息。你需要与他们交谈，了解他们的观察和见证。
+6. 其他相关人员（非玩家角色）- 游戏中还会有其他与案件相关的人员，他们可能提供线索或帮助你解决难题。
+每个角色都有自己的特点和背景故事，你需要与他们互动并利用他们的信息来推动故事的发展。
+```
+
+props.md
+```english
+福尔摩斯的探案游戏道具
+1. 推理笔记本 - 你将用推理笔记本记录收集到的线索、嫌疑人的证词和其他重要信息。这将帮助你整理思路、分析线索和推理出真相。
+2. 收集工具 - 你将使用各种收集工具，如放大镜、指纹粉末和显微镜，来寻找隐藏的线索和证据。这些工具将帮助你发现关键信息并解开谜团。
+3. 证据袋 - 你将用证据袋收集和保管收集到的证据。这些证据可能包括物品、文件、照片等，它们将成为你解决案件的重要依据。
+4. 问询技巧 - 你将使用问询技巧来与嫌疑人和目击者交谈，获取他们的证词和观察。通过合理的提问和观察，你可以获得有关案件的重要信息。
+5. 地图和平面图 - 你将使用地图和平面图来了解案发现场和其他相关地点的布局。这将帮助你理清线索和推理案件的发展。
+这些道具将成为你解决谋杀案的工具和辅助物品。合理利用它们，你将更有可能找到真相并成功破案。
+```
+
+comment.md
+```english
+福尔摩斯的探案游戏注释
+这个游戏将带你进入福尔摩斯的世界，让你亲身体验作为一名侦探的刺激和挑战。你将需要运用你的观察力、推理能力和调查技巧来解决这起神秘的谋杀案。
+通过与各个角色互动、收集证据和分析线索，你将逐渐揭开真相并找出凶手。你的决策和行动将决定案件的结局，所以要谨慎行事，不要错过任何重要线索。
+这个游戏将考验你的观察力、推理能力和决策能力。准备好迎接挑战了吗？让我们一起开始福尔摩斯的探案之旅吧！
+```
+
+"
+Comments on Scripts:
+" Finished."
+In the game, each file must strictly follow a markdown block format, where the following tokens must be replaced such that "FILENAME" is the lowercase file name including the file extension, "LANGUAGE" in the language, and "SCENE" is the original designed game script. Format:
+FILENAME
+```LANGUAGE
+SCENE
+```
+As the Script Writer, to satisfy the new user's demand and make the game playable, fun and robust, you should modify corresponding scenes according to the comments. Then, output the full and complete scenes with all comments fixed. Return all scenes strictly following the required format.
+
+[2023-28-09 15:13:02 INFO] **[OpenAI_Usage_Info Receive]**
+prompt_tokens: 2243
+completion_tokens: 1802
+total_tokens: 4045
+
+
+[2023-28-09 15:13:02 INFO] Script Writer: **Script Writer<->Script Tester on : SingleSceneModification, turn 0**
+
+[ChatRPG is a game studio powered by multiple intelligent agents, such as chief executive officer, chief human resources officer, chief product officer, chief game designer, etc, with a multi-agent organizational structure and the mission of "changing the digital world through gaming".
+You are Game Script Tester. we are both working at ChatRPG. We share a common interest in collaborating to successfully complete a task assigned by a new customer.
+You can help Script Writer to dryrun game scripts for story verification, role verification, logic verification, and offer proposals to improve the game design and to enhance the quality and playability of the game script.
+Here is a new customer's task: 做一个福尔摩斯的探案游戏，我扮演福尔摩斯，破一个案子 .
+To complete the task, you must write a response that appropriately solves the requested instruction based on your expertise and customer's needs.]
+
+background.md
+```chinese
+福尔摩斯的探案游戏背景
+在维多利亚时代的伦敦，福尔摩斯是一位著名的侦探，以其聪明才智和独特的推理能力而闻名于世。他的助手华生博士是他的忠实伙伴，与他一起解决了许多复杂的谜题和案件。
+在这个游戏中，你将扮演福尔摩斯，面临一起神秘的谋杀案。一位富有的商人在他的豪宅中被发现死亡，没有任何明显的线索。你的任务是解开这个谜团，找出凶手并为受害者伸张正义。
+你将需要运用你的观察力、推理能力和调查技巧来收集证据、审问嫌疑人，并分析线索以揭示真相。你将遇到各种各样的人物，包括目击者、嫌疑人和其他相关人员，他们可能会提供有关案件的重要信息。
+准备好了吗，福尔摩斯？开始你的探案之旅吧！
+```
+
+goal.md
+```chinese
+福尔摩斯的探案游戏目标
+你的目标是解开这起神秘的谋杀案，找出凶手并为受害者伸张正义。通过收集证据、审问嫌疑人和分析线索，你需要找到真相并将凶手绳之以法。
+在整个游戏过程中，你将面临各种挑战和难题，需要运用你的观察力、推理能力和调查技巧来解决。你需要仔细分析每个线索，与各个相关人员交谈，并在隐藏的细节中找到关键信息。
+只有通过深入调查和正确的推理，你才能揭示真相，找到凶手并完成你的使命。你的决策和行动将决定案件的结局，所以要谨慎行事，不要错过任何重要线索。
+祝你好运，福尔摩斯！
+```
+
+characters.md
+```chinese
+福尔摩斯的探案游戏角色
+1. 福尔摩斯（玩家角色）- 你将扮演福尔摩斯，一位聪明才智的侦探。你拥有敏锐的观察力和卓越的推理能力，是解决这起谋杀案的唯一希望。
+2. 华生博士（助手角色）- 华生博士是福尔摩斯的忠实伙伴和助手。他将与你一起调查案件，提供帮助和关键信息。
+3. 商人（受害者角色）- 商人是这起谋杀案的受害者。他在自己的豪宅中被发现死亡，你需要找出凶手并为他伸张正义。
+4. 嫌疑人（非玩家角色）- 游戏中将有多个嫌疑人，他们可能与谋杀案有关。你需要审问他们，收集证据，并找出真正的凶手。
+5. 目击者（非玩家角色）- 目击者可能提供关于案件的重要信息。你需要与他们交谈，了解他们的观察和见证。
+6. 其他相关人员（非玩家角色）- 游戏中还会有其他与案件相关的人员，他们可能提供线索或帮助你解决难题。
+每个角色都有自己的特点和背景故事，你需要与他们互动并利用他们的信息来推动故事的发展。
+```
+
+props.md
+```chinese
+福尔摩斯的探案游戏道具
+1. 推理笔记本 - 你将用推理笔记本记录收集到的线索、嫌疑人的证词和其他重要信息。这将帮助你整理思路、分析线索和推理出真相。
+2. 收集工具 - 你将使用各种收集工具，如放大镜、指纹粉末和显微镜，来寻找隐藏的线索和证据。这些工具将帮助你发现关键信息并解开谜团。
+3. 证据袋 - 你将用证据袋收集和保管收集到的证据。这些证据可能包括物品、文件、照片等，它们将成为你解决案件的重要依据。
+4. 问询技巧 - 你将使用问询技巧来与嫌疑人和目击者交谈，获取他们的证词和观察。通过合理的提问和观察，你可以获得有关案件的重要信息。
+5. 地图和平面图 - 你将使用地图和平面图来了解案发现场和其他相关地点的布局。这将帮助你理清线索和推理案件的发展。
+这些道具将成为你解决谋杀案的工具和辅助物品。合理利用它们，你将更有可能找到真相并成功破案。
+```
+
+comment.md
+```chinese
+福尔摩斯的探案游戏注释
+这个游戏将带你进入福尔摩斯的世界，让你亲身体验作为一名侦探的刺激和挑战。你将需要运用你的观察力、推理能力和调查技巧来解决这起神秘的谋杀案。
+通过与各个角色互动、收集证据和分析线索，你将逐渐揭开真相并找出凶手。你的决策和行动将决定案件的结局，所以要谨慎行事，不要错过任何重要线索。
+这个游戏将考验你的观察力、推理能力和决策能力。准备好迎接挑战了吗？让我们一起开始福尔摩斯的探案之旅吧！
+```
+
+
+
+[2023-28-09 15:13:02 INFO] **[Seminar Conclusion]**:
+
+ background.md
+```chinese
+福尔摩斯的探案游戏背景
+在维多利亚时代的伦敦，福尔摩斯是一位著名的侦探，以其聪明才智和独特的推理能力而闻名于世。他的助手华生博士是他的忠实伙伴，与他一起解决了许多复杂的谜题和案件。
+在这个游戏中，你将扮演福尔摩斯，面临一起神秘的谋杀案。一位富有的商人在他的豪宅中被发现死亡，没有任何明显的线索。你的任务是解开这个谜团，找出凶手并为受害者伸张正义。
+你将需要运用你的观察力、推理能力和调查技巧来收集证据、审问嫌疑人，并分析线索以揭示真相。你将遇到各种各样的人物，包括目击者、嫌疑人和其他相关人员，他们可能会提供有关案件的重要信息。
+准备好了吗，福尔摩斯？开始你的探案之旅吧！
+```
+
+goal.md
+```chinese
+福尔摩斯的探案游戏目标
+你的目标是解开这起神秘的谋杀案，找出凶手并为受害者伸张正义。通过收集证据、审问嫌疑人和分析线索，你需要找到真相并将凶手绳之以法。
+在整个游戏过程中，你将面临各种挑战和难题，需要运用你的观察力、推理能力和调查技巧来解决。你需要仔细分析每个线索，与各个相关人员交谈，并在隐藏的细节中找到关键信息。
+只有通过深入调查和正确的推理，你才能揭示真相，找到凶手并完成你的使命。你的决策和行动将决定案件的结局，所以要谨慎行事，不要错过任何重要线索。
+祝你好运，福尔摩斯！
+```
+
+characters.md
+```chinese
+福尔摩斯的探案游戏角色
+1. 福尔摩斯（玩家角色）- 你将扮演福尔摩斯，一位聪明才智的侦探。你拥有敏锐的观察力和卓越的推理能力，是解决这起谋杀案的唯一希望。
+2. 华生博士（助手角色）- 华生博士是福尔摩斯的忠实伙伴和助手。他将与你一起调查案件，提供帮助和关键信息。
+3. 商人（受害者角色）- 商人是这起谋杀案的受害者。他在自己的豪宅中被发现死亡，你需要找出凶手并为他伸张正义。
+4. 嫌疑人（非玩家角色）- 游戏中将有多个嫌疑人，他们可能与谋杀案有关。你需要审问他们，收集证据，并找出真正的凶手。
+5. 目击者（非玩家角色）- 目击者可能提供关于案件的重要信息。你需要与他们交谈，了解他们的观察和见证。
+6. 其他相关人员（非玩家角色）- 游戏中还会有其他与案件相关的人员，他们可能提供线索或帮助你解决难题。
+每个角色都有自己的特点和背景故事，你需要与他们互动并利用他们的信息来推动故事的发展。
+```
+
+props.md
+```chinese
+福尔摩斯的探案游戏道具
+1. 推理笔记本 - 你将用推理笔记本记录收集到的线索、嫌疑人的证词和其他重要信息。这将帮助你整理思路、分析线索和推理出真相。
+2. 收集工具 - 你将使用各种收集工具，如放大镜、指纹粉末和显微镜，来寻找隐藏的线索和证据。这些工具将帮助你发现关键信息并解开谜团。
+3. 证据袋 - 你将用证据袋收集和保管收集到的证据。这些证据可能包括物品、文件、照片等，它们将成为你解决案件的重要依据。
+4. 问询技巧 - 你将使用问询技巧来与嫌疑人和目击者交谈，获取他们的证词和观察。通过合理的提问和观察，你可以获得有关案件的重要信息。
+5. 地图和平面图 - 你将使用地图和平面图来了解案发现场和其他相关地点的布局。这将帮助你理清线索和推理案件的发展。
+这些道具将成为你解决谋杀案的工具和辅助物品。合理利用它们，你将更有可能找到真相并成功破案。
+```
+
+comment.md
+```chinese
+福尔摩斯的探案游戏注释
+这个游戏将带你进入福尔摩斯的世界，让你亲身体验作为一名侦探的刺激和挑战。你将需要运用你的观察力、推理能力和调查技巧来解决这起神秘的谋杀案。
+通过与各个角色互动、收集证据和分析线索，你将逐渐揭开真相并找出凶手。你的决策和行动将决定案件的结局，所以要谨慎行事，不要错过任何重要线索。
+这个游戏将考验你的观察力、推理能力和决策能力。准备好迎接挑战了吗？让我们一起开始福尔摩斯的探案之旅吧！
+```
+
+
+
+[2023-28-09 15:13:02 INFO] **[Rewrite Codes]**
+
+/mnt/c/Users/leizh/Src/rpg-test/WareHouse/detective_DefaultOrganization_20230928151213/background.md Wrote
+/mnt/c/Users/leizh/Src/rpg-test/WareHouse/detective_DefaultOrganization_20230928151213/goal.md Wrote
+/mnt/c/Users/leizh/Src/rpg-test/WareHouse/detective_DefaultOrganization_20230928151213/characters.md Wrote
+/mnt/c/Users/leizh/Src/rpg-test/WareHouse/detective_DefaultOrganization_20230928151213/props.md Wrote
+/mnt/c/Users/leizh/Src/rpg-test/WareHouse/detective_DefaultOrganization_20230928151213/comment.md Wrote
+
+
+[2023-28-09 15:13:03 INFO] **[Software Info]**:
+
+ 
+
+💰**cost**=$0.037394
+
+🔨**version_updates**=-1
+
+📃**num_code_files**=5
+
+🏞**num_png_files**=0
+
+📚**num_doc_files**=4
+
+📃**code_lines**=29
+
+📋**env_lines**=-1
+
+📒**manual_lines**=-1
+
+🗣**num_utterances**=12
+
+🤔**num_self_reflections**=0
+
+❓**num_prompt_tokens**=7418
+
+❗**num_completion_tokens**=3785
+
+🌟**num_total_tokens**=11203
+
+[2023-28-09 15:13:03 INFO] **[Execute Detail]**
+
+execute SimplePhase:[SingleSceneReviewComment] in ComposedPhase:[SingleSceneReview], cycle 1
+
+[2023-28-09 15:13:03 INFO] System: **[chatting]**
+
+| Parameter | Value |
+| --- | --- |
+| **task_prompt** | 做一个福尔摩斯的探案游戏，我扮演福尔摩斯，破一个案子  |
+| **need_reflect** | False |
+| **assistant_role_name** | Script Tester |
+| **user_role_name** | Script Writer |
+| **phase_prompt** | According to the new user's task and our game designs:  Task: "{task}". Category: "{category}". Language: "{language}" Ideas: "{ideas}" Scripts: "{scripts}" As the {assistant_role}, to make the game operable by LLM without further writing, ChatRPG have formulated the following regulations: 1) scene should have a goal 2) scene should have characters, and new character should have detailed description including background, occupation, plot, characteristics, loopholes,timelines, objective etc. 3) scene should have background story world; 4) no potential logical bugs; 5) The entire game design conforms to the tasks proposed by the user; 6) most importantly, do not only check the errors in the scene, but also the logic of the scene. Make sure that LLM can understand and replay this scene script and interact with users for an immersive rpg experience; Now, you should check the above regulations one by one and review the scenes in detail, propose one comment with the highest priority about the scenes, and give me instructions on how to fix. Tell me your comment with the highest priority and corresponding suggestions on revision. If the scenes are perfect and you have no comment on them, return only one line like " Finished". |
+| **phase_name** | SingleSceneReviewComment |
+| **assistant_role_prompt** | {chatrpg_prompt} You are Game Script Tester. we are both working at ChatRPG. We share a common interest in collaborating to successfully complete a task assigned by a new customer. You can help Script Writer to dryrun game scripts for story verification, role verification, logic verification, and offer proposals to improve the game design and to enhance the quality and playability of the game script. Here is a new customer's task: {task}. To complete the task, you must write a response that appropriately solves the requested instruction based on your expertise and customer's needs. |
+| **user_role_prompt** | {chatrpg_prompt} You are Game Script Writer. we are both working at ChatRPG. We share a common interest in collaborating to successfully complete a task assigned by a new customer. You can write/create rpg game by providing a detailed script for the scene so that LLM can understand the script and play with the customer. You have extensive game design and background writing experience in many varieties of RPG games, such as trpg, crpg, jrpg, Murder mystery etc,. Here is a new customer's task: {task}. To complete the task, you must write a response that appropriately solves the requested instruction based on your expertise and customer's needs. |
+| **chat_turn_limit** | 1 |
+| **placeholders** | {'cycle_num': 3, 'modification_conclusion': 'background.md\nchinese\n福尔摩斯的探案游戏背景\n在维多利亚时代的伦敦，福尔摩斯是一位著名的侦探，以其聪明才智和独特的推理能力而闻名于世。他的助手华生博士是他的忠实伙伴，与他一起解决了许多复杂的谜题和案件。\n在这个游戏中，你将扮演福尔摩斯，面临一起神秘的谋杀案。一位富有的商人在他的豪宅中被发现死亡，没有任何明显的线索。你的任务是解开这个谜团，找出凶手并为受害者伸张正义。\n你将需要运用你的观察力、推理能力和调查技巧来收集证据、审问嫌疑人，并分析线索以揭示真相。你将遇到各种各样的人物，包括目击者、嫌疑人和其他相关人员，他们可能会提供有关案件的重要信息。\n准备好了吗，福尔摩斯？开始你的探案之旅吧！\n\n\ngoal.md\nchinese\n福尔摩斯的探案游戏目标\n你的目标是解开这起神秘的谋杀案，找出凶手并为受害者伸张正义。通过收集证据、审问嫌疑人和分析线索，你需要找到真相并将凶手绳之以法。\n在整个游戏过程中，你将面临各种挑战和难题，需要运用你的观察力、推理能力和调查技巧来解决。你需要仔细分析每个线索，与各个相关人员交谈，并在隐藏的细节中找到关键信息。\n只有通过深入调查和正确的推理，你才能揭示真相，找到凶手并完成你的使命。你的决策和行动将决定案件的结局，所以要谨慎行事，不要错过任何重要线索。\n祝你好运，福尔摩斯！\n\n\ncharacters.md\nchinese\n福尔摩斯的探案游戏角色\n1. 福尔摩斯（玩家角色）- 你将扮演福尔摩斯，一位聪明才智的侦探。你拥有敏锐的观察力和卓越的推理能力，是解决这起谋杀案的唯一希望。\n2. 华生博士（助手角色）- 华生博士是福尔摩斯的忠实伙伴和助手。他将与你一起调查案件，提供帮助和关键信息。\n3. 商人（受害者角色）- 商人是这起谋杀案的受害者。他在自己的豪宅中被发现死亡，你需要找出凶手并为他伸张正义。\n4. 嫌疑人（非玩家角色）- 游戏中将有多个嫌疑人，他们可能与谋杀案有关。你需要审问他们，收集证据，并找出真正的凶手。\n5. 目击者（非玩家角色）- 目击者可能提供关于案件的重要信息。你需要与他们交谈，了解他们的观察和见证。\n6. 其他相关人员（非玩家角色）- 游戏中还会有其他与案件相关的人员，他们可能提供线索或帮助你解决难题。\n每个角色都有自己的特点和背景故事，你需要与他们互动并利用他们的信息来推动故事的发展。\n\n\nprops.md\nchinese\n福尔摩斯的探案游戏道具\n1. 推理笔记本 - 你将用推理笔记本记录收集到的线索、嫌疑人的证词和其他重要信息。这将帮助你整理思路、分析线索和推理出真相。\n2. 收集工具 - 你将使用各种收集工具，如放大镜、指纹粉末和显微镜，来寻找隐藏的线索和证据。这些工具将帮助你发现关键信息并解开谜团。\n3. 证据袋 - 你将用证据袋收集和保管收集到的证据。这些证据可能包括物品、文件、照片等，它们将成为你解决案件的重要依据。\n4. 问询技巧 - 你将使用问询技巧来与嫌疑人和目击者交谈，获取他们的证词和观察。通过合理的提问和观察，你可以获得有关案件的重要信息。\n5. 地图和平面图 - 你将使用地图和平面图来了解案发现场和其他相关地点的布局。这将帮助你理清线索和推理案件的发展。\n这些道具将成为你解决谋杀案的工具和辅助物品。合理利用它们，你将更有可能找到真相并成功破案。\n\n\ncomment.md\nchinese\n福尔摩斯的探案游戏注释\n这个游戏将带你进入福尔摩斯的世界，让你亲身体验作为一名侦探的刺激和挑战。你将需要运用你的观察力、推理能力和调查技巧来解决这起神秘的谋杀案。\n通过与各个角色互动、收集证据和分析线索，你将逐渐揭开真相并找出凶手。你的决策和行动将决定案件的结局，所以要谨慎行事，不要错过任何重要线索。\n这个游戏将考验你的观察力、推理能力和决策能力。准备好迎接挑战了吗？让我们一起开始福尔摩斯的探案之旅吧！\n\n\n', 'cycle_index': 1, 'task': '做一个福尔摩斯的探案游戏，我扮演福尔摩斯，破一个案子 ', 'category': 'detective', 'ideas': '', 'language': ' Chinese', 'scripts': 'background.md\nenglish\n福尔摩斯的探案游戏背景\n在维多利亚时代的伦敦，福尔摩斯是一位著名的侦探，以其聪明才智和独特的推理能力而闻名于世。他的助手华生博士是他的忠实伙伴，与他一起解决了许多复杂的谜题和案件。\n在这个游戏中，你将扮演福尔摩斯，面临一起神秘的谋杀案。一位富有的商人在他的豪宅中被发现死亡，没有任何明显的线索。你的任务是解开这个谜团，找出凶手并为受害者伸张正义。\n你将需要运用你的观察力、推理能力和调查技巧来收集证据、审问嫌疑人，并分析线索以揭示真相。你将遇到各种各样的人物，包括目击者、嫌疑人和其他相关人员，他们可能会提供有关案件的重要信息。\n准备好了吗，福尔摩斯？开始你的探案之旅吧！\n\n\ngoal.md\nenglish\n福尔摩斯的探案游戏目标\n你的目标是解开这起神秘的谋杀案，找出凶手并为受害者伸张正义。通过收集证据、审问嫌疑人和分析线索，你需要找到真相并将凶手绳之以法。\n在整个游戏过程中，你将面临各种挑战和难题，需要运用你的观察力、推理能力和调查技巧来解决。你需要仔细分析每个线索，与各个相关人员交谈，并在隐藏的细节中找到关键信息。\n只有通过深入调查和正确的推理，你才能揭示真相，找到凶手并完成你的使命。你的决策和行动将决定案件的结局，所以要谨慎行事，不要错过任何重要线索。\n祝你好运，福尔摩斯！\n\n\ncharacters.md\nenglish\n福尔摩斯的探案游戏角色\n1. 福尔摩斯（玩家角色）- 你将扮演福尔摩斯，一位聪明才智的侦探。你拥有敏锐的观察力和卓越的推理能力，是解决这起谋杀案的唯一希望。\n2. 华生博士（助手角色）- 华生博士是福尔摩斯的忠实伙伴和助手。他将与你一起调查案件，提供帮助和关键信息。\n3. 商人（受害者角色）- 商人是这起谋杀案的受害者。他在自己的豪宅中被发现死亡，你需要找出凶手并为他伸张正义。\n4. 嫌疑人（非玩家角色）- 游戏中将有多个嫌疑人，他们可能与谋杀案有关。你需要审问他们，收集证据，并找出真正的凶手。\n5. 目击者（非玩家角色）- 目击者可能提供关于案件的重要信息。你需要与他们交谈，了解他们的观察和见证。\n6. 其他相关人员（非玩家角色）- 游戏中还会有其他与案件相关的人员，他们可能提供线索或帮助你解决难题。\n每个角色都有自己的特点和背景故事，你需要与他们互动并利用他们的信息来推动故事的发展。\n\n\nprops.md\nenglish\n福尔摩斯的探案游戏道具\n1. 推理笔记本 - 你将用推理笔记本记录收集到的线索、嫌疑人的证词和其他重要信息。这将帮助你整理思路、分析线索和推理出真相。\n2. 收集工具 - 你将使用各种收集工具，如放大镜、指纹粉末和显微镜，来寻找隐藏的线索和证据。这些工具将帮助你发现关键信息并解开谜团。\n3. 证据袋 - 你将用证据袋收集和保管收集到的证据。这些证据可能包括物品、文件、照片等，它们将成为你解决案件的重要依据。\n4. 问询技巧 - 你将使用问询技巧来与嫌疑人和目击者交谈，获取他们的证词和观察。通过合理的提问和观察，你可以获得有关案件的重要信息。\n5. 地图和平面图 - 你将使用地图和平面图来了解案发现场和其他相关地点的布局。这将帮助你理清线索和推理案件的发展。\n这些道具将成为你解决谋杀案的工具和辅助物品。合理利用它们，你将更有可能找到真相并成功破案。\n\n\ncomment.md\nenglish\n福尔摩斯的探案游戏注释\n这个游戏将带你进入福尔摩斯的世界，让你亲身体验作为一名侦探的刺激和挑战。你将需要运用你的观察力、推理能力和调查技巧来解决这起神秘的谋杀案。\n通过与各个角色互动、收集证据和分析线索，你将逐渐揭开真相并找出凶手。你的决策和行动将决定案件的结局，所以要谨慎行事，不要错过任何重要线索。\n这个游戏将考验你的观察力、推理能力和决策能力。准备好迎接挑战了吗？让我们一起开始福尔摩斯的探案之旅吧！\n\n\n', 'images': '', 'comments': ' Finished.'} |
+| **model_type** | ModelType.GPT_3_5_TURBO |
+
+[2023-28-09 15:13:03 INFO] System: **[RolePlaying]**
+
+| Parameter | Value |
+| --- | --- |
+| **assistant_role_name** | Script Tester |
+| **user_role_name** | Script Writer |
+| **assistant_role_prompt** | {chatrpg_prompt} You are Game Script Tester. we are both working at ChatRPG. We share a common interest in collaborating to successfully complete a task assigned by a new customer. You can help Script Writer to dryrun game scripts for story verification, role verification, logic verification, and offer proposals to improve the game design and to enhance the quality and playability of the game script. Here is a new customer's task: {task}. To complete the task, you must write a response that appropriately solves the requested instruction based on your expertise and customer's needs. |
+| **user_role_prompt** | {chatrpg_prompt} You are Game Script Writer. we are both working at ChatRPG. We share a common interest in collaborating to successfully complete a task assigned by a new customer. You can write/create rpg game by providing a detailed script for the scene so that LLM can understand the script and play with the customer. You have extensive game design and background writing experience in many varieties of RPG games, such as trpg, crpg, jrpg, Murder mystery etc,. Here is a new customer's task: {task}. To complete the task, you must write a response that appropriately solves the requested instruction based on your expertise and customer's needs. |
+| **task_prompt** | 做一个福尔摩斯的探案游戏，我扮演福尔摩斯，破一个案子  |
+| **with_task_specify** | False |
+| **model_type** | ModelType.GPT_3_5_TURBO |
+
+[2023-28-09 15:13:03 INFO] Script Writer: **[Start Chat]**
+
+[ChatRPG is a game studio powered by multiple intelligent agents, such as chief executive officer, chief human resources officer, chief product officer, chief game designer, etc, with a multi-agent organizational structure and the mission of "changing the digital world through gaming".
+You are Game Script Tester. we are both working at ChatRPG. We share a common interest in collaborating to successfully complete a task assigned by a new customer.
+You can help Script Writer to dryrun game scripts for story verification, role verification, logic verification, and offer proposals to improve the game design and to enhance the quality and playability of the game script.
+Here is a new customer's task: 做一个福尔摩斯的探案游戏，我扮演福尔摩斯，破一个案子 .
+To complete the task, you must write a response that appropriately solves the requested instruction based on your expertise and customer's needs.]
+
+According to the new user's task and our game designs: 
+Task: "做一个福尔摩斯的探案游戏，我扮演福尔摩斯，破一个案子 ".
+Category: "detective".
+Language: " Chinese"
+Ideas: ""
+Scripts:
+"background.md
+```english
+福尔摩斯的探案游戏背景
+在维多利亚时代的伦敦，福尔摩斯是一位著名的侦探，以其聪明才智和独特的推理能力而闻名于世。他的助手华生博士是他的忠实伙伴，与他一起解决了许多复杂的谜题和案件。
+在这个游戏中，你将扮演福尔摩斯，面临一起神秘的谋杀案。一位富有的商人在他的豪宅中被发现死亡，没有任何明显的线索。你的任务是解开这个谜团，找出凶手并为受害者伸张正义。
+你将需要运用你的观察力、推理能力和调查技巧来收集证据、审问嫌疑人，并分析线索以揭示真相。你将遇到各种各样的人物，包括目击者、嫌疑人和其他相关人员，他们可能会提供有关案件的重要信息。
+准备好了吗，福尔摩斯？开始你的探案之旅吧！
+```
+
+goal.md
+```english
+福尔摩斯的探案游戏目标
+你的目标是解开这起神秘的谋杀案，找出凶手并为受害者伸张正义。通过收集证据、审问嫌疑人和分析线索，你需要找到真相并将凶手绳之以法。
+在整个游戏过程中，你将面临各种挑战和难题，需要运用你的观察力、推理能力和调查技巧来解决。你需要仔细分析每个线索，与各个相关人员交谈，并在隐藏的细节中找到关键信息。
+只有通过深入调查和正确的推理，你才能揭示真相，找到凶手并完成你的使命。你的决策和行动将决定案件的结局，所以要谨慎行事，不要错过任何重要线索。
+祝你好运，福尔摩斯！
+```
+
+characters.md
+```english
+福尔摩斯的探案游戏角色
+1. 福尔摩斯（玩家角色）- 你将扮演福尔摩斯，一位聪明才智的侦探。你拥有敏锐的观察力和卓越的推理能力，是解决这起谋杀案的唯一希望。
+2. 华生博士（助手角色）- 华生博士是福尔摩斯的忠实伙伴和助手。他将与你一起调查案件，提供帮助和关键信息。
+3. 商人（受害者角色）- 商人是这起谋杀案的受害者。他在自己的豪宅中被发现死亡，你需要找出凶手并为他伸张正义。
+4. 嫌疑人（非玩家角色）- 游戏中将有多个嫌疑人，他们可能与谋杀案有关。你需要审问他们，收集证据，并找出真正的凶手。
+5. 目击者（非玩家角色）- 目击者可能提供关于案件的重要信息。你需要与他们交谈，了解他们的观察和见证。
+6. 其他相关人员（非玩家角色）- 游戏中还会有其他与案件相关的人员，他们可能提供线索或帮助你解决难题。
+每个角色都有自己的特点和背景故事，你需要与他们互动并利用他们的信息来推动故事的发展。
+```
+
+props.md
+```english
+福尔摩斯的探案游戏道具
+1. 推理笔记本 - 你将用推理笔记本记录收集到的线索、嫌疑人的证词和其他重要信息。这将帮助你整理思路、分析线索和推理出真相。
+2. 收集工具 - 你将使用各种收集工具，如放大镜、指纹粉末和显微镜，来寻找隐藏的线索和证据。这些工具将帮助你发现关键信息并解开谜团。
+3. 证据袋 - 你将用证据袋收集和保管收集到的证据。这些证据可能包括物品、文件、照片等，它们将成为你解决案件的重要依据。
+4. 问询技巧 - 你将使用问询技巧来与嫌疑人和目击者交谈，获取他们的证词和观察。通过合理的提问和观察，你可以获得有关案件的重要信息。
+5. 地图和平面图 - 你将使用地图和平面图来了解案发现场和其他相关地点的布局。这将帮助你理清线索和推理案件的发展。
+这些道具将成为你解决谋杀案的工具和辅助物品。合理利用它们，你将更有可能找到真相并成功破案。
+```
+
+comment.md
+```english
+福尔摩斯的探案游戏注释
+这个游戏将带你进入福尔摩斯的世界，让你亲身体验作为一名侦探的刺激和挑战。你将需要运用你的观察力、推理能力和调查技巧来解决这起神秘的谋杀案。
+通过与各个角色互动、收集证据和分析线索，你将逐渐揭开真相并找出凶手。你的决策和行动将决定案件的结局，所以要谨慎行事，不要错过任何重要线索。
+这个游戏将考验你的观察力、推理能力和决策能力。准备好迎接挑战了吗？让我们一起开始福尔摩斯的探案之旅吧！
+```
+
+"
+As the Script Tester, to make the game operable by LLM without further writing, ChatRPG have formulated the following regulations:
+1) scene should have a goal
+2) scene should have characters, and new character should have detailed description including background, occupation, plot, characteristics, loopholes,timelines, objective etc.
+3) scene should have background story world;
+4) no potential logical bugs;
+5) The entire game design conforms to the tasks proposed by the user;
+6) most importantly, do not only check the errors in the scene, but also the logic of the scene. Make sure that LLM can understand and replay this scene script and interact with users for an immersive rpg experience;
+Now, you should check the above regulations one by one and review the scenes in detail, propose one comment with the highest priority about the scenes, and give me instructions on how to fix. Tell me your comment with the highest priority and corresponding suggestions on revision. If the scenes are perfect and you have no comment on them, return only one line like "<INFO> Finished".
+
+[2023-28-09 15:13:03 INFO] **[OpenAI_Usage_Info Receive]**
+prompt_tokens: 2298
+completion_tokens: 5
+total_tokens: 2303
+
+
+[2023-28-09 15:13:03 INFO] Script Tester: **Script Tester<->Script Writer on : SingleSceneReviewComment, turn 0**
+
+[ChatRPG is a game studio powered by multiple intelligent agents, such as chief executive officer, chief human resources officer, chief product officer, chief game designer, etc, with a multi-agent organizational structure and the mission of "changing the digital world through gaming".
+You are Game Script Writer. we are both working at ChatRPG. We share a common interest in collaborating to successfully complete a task assigned by a new customer.
+You can write/create rpg game by providing a detailed script for the scene so that LLM can understand the script and play with the customer. You have extensive game design and background writing experience in many varieties of RPG games, such as trpg, crpg, jrpg, Murder mystery etc,.
+Here is a new customer's task: 做一个福尔摩斯的探案游戏，我扮演福尔摩斯，破一个案子 .
+To complete the task, you must write a response that appropriately solves the requested instruction based on your expertise and customer's needs.]
+
+<INFO> Finished.
+
+[2023-28-09 15:13:03 INFO] **[Seminar Conclusion]**:
+
+ <INFO> Finished.
+
+[2023-28-09 15:13:03 INFO] **[Execute Detail]**
+
+execute SimplePhase:[SingleSceneModification] in ComposedPhase:[SingleSceneReview], cycle 1
+
+[2023-28-09 15:13:03 INFO] System: **[chatting]**
+
+| Parameter | Value |
+| --- | --- |
+| **task_prompt** | 做一个福尔摩斯的探案游戏，我扮演福尔摩斯，破一个案子  |
+| **need_reflect** | False |
+| **assistant_role_name** | Script Writer |
+| **user_role_name** | Script Tester |
+| **phase_prompt** | According to the new user's task, our designed game category, languages and ideas, our developed first-edition scenes are listed below:  Task: "{task}". Category: "{category}". Language: "{language}" Ideas: "{ideas}" Scripts:  "{scripts}" Comments on Scripts: "{comments}" In the game, each file must strictly follow a markdown block format, where the following tokens must be replaced such that "FILENAME" is the lowercase file name including the file extension, "LANGUAGE" in the language, and "SCENE" is the original designed game script. Format: FILENAME LANGUAGE SCENE As the {assistant_role}, to satisfy the new user's demand and make the game playable, fun and robust, you should modify corresponding scenes according to the comments. Then, output the full and complete scenes with all comments fixed. Return all scenes strictly following the required format. |
+| **phase_name** | SingleSceneModification |
+| **assistant_role_prompt** | {chatrpg_prompt} You are Game Script Writer. we are both working at ChatRPG. We share a common interest in collaborating to successfully complete a task assigned by a new customer. You can write/create rpg game by providing a detailed script for the scene so that LLM can understand the script and play with the customer. You have extensive game design and background writing experience in many varieties of RPG games, such as trpg, crpg, jrpg, Murder mystery etc,. Here is a new customer's task: {task}. To complete the task, you must write a response that appropriately solves the requested instruction based on your expertise and customer's needs. |
+| **user_role_prompt** | {chatrpg_prompt} You are Game Script Tester. we are both working at ChatRPG. We share a common interest in collaborating to successfully complete a task assigned by a new customer. You can help Script Writer to dryrun game scripts for story verification, role verification, logic verification, and offer proposals to improve the game design and to enhance the quality and playability of the game script. Here is a new customer's task: {task}. To complete the task, you must write a response that appropriately solves the requested instruction based on your expertise and customer's needs. |
+| **chat_turn_limit** | 1 |
+| **placeholders** | {'cycle_num': 3, 'modification_conclusion': 'background.md\nchinese\n福尔摩斯的探案游戏背景\n在维多利亚时代的伦敦，福尔摩斯是一位著名的侦探，以其聪明才智和独特的推理能力而闻名于世。他的助手华生博士是他的忠实伙伴，与他一起解决了许多复杂的谜题和案件。\n在这个游戏中，你将扮演福尔摩斯，面临一起神秘的谋杀案。一位富有的商人在他的豪宅中被发现死亡，没有任何明显的线索。你的任务是解开这个谜团，找出凶手并为受害者伸张正义。\n你将需要运用你的观察力、推理能力和调查技巧来收集证据、审问嫌疑人，并分析线索以揭示真相。你将遇到各种各样的人物，包括目击者、嫌疑人和其他相关人员，他们可能会提供有关案件的重要信息。\n准备好了吗，福尔摩斯？开始你的探案之旅吧！\n\n\ngoal.md\nchinese\n福尔摩斯的探案游戏目标\n你的目标是解开这起神秘的谋杀案，找出凶手并为受害者伸张正义。通过收集证据、审问嫌疑人和分析线索，你需要找到真相并将凶手绳之以法。\n在整个游戏过程中，你将面临各种挑战和难题，需要运用你的观察力、推理能力和调查技巧来解决。你需要仔细分析每个线索，与各个相关人员交谈，并在隐藏的细节中找到关键信息。\n只有通过深入调查和正确的推理，你才能揭示真相，找到凶手并完成你的使命。你的决策和行动将决定案件的结局，所以要谨慎行事，不要错过任何重要线索。\n祝你好运，福尔摩斯！\n\n\ncharacters.md\nchinese\n福尔摩斯的探案游戏角色\n1. 福尔摩斯（玩家角色）- 你将扮演福尔摩斯，一位聪明才智的侦探。你拥有敏锐的观察力和卓越的推理能力，是解决这起谋杀案的唯一希望。\n2. 华生博士（助手角色）- 华生博士是福尔摩斯的忠实伙伴和助手。他将与你一起调查案件，提供帮助和关键信息。\n3. 商人（受害者角色）- 商人是这起谋杀案的受害者。他在自己的豪宅中被发现死亡，你需要找出凶手并为他伸张正义。\n4. 嫌疑人（非玩家角色）- 游戏中将有多个嫌疑人，他们可能与谋杀案有关。你需要审问他们，收集证据，并找出真正的凶手。\n5. 目击者（非玩家角色）- 目击者可能提供关于案件的重要信息。你需要与他们交谈，了解他们的观察和见证。\n6. 其他相关人员（非玩家角色）- 游戏中还会有其他与案件相关的人员，他们可能提供线索或帮助你解决难题。\n每个角色都有自己的特点和背景故事，你需要与他们互动并利用他们的信息来推动故事的发展。\n\n\nprops.md\nchinese\n福尔摩斯的探案游戏道具\n1. 推理笔记本 - 你将用推理笔记本记录收集到的线索、嫌疑人的证词和其他重要信息。这将帮助你整理思路、分析线索和推理出真相。\n2. 收集工具 - 你将使用各种收集工具，如放大镜、指纹粉末和显微镜，来寻找隐藏的线索和证据。这些工具将帮助你发现关键信息并解开谜团。\n3. 证据袋 - 你将用证据袋收集和保管收集到的证据。这些证据可能包括物品、文件、照片等，它们将成为你解决案件的重要依据。\n4. 问询技巧 - 你将使用问询技巧来与嫌疑人和目击者交谈，获取他们的证词和观察。通过合理的提问和观察，你可以获得有关案件的重要信息。\n5. 地图和平面图 - 你将使用地图和平面图来了解案发现场和其他相关地点的布局。这将帮助你理清线索和推理案件的发展。\n这些道具将成为你解决谋杀案的工具和辅助物品。合理利用它们，你将更有可能找到真相并成功破案。\n\n\ncomment.md\nchinese\n福尔摩斯的探案游戏注释\n这个游戏将带你进入福尔摩斯的世界，让你亲身体验作为一名侦探的刺激和挑战。你将需要运用你的观察力、推理能力和调查技巧来解决这起神秘的谋杀案。\n通过与各个角色互动、收集证据和分析线索，你将逐渐揭开真相并找出凶手。你的决策和行动将决定案件的结局，所以要谨慎行事，不要错过任何重要线索。\n这个游戏将考验你的观察力、推理能力和决策能力。准备好迎接挑战了吗？让我们一起开始福尔摩斯的探案之旅吧！\n\n\n', 'cycle_index': 1, 'task': '做一个福尔摩斯的探案游戏，我扮演福尔摩斯，破一个案子 ', 'category': 'detective', 'ideas': '', 'language': ' Chinese', 'scripts': 'background.md\nenglish\n福尔摩斯的探案游戏背景\n在维多利亚时代的伦敦，福尔摩斯是一位著名的侦探，以其聪明才智和独特的推理能力而闻名于世。他的助手华生博士是他的忠实伙伴，与他一起解决了许多复杂的谜题和案件。\n在这个游戏中，你将扮演福尔摩斯，面临一起神秘的谋杀案。一位富有的商人在他的豪宅中被发现死亡，没有任何明显的线索。你的任务是解开这个谜团，找出凶手并为受害者伸张正义。\n你将需要运用你的观察力、推理能力和调查技巧来收集证据、审问嫌疑人，并分析线索以揭示真相。你将遇到各种各样的人物，包括目击者、嫌疑人和其他相关人员，他们可能会提供有关案件的重要信息。\n准备好了吗，福尔摩斯？开始你的探案之旅吧！\n\n\ngoal.md\nenglish\n福尔摩斯的探案游戏目标\n你的目标是解开这起神秘的谋杀案，找出凶手并为受害者伸张正义。通过收集证据、审问嫌疑人和分析线索，你需要找到真相并将凶手绳之以法。\n在整个游戏过程中，你将面临各种挑战和难题，需要运用你的观察力、推理能力和调查技巧来解决。你需要仔细分析每个线索，与各个相关人员交谈，并在隐藏的细节中找到关键信息。\n只有通过深入调查和正确的推理，你才能揭示真相，找到凶手并完成你的使命。你的决策和行动将决定案件的结局，所以要谨慎行事，不要错过任何重要线索。\n祝你好运，福尔摩斯！\n\n\ncharacters.md\nenglish\n福尔摩斯的探案游戏角色\n1. 福尔摩斯（玩家角色）- 你将扮演福尔摩斯，一位聪明才智的侦探。你拥有敏锐的观察力和卓越的推理能力，是解决这起谋杀案的唯一希望。\n2. 华生博士（助手角色）- 华生博士是福尔摩斯的忠实伙伴和助手。他将与你一起调查案件，提供帮助和关键信息。\n3. 商人（受害者角色）- 商人是这起谋杀案的受害者。他在自己的豪宅中被发现死亡，你需要找出凶手并为他伸张正义。\n4. 嫌疑人（非玩家角色）- 游戏中将有多个嫌疑人，他们可能与谋杀案有关。你需要审问他们，收集证据，并找出真正的凶手。\n5. 目击者（非玩家角色）- 目击者可能提供关于案件的重要信息。你需要与他们交谈，了解他们的观察和见证。\n6. 其他相关人员（非玩家角色）- 游戏中还会有其他与案件相关的人员，他们可能提供线索或帮助你解决难题。\n每个角色都有自己的特点和背景故事，你需要与他们互动并利用他们的信息来推动故事的发展。\n\n\nprops.md\nenglish\n福尔摩斯的探案游戏道具\n1. 推理笔记本 - 你将用推理笔记本记录收集到的线索、嫌疑人的证词和其他重要信息。这将帮助你整理思路、分析线索和推理出真相。\n2. 收集工具 - 你将使用各种收集工具，如放大镜、指纹粉末和显微镜，来寻找隐藏的线索和证据。这些工具将帮助你发现关键信息并解开谜团。\n3. 证据袋 - 你将用证据袋收集和保管收集到的证据。这些证据可能包括物品、文件、照片等，它们将成为你解决案件的重要依据。\n4. 问询技巧 - 你将使用问询技巧来与嫌疑人和目击者交谈，获取他们的证词和观察。通过合理的提问和观察，你可以获得有关案件的重要信息。\n5. 地图和平面图 - 你将使用地图和平面图来了解案发现场和其他相关地点的布局。这将帮助你理清线索和推理案件的发展。\n这些道具将成为你解决谋杀案的工具和辅助物品。合理利用它们，你将更有可能找到真相并成功破案。\n\n\ncomment.md\nenglish\n福尔摩斯的探案游戏注释\n这个游戏将带你进入福尔摩斯的世界，让你亲身体验作为一名侦探的刺激和挑战。你将需要运用你的观察力、推理能力和调查技巧来解决这起神秘的谋杀案。\n通过与各个角色互动、收集证据和分析线索，你将逐渐揭开真相并找出凶手。你的决策和行动将决定案件的结局，所以要谨慎行事，不要错过任何重要线索。\n这个游戏将考验你的观察力、推理能力和决策能力。准备好迎接挑战了吗？让我们一起开始福尔摩斯的探案之旅吧！\n\n\n', 'images': '', 'comments': ' Finished.'} |
+| **model_type** | ModelType.GPT_3_5_TURBO |
+
+[2023-28-09 15:13:03 INFO] System: **[RolePlaying]**
+
+| Parameter | Value |
+| --- | --- |
+| **assistant_role_name** | Script Writer |
+| **user_role_name** | Script Tester |
+| **assistant_role_prompt** | {chatrpg_prompt} You are Game Script Writer. we are both working at ChatRPG. We share a common interest in collaborating to successfully complete a task assigned by a new customer. You can write/create rpg game by providing a detailed script for the scene so that LLM can understand the script and play with the customer. You have extensive game design and background writing experience in many varieties of RPG games, such as trpg, crpg, jrpg, Murder mystery etc,. Here is a new customer's task: {task}. To complete the task, you must write a response that appropriately solves the requested instruction based on your expertise and customer's needs. |
+| **user_role_prompt** | {chatrpg_prompt} You are Game Script Tester. we are both working at ChatRPG. We share a common interest in collaborating to successfully complete a task assigned by a new customer. You can help Script Writer to dryrun game scripts for story verification, role verification, logic verification, and offer proposals to improve the game design and to enhance the quality and playability of the game script. Here is a new customer's task: {task}. To complete the task, you must write a response that appropriately solves the requested instruction based on your expertise and customer's needs. |
+| **task_prompt** | 做一个福尔摩斯的探案游戏，我扮演福尔摩斯，破一个案子  |
+| **with_task_specify** | False |
+| **model_type** | ModelType.GPT_3_5_TURBO |
+
+[2023-28-09 15:13:03 INFO] Script Tester: **[Start Chat]**
+
+[ChatRPG is a game studio powered by multiple intelligent agents, such as chief executive officer, chief human resources officer, chief product officer, chief game designer, etc, with a multi-agent organizational structure and the mission of "changing the digital world through gaming".
+You are Game Script Writer. we are both working at ChatRPG. We share a common interest in collaborating to successfully complete a task assigned by a new customer.
+You can write/create rpg game by providing a detailed script for the scene so that LLM can understand the script and play with the customer. You have extensive game design and background writing experience in many varieties of RPG games, such as trpg, crpg, jrpg, Murder mystery etc,.
+Here is a new customer's task: 做一个福尔摩斯的探案游戏，我扮演福尔摩斯，破一个案子 .
+To complete the task, you must write a response that appropriately solves the requested instruction based on your expertise and customer's needs.]
+
+According to the new user's task, our designed game category, languages and ideas, our developed first-edition scenes are listed below: 
+Task: "做一个福尔摩斯的探案游戏，我扮演福尔摩斯，破一个案子 ".
+Category: "detective".
+Language: " Chinese"
+Ideas: ""
+Scripts: 
+"background.md
+```english
+福尔摩斯的探案游戏背景
+在维多利亚时代的伦敦，福尔摩斯是一位著名的侦探，以其聪明才智和独特的推理能力而闻名于世。他的助手华生博士是他的忠实伙伴，与他一起解决了许多复杂的谜题和案件。
+在这个游戏中，你将扮演福尔摩斯，面临一起神秘的谋杀案。一位富有的商人在他的豪宅中被发现死亡，没有任何明显的线索。你的任务是解开这个谜团，找出凶手并为受害者伸张正义。
+你将需要运用你的观察力、推理能力和调查技巧来收集证据、审问嫌疑人，并分析线索以揭示真相。你将遇到各种各样的人物，包括目击者、嫌疑人和其他相关人员，他们可能会提供有关案件的重要信息。
+准备好了吗，福尔摩斯？开始你的探案之旅吧！
+```
+
+goal.md
+```english
+福尔摩斯的探案游戏目标
+你的目标是解开这起神秘的谋杀案，找出凶手并为受害者伸张正义。通过收集证据、审问嫌疑人和分析线索，你需要找到真相并将凶手绳之以法。
+在整个游戏过程中，你将面临各种挑战和难题，需要运用你的观察力、推理能力和调查技巧来解决。你需要仔细分析每个线索，与各个相关人员交谈，并在隐藏的细节中找到关键信息。
+只有通过深入调查和正确的推理，你才能揭示真相，找到凶手并完成你的使命。你的决策和行动将决定案件的结局，所以要谨慎行事，不要错过任何重要线索。
+祝你好运，福尔摩斯！
+```
+
+characters.md
+```english
+福尔摩斯的探案游戏角色
+1. 福尔摩斯（玩家角色）- 你将扮演福尔摩斯，一位聪明才智的侦探。你拥有敏锐的观察力和卓越的推理能力，是解决这起谋杀案的唯一希望。
+2. 华生博士（助手角色）- 华生博士是福尔摩斯的忠实伙伴和助手。他将与你一起调查案件，提供帮助和关键信息。
+3. 商人（受害者角色）- 商人是这起谋杀案的受害者。他在自己的豪宅中被发现死亡，你需要找出凶手并为他伸张正义。
+4. 嫌疑人（非玩家角色）- 游戏中将有多个嫌疑人，他们可能与谋杀案有关。你需要审问他们，收集证据，并找出真正的凶手。
+5. 目击者（非玩家角色）- 目击者可能提供关于案件的重要信息。你需要与他们交谈，了解他们的观察和见证。
+6. 其他相关人员（非玩家角色）- 游戏中还会有其他与案件相关的人员，他们可能提供线索或帮助你解决难题。
+每个角色都有自己的特点和背景故事，你需要与他们互动并利用他们的信息来推动故事的发展。
+```
+
+props.md
+```english
+福尔摩斯的探案游戏道具
+1. 推理笔记本 - 你将用推理笔记本记录收集到的线索、嫌疑人的证词和其他重要信息。这将帮助你整理思路、分析线索和推理出真相。
+2. 收集工具 - 你将使用各种收集工具，如放大镜、指纹粉末和显微镜，来寻找隐藏的线索和证据。这些工具将帮助你发现关键信息并解开谜团。
+3. 证据袋 - 你将用证据袋收集和保管收集到的证据。这些证据可能包括物品、文件、照片等，它们将成为你解决案件的重要依据。
+4. 问询技巧 - 你将使用问询技巧来与嫌疑人和目击者交谈，获取他们的证词和观察。通过合理的提问和观察，你可以获得有关案件的重要信息。
+5. 地图和平面图 - 你将使用地图和平面图来了解案发现场和其他相关地点的布局。这将帮助你理清线索和推理案件的发展。
+这些道具将成为你解决谋杀案的工具和辅助物品。合理利用它们，你将更有可能找到真相并成功破案。
+```
+
+comment.md
+```english
+福尔摩斯的探案游戏注释
+这个游戏将带你进入福尔摩斯的世界，让你亲身体验作为一名侦探的刺激和挑战。你将需要运用你的观察力、推理能力和调查技巧来解决这起神秘的谋杀案。
+通过与各个角色互动、收集证据和分析线索，你将逐渐揭开真相并找出凶手。你的决策和行动将决定案件的结局，所以要谨慎行事，不要错过任何重要线索。
+这个游戏将考验你的观察力、推理能力和决策能力。准备好迎接挑战了吗？让我们一起开始福尔摩斯的探案之旅吧！
+```
+
+"
+Comments on Scripts:
+" Finished."
+In the game, each file must strictly follow a markdown block format, where the following tokens must be replaced such that "FILENAME" is the lowercase file name including the file extension, "LANGUAGE" in the language, and "SCENE" is the original designed game script. Format:
+FILENAME
+```LANGUAGE
+SCENE
+```
+As the Script Writer, to satisfy the new user's demand and make the game playable, fun and robust, you should modify corresponding scenes according to the comments. Then, output the full and complete scenes with all comments fixed. Return all scenes strictly following the required format.
+
+[2023-28-09 15:13:35 INFO] **[OpenAI_Usage_Info Receive]**
+prompt_tokens: 2243
+completion_tokens: 1802
+total_tokens: 4045
+
+
+[2023-28-09 15:13:35 INFO] Script Writer: **Script Writer<->Script Tester on : SingleSceneModification, turn 0**
+
+[ChatRPG is a game studio powered by multiple intelligent agents, such as chief executive officer, chief human resources officer, chief product officer, chief game designer, etc, with a multi-agent organizational structure and the mission of "changing the digital world through gaming".
+You are Game Script Tester. we are both working at ChatRPG. We share a common interest in collaborating to successfully complete a task assigned by a new customer.
+You can help Script Writer to dryrun game scripts for story verification, role verification, logic verification, and offer proposals to improve the game design and to enhance the quality and playability of the game script.
+Here is a new customer's task: 做一个福尔摩斯的探案游戏，我扮演福尔摩斯，破一个案子 .
+To complete the task, you must write a response that appropriately solves the requested instruction based on your expertise and customer's needs.]
+
+background.md
+```chinese
+福尔摩斯的探案游戏背景
+在维多利亚时代的伦敦，福尔摩斯是一位著名的侦探，以其聪明才智和独特的推理能力而闻名于世。他的助手华生博士是他的忠实伙伴，与他一起解决了许多复杂的谜题和案件。
+
+在这个游戏中，你将扮演福尔摩斯，面临一起神秘的谋杀案。一位富有的商人在他的豪宅中被发现死亡，没有任何明显的线索。你的任务是解开这个谜团，找出凶手并为受害者伸张正义。
+
+你将需要运用你的观察力、推理能力和调查技巧来收集证据、审问嫌疑人，并分析线索以揭示真相。你将遇到各种各样的人物，包括目击者、嫌疑人和其他相关人员，他们可能会提供有关案件的重要信息。
+
+准备好了吗，福尔摩斯？开始你的探案之旅吧！
+```
+
+goal.md
+```chinese
+福尔摩斯的探案游戏目标
+你的目标是解开这起神秘的谋杀案，找出凶手并为受害者伸张正义。通过收集证据、审问嫌疑人和分析线索，你需要找到真相并将凶手绳之以法。
+
+在整个游戏过程中，你将面临各种挑战和难题，需要运用你的观察力、推理能力和调查技巧来解决。你需要仔细分析每个线索，与各个相关人员交谈，并在隐藏的细节中找到关键信息。
+
+只有通过深入调查和正确的推理，你才能揭示真相，找到凶手并完成你的使命。你的决策和行动将决定案件的结局，所以要谨慎行事，不要错过任何重要线索。
+
+祝你好运，福尔摩斯！
+```
+
+characters.md
+```chinese
+福尔摩斯的探案游戏角色
+1. 福尔摩斯（玩家角色）- 你将扮演福尔摩斯，一位聪明才智的侦探。你拥有敏锐的观察力和卓越的推理能力，是解决这起谋杀案的唯一希望。
+2. 华生博士（助手角色）- 华生博士是福尔摩斯的忠实伙伴和助手。他将与你一起调查案件，提供帮助和关键信息。
+3. 商人（受害者角色）- 商人是这起谋杀案的受害者。他在自己的豪宅中被发现死亡，你需要找出凶手并为他伸张正义。
+4. 嫌疑人（非玩家角色）- 游戏中将有多个嫌疑人，他们可能与谋杀案有关。你需要审问他们，收集证据，并找出真正的凶手。
+5. 目击者（非玩家角色）- 目击者可能提供关于案件的重要信息。你需要与他们交谈，了解他们的观察和见证。
+6. 其他相关人员（非玩家角色）- 游戏中还会有其他与案件相关的人员，他们可能提供线索或帮助你解决难题。
+
+每个角色都有自己的特点和背景故事，你需要与他们互动并利用他们的信息来推动故事的发展。
+```
+
+props.md
+```chinese
+福尔摩斯的探案游戏道具
+1. 推理笔记本 - 你将用推理笔记本记录收集到的线索、嫌疑人的证词和其他重要信息。这将帮助你整理思路、分析线索和推理出真相。
+2. 收集工具 - 你将使用各种收集工具，如放大镜、指纹粉末和显微镜，来寻找隐藏的线索和证据。这些工具将帮助你发现关键信息并解开谜团。
+3. 证据袋 - 你将用证据袋收集和保管收集到的证据。这些证据可能包括物品、文件、照片等，它们将成为你解决案件的重要依据。
+4. 问询技巧 - 你将使用问询技巧来与嫌疑人和目击者交谈，获取他们的证词和观察。通过合理的提问和观察，你可以获得有关案件的重要信息。
+5. 地图和平面图 - 你将使用地图和平面图来了解案发现场和其他相关地点的布局。这将帮助你理清线索和推理案件的发展。
+
+这些道具将成为你解决谋杀案的工具和辅助物品。合理利用它们，你将更有可能找到真相并成功破案。
+```
+
+comment.md
+```chinese
+福尔摩斯的探案游戏注释
+这个游戏将带你进入福尔摩斯的世界，让你亲身体验作为一名侦探的刺激和挑战。你将需要运用你的观察力、推理能力和调查技巧来解决这起神秘的谋杀案。
+
+通过与各个角色互动、收集证据和分析线索，你将逐渐揭开真相并找出凶手。你的决策和行动将决定案件的结局，所以要谨慎行事，不要错过任何重要线索。
+
+这个游戏将考验你的观察力、推理能力和决策能力。准备好迎接挑战了吗？让我们一起开始福尔摩斯的探案之旅吧！
+```
+
+
+
+[2023-28-09 15:13:35 INFO] **[Seminar Conclusion]**:
+
+ background.md
+```chinese
+福尔摩斯的探案游戏背景
+在维多利亚时代的伦敦，福尔摩斯是一位著名的侦探，以其聪明才智和独特的推理能力而闻名于世。他的助手华生博士是他的忠实伙伴，与他一起解决了许多复杂的谜题和案件。
+
+在这个游戏中，你将扮演福尔摩斯，面临一起神秘的谋杀案。一位富有的商人在他的豪宅中被发现死亡，没有任何明显的线索。你的任务是解开这个谜团，找出凶手并为受害者伸张正义。
+
+你将需要运用你的观察力、推理能力和调查技巧来收集证据、审问嫌疑人，并分析线索以揭示真相。你将遇到各种各样的人物，包括目击者、嫌疑人和其他相关人员，他们可能会提供有关案件的重要信息。
+
+准备好了吗，福尔摩斯？开始你的探案之旅吧！
+```
+
+goal.md
+```chinese
+福尔摩斯的探案游戏目标
+你的目标是解开这起神秘的谋杀案，找出凶手并为受害者伸张正义。通过收集证据、审问嫌疑人和分析线索，你需要找到真相并将凶手绳之以法。
+
+在整个游戏过程中，你将面临各种挑战和难题，需要运用你的观察力、推理能力和调查技巧来解决。你需要仔细分析每个线索，与各个相关人员交谈，并在隐藏的细节中找到关键信息。
+
+只有通过深入调查和正确的推理，你才能揭示真相，找到凶手并完成你的使命。你的决策和行动将决定案件的结局，所以要谨慎行事，不要错过任何重要线索。
+
+祝你好运，福尔摩斯！
+```
+
+characters.md
+```chinese
+福尔摩斯的探案游戏角色
+1. 福尔摩斯（玩家角色）- 你将扮演福尔摩斯，一位聪明才智的侦探。你拥有敏锐的观察力和卓越的推理能力，是解决这起谋杀案的唯一希望。
+2. 华生博士（助手角色）- 华生博士是福尔摩斯的忠实伙伴和助手。他将与你一起调查案件，提供帮助和关键信息。
+3. 商人（受害者角色）- 商人是这起谋杀案的受害者。他在自己的豪宅中被发现死亡，你需要找出凶手并为他伸张正义。
+4. 嫌疑人（非玩家角色）- 游戏中将有多个嫌疑人，他们可能与谋杀案有关。你需要审问他们，收集证据，并找出真正的凶手。
+5. 目击者（非玩家角色）- 目击者可能提供关于案件的重要信息。你需要与他们交谈，了解他们的观察和见证。
+6. 其他相关人员（非玩家角色）- 游戏中还会有其他与案件相关的人员，他们可能提供线索或帮助你解决难题。
+
+每个角色都有自己的特点和背景故事，你需要与他们互动并利用他们的信息来推动故事的发展。
+```
+
+props.md
+```chinese
+福尔摩斯的探案游戏道具
+1. 推理笔记本 - 你将用推理笔记本记录收集到的线索、嫌疑人的证词和其他重要信息。这将帮助你整理思路、分析线索和推理出真相。
+2. 收集工具 - 你将使用各种收集工具，如放大镜、指纹粉末和显微镜，来寻找隐藏的线索和证据。这些工具将帮助你发现关键信息并解开谜团。
+3. 证据袋 - 你将用证据袋收集和保管收集到的证据。这些证据可能包括物品、文件、照片等，它们将成为你解决案件的重要依据。
+4. 问询技巧 - 你将使用问询技巧来与嫌疑人和目击者交谈，获取他们的证词和观察。通过合理的提问和观察，你可以获得有关案件的重要信息。
+5. 地图和平面图 - 你将使用地图和平面图来了解案发现场和其他相关地点的布局。这将帮助你理清线索和推理案件的发展。
+
+这些道具将成为你解决谋杀案的工具和辅助物品。合理利用它们，你将更有可能找到真相并成功破案。
+```
+
+comment.md
+```chinese
+福尔摩斯的探案游戏注释
+这个游戏将带你进入福尔摩斯的世界，让你亲身体验作为一名侦探的刺激和挑战。你将需要运用你的观察力、推理能力和调查技巧来解决这起神秘的谋杀案。
+
+通过与各个角色互动、收集证据和分析线索，你将逐渐揭开真相并找出凶手。你的决策和行动将决定案件的结局，所以要谨慎行事，不要错过任何重要线索。
+
+这个游戏将考验你的观察力、推理能力和决策能力。准备好迎接挑战了吗？让我们一起开始福尔摩斯的探案之旅吧！
+```
+
+
+
+[2023-28-09 15:13:35 INFO] **[Rewrite Codes]**
+
+/mnt/c/Users/leizh/Src/rpg-test/WareHouse/detective_DefaultOrganization_20230928151213/background.md Wrote
+/mnt/c/Users/leizh/Src/rpg-test/WareHouse/detective_DefaultOrganization_20230928151213/goal.md Wrote
+/mnt/c/Users/leizh/Src/rpg-test/WareHouse/detective_DefaultOrganization_20230928151213/characters.md Wrote
+/mnt/c/Users/leizh/Src/rpg-test/WareHouse/detective_DefaultOrganization_20230928151213/props.md Wrote
+/mnt/c/Users/leizh/Src/rpg-test/WareHouse/detective_DefaultOrganization_20230928151213/comment.md Wrote
+
+
+[2023-28-09 15:13:35 INFO] **[Software Info]**:
+
+ 
+
+💰**cost**=$0.058245
+
+🔨**version_updates**=-1
+
+📃**num_code_files**=5
+
+🏞**num_png_files**=0
+
+📚**num_doc_files**=4
+
+📃**code_lines**=29
+
+📋**env_lines**=-1
+
+📒**manual_lines**=-1
+
+🗣**num_utterances**=16
+
+🤔**num_self_reflections**=0
+
+❓**num_prompt_tokens**=11959
+
+❗**num_completion_tokens**=5592
+
+🌟**num_total_tokens**=17551
+
+[2023-28-09 15:13:35 INFO] **[Execute Detail]**
+
+execute SimplePhase:[SingleSceneReviewComment] in ComposedPhase:[SingleSceneReview], cycle 2
+
+[2023-28-09 15:13:35 INFO] System: **[chatting]**
+
+| Parameter | Value |
+| --- | --- |
+| **task_prompt** | 做一个福尔摩斯的探案游戏，我扮演福尔摩斯，破一个案子  |
+| **need_reflect** | False |
+| **assistant_role_name** | Script Tester |
+| **user_role_name** | Script Writer |
+| **phase_prompt** | According to the new user's task and our game designs:  Task: "{task}". Category: "{category}". Language: "{language}" Ideas: "{ideas}" Scripts: "{scripts}" As the {assistant_role}, to make the game operable by LLM without further writing, ChatRPG have formulated the following regulations: 1) scene should have a goal 2) scene should have characters, and new character should have detailed description including background, occupation, plot, characteristics, loopholes,timelines, objective etc. 3) scene should have background story world; 4) no potential logical bugs; 5) The entire game design conforms to the tasks proposed by the user; 6) most importantly, do not only check the errors in the scene, but also the logic of the scene. Make sure that LLM can understand and replay this scene script and interact with users for an immersive rpg experience; Now, you should check the above regulations one by one and review the scenes in detail, propose one comment with the highest priority about the scenes, and give me instructions on how to fix. Tell me your comment with the highest priority and corresponding suggestions on revision. If the scenes are perfect and you have no comment on them, return only one line like " Finished". |
+| **phase_name** | SingleSceneReviewComment |
+| **assistant_role_prompt** | {chatrpg_prompt} You are Game Script Tester. we are both working at ChatRPG. We share a common interest in collaborating to successfully complete a task assigned by a new customer. You can help Script Writer to dryrun game scripts for story verification, role verification, logic verification, and offer proposals to improve the game design and to enhance the quality and playability of the game script. Here is a new customer's task: {task}. To complete the task, you must write a response that appropriately solves the requested instruction based on your expertise and customer's needs. |
+| **user_role_prompt** | {chatrpg_prompt} You are Game Script Writer. we are both working at ChatRPG. We share a common interest in collaborating to successfully complete a task assigned by a new customer. You can write/create rpg game by providing a detailed script for the scene so that LLM can understand the script and play with the customer. You have extensive game design and background writing experience in many varieties of RPG games, such as trpg, crpg, jrpg, Murder mystery etc,. Here is a new customer's task: {task}. To complete the task, you must write a response that appropriately solves the requested instruction based on your expertise and customer's needs. |
+| **chat_turn_limit** | 1 |
+| **placeholders** | {'cycle_num': 3, 'modification_conclusion': 'background.md\nchinese\n福尔摩斯的探案游戏背景\n在维多利亚时代的伦敦，福尔摩斯是一位著名的侦探，以其聪明才智和独特的推理能力而闻名于世。他的助手华生博士是他的忠实伙伴，与他一起解决了许多复杂的谜题和案件。\n\n在这个游戏中，你将扮演福尔摩斯，面临一起神秘的谋杀案。一位富有的商人在他的豪宅中被发现死亡，没有任何明显的线索。你的任务是解开这个谜团，找出凶手并为受害者伸张正义。\n\n你将需要运用你的观察力、推理能力和调查技巧来收集证据、审问嫌疑人，并分析线索以揭示真相。你将遇到各种各样的人物，包括目击者、嫌疑人和其他相关人员，他们可能会提供有关案件的重要信息。\n\n准备好了吗，福尔摩斯？开始你的探案之旅吧！\n\n\ngoal.md\nchinese\n福尔摩斯的探案游戏目标\n你的目标是解开这起神秘的谋杀案，找出凶手并为受害者伸张正义。通过收集证据、审问嫌疑人和分析线索，你需要找到真相并将凶手绳之以法。\n\n在整个游戏过程中，你将面临各种挑战和难题，需要运用你的观察力、推理能力和调查技巧来解决。你需要仔细分析每个线索，与各个相关人员交谈，并在隐藏的细节中找到关键信息。\n\n只有通过深入调查和正确的推理，你才能揭示真相，找到凶手并完成你的使命。你的决策和行动将决定案件的结局，所以要谨慎行事，不要错过任何重要线索。\n\n祝你好运，福尔摩斯！\n\n\ncharacters.md\nchinese\n福尔摩斯的探案游戏角色\n1. 福尔摩斯（玩家角色）- 你将扮演福尔摩斯，一位聪明才智的侦探。你拥有敏锐的观察力和卓越的推理能力，是解决这起谋杀案的唯一希望。\n2. 华生博士（助手角色）- 华生博士是福尔摩斯的忠实伙伴和助手。他将与你一起调查案件，提供帮助和关键信息。\n3. 商人（受害者角色）- 商人是这起谋杀案的受害者。他在自己的豪宅中被发现死亡，你需要找出凶手并为他伸张正义。\n4. 嫌疑人（非玩家角色）- 游戏中将有多个嫌疑人，他们可能与谋杀案有关。你需要审问他们，收集证据，并找出真正的凶手。\n5. 目击者（非玩家角色）- 目击者可能提供关于案件的重要信息。你需要与他们交谈，了解他们的观察和见证。\n6. 其他相关人员（非玩家角色）- 游戏中还会有其他与案件相关的人员，他们可能提供线索或帮助你解决难题。\n\n每个角色都有自己的特点和背景故事，你需要与他们互动并利用他们的信息来推动故事的发展。\n\n\nprops.md\nchinese\n福尔摩斯的探案游戏道具\n1. 推理笔记本 - 你将用推理笔记本记录收集到的线索、嫌疑人的证词和其他重要信息。这将帮助你整理思路、分析线索和推理出真相。\n2. 收集工具 - 你将使用各种收集工具，如放大镜、指纹粉末和显微镜，来寻找隐藏的线索和证据。这些工具将帮助你发现关键信息并解开谜团。\n3. 证据袋 - 你将用证据袋收集和保管收集到的证据。这些证据可能包括物品、文件、照片等，它们将成为你解决案件的重要依据。\n4. 问询技巧 - 你将使用问询技巧来与嫌疑人和目击者交谈，获取他们的证词和观察。通过合理的提问和观察，你可以获得有关案件的重要信息。\n5. 地图和平面图 - 你将使用地图和平面图来了解案发现场和其他相关地点的布局。这将帮助你理清线索和推理案件的发展。\n\n这些道具将成为你解决谋杀案的工具和辅助物品。合理利用它们，你将更有可能找到真相并成功破案。\n\n\ncomment.md\nchinese\n福尔摩斯的探案游戏注释\n这个游戏将带你进入福尔摩斯的世界，让你亲身体验作为一名侦探的刺激和挑战。你将需要运用你的观察力、推理能力和调查技巧来解决这起神秘的谋杀案。\n\n通过与各个角色互动、收集证据和分析线索，你将逐渐揭开真相并找出凶手。你的决策和行动将决定案件的结局，所以要谨慎行事，不要错过任何重要线索。\n\n这个游戏将考验你的观察力、推理能力和决策能力。准备好迎接挑战了吗？让我们一起开始福尔摩斯的探案之旅吧！\n\n\n', 'cycle_index': 2, 'task': '做一个福尔摩斯的探案游戏，我扮演福尔摩斯，破一个案子 ', 'category': 'detective', 'ideas': '', 'language': ' Chinese', 'scripts': 'background.md\nenglish\n福尔摩斯的探案游戏背景\n在维多利亚时代的伦敦，福尔摩斯是一位著名的侦探，以其聪明才智和独特的推理能力而闻名于世。他的助手华生博士是他的忠实伙伴，与他一起解决了许多复杂的谜题和案件。\n在这个游戏中，你将扮演福尔摩斯，面临一起神秘的谋杀案。一位富有的商人在他的豪宅中被发现死亡，没有任何明显的线索。你的任务是解开这个谜团，找出凶手并为受害者伸张正义。\n你将需要运用你的观察力、推理能力和调查技巧来收集证据、审问嫌疑人，并分析线索以揭示真相。你将遇到各种各样的人物，包括目击者、嫌疑人和其他相关人员，他们可能会提供有关案件的重要信息。\n准备好了吗，福尔摩斯？开始你的探案之旅吧！\n\n\ngoal.md\nenglish\n福尔摩斯的探案游戏目标\n你的目标是解开这起神秘的谋杀案，找出凶手并为受害者伸张正义。通过收集证据、审问嫌疑人和分析线索，你需要找到真相并将凶手绳之以法。\n在整个游戏过程中，你将面临各种挑战和难题，需要运用你的观察力、推理能力和调查技巧来解决。你需要仔细分析每个线索，与各个相关人员交谈，并在隐藏的细节中找到关键信息。\n只有通过深入调查和正确的推理，你才能揭示真相，找到凶手并完成你的使命。你的决策和行动将决定案件的结局，所以要谨慎行事，不要错过任何重要线索。\n祝你好运，福尔摩斯！\n\n\ncharacters.md\nenglish\n福尔摩斯的探案游戏角色\n1. 福尔摩斯（玩家角色）- 你将扮演福尔摩斯，一位聪明才智的侦探。你拥有敏锐的观察力和卓越的推理能力，是解决这起谋杀案的唯一希望。\n2. 华生博士（助手角色）- 华生博士是福尔摩斯的忠实伙伴和助手。他将与你一起调查案件，提供帮助和关键信息。\n3. 商人（受害者角色）- 商人是这起谋杀案的受害者。他在自己的豪宅中被发现死亡，你需要找出凶手并为他伸张正义。\n4. 嫌疑人（非玩家角色）- 游戏中将有多个嫌疑人，他们可能与谋杀案有关。你需要审问他们，收集证据，并找出真正的凶手。\n5. 目击者（非玩家角色）- 目击者可能提供关于案件的重要信息。你需要与他们交谈，了解他们的观察和见证。\n6. 其他相关人员（非玩家角色）- 游戏中还会有其他与案件相关的人员，他们可能提供线索或帮助你解决难题。\n每个角色都有自己的特点和背景故事，你需要与他们互动并利用他们的信息来推动故事的发展。\n\n\nprops.md\nenglish\n福尔摩斯的探案游戏道具\n1. 推理笔记本 - 你将用推理笔记本记录收集到的线索、嫌疑人的证词和其他重要信息。这将帮助你整理思路、分析线索和推理出真相。\n2. 收集工具 - 你将使用各种收集工具，如放大镜、指纹粉末和显微镜，来寻找隐藏的线索和证据。这些工具将帮助你发现关键信息并解开谜团。\n3. 证据袋 - 你将用证据袋收集和保管收集到的证据。这些证据可能包括物品、文件、照片等，它们将成为你解决案件的重要依据。\n4. 问询技巧 - 你将使用问询技巧来与嫌疑人和目击者交谈，获取他们的证词和观察。通过合理的提问和观察，你可以获得有关案件的重要信息。\n5. 地图和平面图 - 你将使用地图和平面图来了解案发现场和其他相关地点的布局。这将帮助你理清线索和推理案件的发展。\n这些道具将成为你解决谋杀案的工具和辅助物品。合理利用它们，你将更有可能找到真相并成功破案。\n\n\ncomment.md\nenglish\n福尔摩斯的探案游戏注释\n这个游戏将带你进入福尔摩斯的世界，让你亲身体验作为一名侦探的刺激和挑战。你将需要运用你的观察力、推理能力和调查技巧来解决这起神秘的谋杀案。\n通过与各个角色互动、收集证据和分析线索，你将逐渐揭开真相并找出凶手。你的决策和行动将决定案件的结局，所以要谨慎行事，不要错过任何重要线索。\n这个游戏将考验你的观察力、推理能力和决策能力。准备好迎接挑战了吗？让我们一起开始福尔摩斯的探案之旅吧！\n\n\n', 'images': '', 'comments': ' Finished.'} |
+| **model_type** | ModelType.GPT_3_5_TURBO |
+
+[2023-28-09 15:13:35 INFO] System: **[RolePlaying]**
+
+| Parameter | Value |
+| --- | --- |
+| **assistant_role_name** | Script Tester |
+| **user_role_name** | Script Writer |
+| **assistant_role_prompt** | {chatrpg_prompt} You are Game Script Tester. we are both working at ChatRPG. We share a common interest in collaborating to successfully complete a task assigned by a new customer. You can help Script Writer to dryrun game scripts for story verification, role verification, logic verification, and offer proposals to improve the game design and to enhance the quality and playability of the game script. Here is a new customer's task: {task}. To complete the task, you must write a response that appropriately solves the requested instruction based on your expertise and customer's needs. |
+| **user_role_prompt** | {chatrpg_prompt} You are Game Script Writer. we are both working at ChatRPG. We share a common interest in collaborating to successfully complete a task assigned by a new customer. You can write/create rpg game by providing a detailed script for the scene so that LLM can understand the script and play with the customer. You have extensive game design and background writing experience in many varieties of RPG games, such as trpg, crpg, jrpg, Murder mystery etc,. Here is a new customer's task: {task}. To complete the task, you must write a response that appropriately solves the requested instruction based on your expertise and customer's needs. |
+| **task_prompt** | 做一个福尔摩斯的探案游戏，我扮演福尔摩斯，破一个案子  |
+| **with_task_specify** | False |
+| **model_type** | ModelType.GPT_3_5_TURBO |
+
+[2023-28-09 15:13:35 INFO] Script Writer: **[Start Chat]**
+
+[ChatRPG is a game studio powered by multiple intelligent agents, such as chief executive officer, chief human resources officer, chief product officer, chief game designer, etc, with a multi-agent organizational structure and the mission of "changing the digital world through gaming".
+You are Game Script Tester. we are both working at ChatRPG. We share a common interest in collaborating to successfully complete a task assigned by a new customer.
+You can help Script Writer to dryrun game scripts for story verification, role verification, logic verification, and offer proposals to improve the game design and to enhance the quality and playability of the game script.
+Here is a new customer's task: 做一个福尔摩斯的探案游戏，我扮演福尔摩斯，破一个案子 .
+To complete the task, you must write a response that appropriately solves the requested instruction based on your expertise and customer's needs.]
+
+According to the new user's task and our game designs: 
+Task: "做一个福尔摩斯的探案游戏，我扮演福尔摩斯，破一个案子 ".
+Category: "detective".
+Language: " Chinese"
+Ideas: ""
+Scripts:
+"background.md
+```english
+福尔摩斯的探案游戏背景
+在维多利亚时代的伦敦，福尔摩斯是一位著名的侦探，以其聪明才智和独特的推理能力而闻名于世。他的助手华生博士是他的忠实伙伴，与他一起解决了许多复杂的谜题和案件。
+在这个游戏中，你将扮演福尔摩斯，面临一起神秘的谋杀案。一位富有的商人在他的豪宅中被发现死亡，没有任何明显的线索。你的任务是解开这个谜团，找出凶手并为受害者伸张正义。
+你将需要运用你的观察力、推理能力和调查技巧来收集证据、审问嫌疑人，并分析线索以揭示真相。你将遇到各种各样的人物，包括目击者、嫌疑人和其他相关人员，他们可能会提供有关案件的重要信息。
+准备好了吗，福尔摩斯？开始你的探案之旅吧！
+```
+
+goal.md
+```english
+福尔摩斯的探案游戏目标
+你的目标是解开这起神秘的谋杀案，找出凶手并为受害者伸张正义。通过收集证据、审问嫌疑人和分析线索，你需要找到真相并将凶手绳之以法。
+在整个游戏过程中，你将面临各种挑战和难题，需要运用你的观察力、推理能力和调查技巧来解决。你需要仔细分析每个线索，与各个相关人员交谈，并在隐藏的细节中找到关键信息。
+只有通过深入调查和正确的推理，你才能揭示真相，找到凶手并完成你的使命。你的决策和行动将决定案件的结局，所以要谨慎行事，不要错过任何重要线索。
+祝你好运，福尔摩斯！
+```
+
+characters.md
+```english
+福尔摩斯的探案游戏角色
+1. 福尔摩斯（玩家角色）- 你将扮演福尔摩斯，一位聪明才智的侦探。你拥有敏锐的观察力和卓越的推理能力，是解决这起谋杀案的唯一希望。
+2. 华生博士（助手角色）- 华生博士是福尔摩斯的忠实伙伴和助手。他将与你一起调查案件，提供帮助和关键信息。
+3. 商人（受害者角色）- 商人是这起谋杀案的受害者。他在自己的豪宅中被发现死亡，你需要找出凶手并为他伸张正义。
+4. 嫌疑人（非玩家角色）- 游戏中将有多个嫌疑人，他们可能与谋杀案有关。你需要审问他们，收集证据，并找出真正的凶手。
+5. 目击者（非玩家角色）- 目击者可能提供关于案件的重要信息。你需要与他们交谈，了解他们的观察和见证。
+6. 其他相关人员（非玩家角色）- 游戏中还会有其他与案件相关的人员，他们可能提供线索或帮助你解决难题。
+每个角色都有自己的特点和背景故事，你需要与他们互动并利用他们的信息来推动故事的发展。
+```
+
+props.md
+```english
+福尔摩斯的探案游戏道具
+1. 推理笔记本 - 你将用推理笔记本记录收集到的线索、嫌疑人的证词和其他重要信息。这将帮助你整理思路、分析线索和推理出真相。
+2. 收集工具 - 你将使用各种收集工具，如放大镜、指纹粉末和显微镜，来寻找隐藏的线索和证据。这些工具将帮助你发现关键信息并解开谜团。
+3. 证据袋 - 你将用证据袋收集和保管收集到的证据。这些证据可能包括物品、文件、照片等，它们将成为你解决案件的重要依据。
+4. 问询技巧 - 你将使用问询技巧来与嫌疑人和目击者交谈，获取他们的证词和观察。通过合理的提问和观察，你可以获得有关案件的重要信息。
+5. 地图和平面图 - 你将使用地图和平面图来了解案发现场和其他相关地点的布局。这将帮助你理清线索和推理案件的发展。
+这些道具将成为你解决谋杀案的工具和辅助物品。合理利用它们，你将更有可能找到真相并成功破案。
+```
+
+comment.md
+```english
+福尔摩斯的探案游戏注释
+这个游戏将带你进入福尔摩斯的世界，让你亲身体验作为一名侦探的刺激和挑战。你将需要运用你的观察力、推理能力和调查技巧来解决这起神秘的谋杀案。
+通过与各个角色互动、收集证据和分析线索，你将逐渐揭开真相并找出凶手。你的决策和行动将决定案件的结局，所以要谨慎行事，不要错过任何重要线索。
+这个游戏将考验你的观察力、推理能力和决策能力。准备好迎接挑战了吗？让我们一起开始福尔摩斯的探案之旅吧！
+```
+
+"
+As the Script Tester, to make the game operable by LLM without further writing, ChatRPG have formulated the following regulations:
+1) scene should have a goal
+2) scene should have characters, and new character should have detailed description including background, occupation, plot, characteristics, loopholes,timelines, objective etc.
+3) scene should have background story world;
+4) no potential logical bugs;
+5) The entire game design conforms to the tasks proposed by the user;
+6) most importantly, do not only check the errors in the scene, but also the logic of the scene. Make sure that LLM can understand and replay this scene script and interact with users for an immersive rpg experience;
+Now, you should check the above regulations one by one and review the scenes in detail, propose one comment with the highest priority about the scenes, and give me instructions on how to fix. Tell me your comment with the highest priority and corresponding suggestions on revision. If the scenes are perfect and you have no comment on them, return only one line like "<INFO> Finished".
+
+[2023-28-09 15:13:35 INFO] **[OpenAI_Usage_Info Receive]**
+prompt_tokens: 2298
+completion_tokens: 5
+total_tokens: 2303
+
+
+[2023-28-09 15:13:35 INFO] Script Tester: **Script Tester<->Script Writer on : SingleSceneReviewComment, turn 0**
+
+[ChatRPG is a game studio powered by multiple intelligent agents, such as chief executive officer, chief human resources officer, chief product officer, chief game designer, etc, with a multi-agent organizational structure and the mission of "changing the digital world through gaming".
+You are Game Script Writer. we are both working at ChatRPG. We share a common interest in collaborating to successfully complete a task assigned by a new customer.
+You can write/create rpg game by providing a detailed script for the scene so that LLM can understand the script and play with the customer. You have extensive game design and background writing experience in many varieties of RPG games, such as trpg, crpg, jrpg, Murder mystery etc,.
+Here is a new customer's task: 做一个福尔摩斯的探案游戏，我扮演福尔摩斯，破一个案子 .
+To complete the task, you must write a response that appropriately solves the requested instruction based on your expertise and customer's needs.]
+
+<INFO> Finished.
+
+[2023-28-09 15:13:35 INFO] **[Seminar Conclusion]**:
+
+ <INFO> Finished.
+
+[2023-28-09 15:13:35 INFO] **[Execute Detail]**
+
+execute SimplePhase:[SingleSceneModification] in ComposedPhase:[SingleSceneReview], cycle 2
+
+[2023-28-09 15:13:35 INFO] System: **[chatting]**
+
+| Parameter | Value |
+| --- | --- |
+| **task_prompt** | 做一个福尔摩斯的探案游戏，我扮演福尔摩斯，破一个案子  |
+| **need_reflect** | False |
+| **assistant_role_name** | Script Writer |
+| **user_role_name** | Script Tester |
+| **phase_prompt** | According to the new user's task, our designed game category, languages and ideas, our developed first-edition scenes are listed below:  Task: "{task}". Category: "{category}". Language: "{language}" Ideas: "{ideas}" Scripts:  "{scripts}" Comments on Scripts: "{comments}" In the game, each file must strictly follow a markdown block format, where the following tokens must be replaced such that "FILENAME" is the lowercase file name including the file extension, "LANGUAGE" in the language, and "SCENE" is the original designed game script. Format: FILENAME LANGUAGE SCENE As the {assistant_role}, to satisfy the new user's demand and make the game playable, fun and robust, you should modify corresponding scenes according to the comments. Then, output the full and complete scenes with all comments fixed. Return all scenes strictly following the required format. |
+| **phase_name** | SingleSceneModification |
+| **assistant_role_prompt** | {chatrpg_prompt} You are Game Script Writer. we are both working at ChatRPG. We share a common interest in collaborating to successfully complete a task assigned by a new customer. You can write/create rpg game by providing a detailed script for the scene so that LLM can understand the script and play with the customer. You have extensive game design and background writing experience in many varieties of RPG games, such as trpg, crpg, jrpg, Murder mystery etc,. Here is a new customer's task: {task}. To complete the task, you must write a response that appropriately solves the requested instruction based on your expertise and customer's needs. |
+| **user_role_prompt** | {chatrpg_prompt} You are Game Script Tester. we are both working at ChatRPG. We share a common interest in collaborating to successfully complete a task assigned by a new customer. You can help Script Writer to dryrun game scripts for story verification, role verification, logic verification, and offer proposals to improve the game design and to enhance the quality and playability of the game script. Here is a new customer's task: {task}. To complete the task, you must write a response that appropriately solves the requested instruction based on your expertise and customer's needs. |
+| **chat_turn_limit** | 1 |
+| **placeholders** | {'cycle_num': 3, 'modification_conclusion': 'background.md\nchinese\n福尔摩斯的探案游戏背景\n在维多利亚时代的伦敦，福尔摩斯是一位著名的侦探，以其聪明才智和独特的推理能力而闻名于世。他的助手华生博士是他的忠实伙伴，与他一起解决了许多复杂的谜题和案件。\n\n在这个游戏中，你将扮演福尔摩斯，面临一起神秘的谋杀案。一位富有的商人在他的豪宅中被发现死亡，没有任何明显的线索。你的任务是解开这个谜团，找出凶手并为受害者伸张正义。\n\n你将需要运用你的观察力、推理能力和调查技巧来收集证据、审问嫌疑人，并分析线索以揭示真相。你将遇到各种各样的人物，包括目击者、嫌疑人和其他相关人员，他们可能会提供有关案件的重要信息。\n\n准备好了吗，福尔摩斯？开始你的探案之旅吧！\n\n\ngoal.md\nchinese\n福尔摩斯的探案游戏目标\n你的目标是解开这起神秘的谋杀案，找出凶手并为受害者伸张正义。通过收集证据、审问嫌疑人和分析线索，你需要找到真相并将凶手绳之以法。\n\n在整个游戏过程中，你将面临各种挑战和难题，需要运用你的观察力、推理能力和调查技巧来解决。你需要仔细分析每个线索，与各个相关人员交谈，并在隐藏的细节中找到关键信息。\n\n只有通过深入调查和正确的推理，你才能揭示真相，找到凶手并完成你的使命。你的决策和行动将决定案件的结局，所以要谨慎行事，不要错过任何重要线索。\n\n祝你好运，福尔摩斯！\n\n\ncharacters.md\nchinese\n福尔摩斯的探案游戏角色\n1. 福尔摩斯（玩家角色）- 你将扮演福尔摩斯，一位聪明才智的侦探。你拥有敏锐的观察力和卓越的推理能力，是解决这起谋杀案的唯一希望。\n2. 华生博士（助手角色）- 华生博士是福尔摩斯的忠实伙伴和助手。他将与你一起调查案件，提供帮助和关键信息。\n3. 商人（受害者角色）- 商人是这起谋杀案的受害者。他在自己的豪宅中被发现死亡，你需要找出凶手并为他伸张正义。\n4. 嫌疑人（非玩家角色）- 游戏中将有多个嫌疑人，他们可能与谋杀案有关。你需要审问他们，收集证据，并找出真正的凶手。\n5. 目击者（非玩家角色）- 目击者可能提供关于案件的重要信息。你需要与他们交谈，了解他们的观察和见证。\n6. 其他相关人员（非玩家角色）- 游戏中还会有其他与案件相关的人员，他们可能提供线索或帮助你解决难题。\n\n每个角色都有自己的特点和背景故事，你需要与他们互动并利用他们的信息来推动故事的发展。\n\n\nprops.md\nchinese\n福尔摩斯的探案游戏道具\n1. 推理笔记本 - 你将用推理笔记本记录收集到的线索、嫌疑人的证词和其他重要信息。这将帮助你整理思路、分析线索和推理出真相。\n2. 收集工具 - 你将使用各种收集工具，如放大镜、指纹粉末和显微镜，来寻找隐藏的线索和证据。这些工具将帮助你发现关键信息并解开谜团。\n3. 证据袋 - 你将用证据袋收集和保管收集到的证据。这些证据可能包括物品、文件、照片等，它们将成为你解决案件的重要依据。\n4. 问询技巧 - 你将使用问询技巧来与嫌疑人和目击者交谈，获取他们的证词和观察。通过合理的提问和观察，你可以获得有关案件的重要信息。\n5. 地图和平面图 - 你将使用地图和平面图来了解案发现场和其他相关地点的布局。这将帮助你理清线索和推理案件的发展。\n\n这些道具将成为你解决谋杀案的工具和辅助物品。合理利用它们，你将更有可能找到真相并成功破案。\n\n\ncomment.md\nchinese\n福尔摩斯的探案游戏注释\n这个游戏将带你进入福尔摩斯的世界，让你亲身体验作为一名侦探的刺激和挑战。你将需要运用你的观察力、推理能力和调查技巧来解决这起神秘的谋杀案。\n\n通过与各个角色互动、收集证据和分析线索，你将逐渐揭开真相并找出凶手。你的决策和行动将决定案件的结局，所以要谨慎行事，不要错过任何重要线索。\n\n这个游戏将考验你的观察力、推理能力和决策能力。准备好迎接挑战了吗？让我们一起开始福尔摩斯的探案之旅吧！\n\n\n', 'cycle_index': 2, 'task': '做一个福尔摩斯的探案游戏，我扮演福尔摩斯，破一个案子 ', 'category': 'detective', 'ideas': '', 'language': ' Chinese', 'scripts': 'background.md\nenglish\n福尔摩斯的探案游戏背景\n在维多利亚时代的伦敦，福尔摩斯是一位著名的侦探，以其聪明才智和独特的推理能力而闻名于世。他的助手华生博士是他的忠实伙伴，与他一起解决了许多复杂的谜题和案件。\n在这个游戏中，你将扮演福尔摩斯，面临一起神秘的谋杀案。一位富有的商人在他的豪宅中被发现死亡，没有任何明显的线索。你的任务是解开这个谜团，找出凶手并为受害者伸张正义。\n你将需要运用你的观察力、推理能力和调查技巧来收集证据、审问嫌疑人，并分析线索以揭示真相。你将遇到各种各样的人物，包括目击者、嫌疑人和其他相关人员，他们可能会提供有关案件的重要信息。\n准备好了吗，福尔摩斯？开始你的探案之旅吧！\n\n\ngoal.md\nenglish\n福尔摩斯的探案游戏目标\n你的目标是解开这起神秘的谋杀案，找出凶手并为受害者伸张正义。通过收集证据、审问嫌疑人和分析线索，你需要找到真相并将凶手绳之以法。\n在整个游戏过程中，你将面临各种挑战和难题，需要运用你的观察力、推理能力和调查技巧来解决。你需要仔细分析每个线索，与各个相关人员交谈，并在隐藏的细节中找到关键信息。\n只有通过深入调查和正确的推理，你才能揭示真相，找到凶手并完成你的使命。你的决策和行动将决定案件的结局，所以要谨慎行事，不要错过任何重要线索。\n祝你好运，福尔摩斯！\n\n\ncharacters.md\nenglish\n福尔摩斯的探案游戏角色\n1. 福尔摩斯（玩家角色）- 你将扮演福尔摩斯，一位聪明才智的侦探。你拥有敏锐的观察力和卓越的推理能力，是解决这起谋杀案的唯一希望。\n2. 华生博士（助手角色）- 华生博士是福尔摩斯的忠实伙伴和助手。他将与你一起调查案件，提供帮助和关键信息。\n3. 商人（受害者角色）- 商人是这起谋杀案的受害者。他在自己的豪宅中被发现死亡，你需要找出凶手并为他伸张正义。\n4. 嫌疑人（非玩家角色）- 游戏中将有多个嫌疑人，他们可能与谋杀案有关。你需要审问他们，收集证据，并找出真正的凶手。\n5. 目击者（非玩家角色）- 目击者可能提供关于案件的重要信息。你需要与他们交谈，了解他们的观察和见证。\n6. 其他相关人员（非玩家角色）- 游戏中还会有其他与案件相关的人员，他们可能提供线索或帮助你解决难题。\n每个角色都有自己的特点和背景故事，你需要与他们互动并利用他们的信息来推动故事的发展。\n\n\nprops.md\nenglish\n福尔摩斯的探案游戏道具\n1. 推理笔记本 - 你将用推理笔记本记录收集到的线索、嫌疑人的证词和其他重要信息。这将帮助你整理思路、分析线索和推理出真相。\n2. 收集工具 - 你将使用各种收集工具，如放大镜、指纹粉末和显微镜，来寻找隐藏的线索和证据。这些工具将帮助你发现关键信息并解开谜团。\n3. 证据袋 - 你将用证据袋收集和保管收集到的证据。这些证据可能包括物品、文件、照片等，它们将成为你解决案件的重要依据。\n4. 问询技巧 - 你将使用问询技巧来与嫌疑人和目击者交谈，获取他们的证词和观察。通过合理的提问和观察，你可以获得有关案件的重要信息。\n5. 地图和平面图 - 你将使用地图和平面图来了解案发现场和其他相关地点的布局。这将帮助你理清线索和推理案件的发展。\n这些道具将成为你解决谋杀案的工具和辅助物品。合理利用它们，你将更有可能找到真相并成功破案。\n\n\ncomment.md\nenglish\n福尔摩斯的探案游戏注释\n这个游戏将带你进入福尔摩斯的世界，让你亲身体验作为一名侦探的刺激和挑战。你将需要运用你的观察力、推理能力和调查技巧来解决这起神秘的谋杀案。\n通过与各个角色互动、收集证据和分析线索，你将逐渐揭开真相并找出凶手。你的决策和行动将决定案件的结局，所以要谨慎行事，不要错过任何重要线索。\n这个游戏将考验你的观察力、推理能力和决策能力。准备好迎接挑战了吗？让我们一起开始福尔摩斯的探案之旅吧！\n\n\n', 'images': '', 'comments': ' Finished.'} |
+| **model_type** | ModelType.GPT_3_5_TURBO |
+
+[2023-28-09 15:13:35 INFO] System: **[RolePlaying]**
+
+| Parameter | Value |
+| --- | --- |
+| **assistant_role_name** | Script Writer |
+| **user_role_name** | Script Tester |
+| **assistant_role_prompt** | {chatrpg_prompt} You are Game Script Writer. we are both working at ChatRPG. We share a common interest in collaborating to successfully complete a task assigned by a new customer. You can write/create rpg game by providing a detailed script for the scene so that LLM can understand the script and play with the customer. You have extensive game design and background writing experience in many varieties of RPG games, such as trpg, crpg, jrpg, Murder mystery etc,. Here is a new customer's task: {task}. To complete the task, you must write a response that appropriately solves the requested instruction based on your expertise and customer's needs. |
+| **user_role_prompt** | {chatrpg_prompt} You are Game Script Tester. we are both working at ChatRPG. We share a common interest in collaborating to successfully complete a task assigned by a new customer. You can help Script Writer to dryrun game scripts for story verification, role verification, logic verification, and offer proposals to improve the game design and to enhance the quality and playability of the game script. Here is a new customer's task: {task}. To complete the task, you must write a response that appropriately solves the requested instruction based on your expertise and customer's needs. |
+| **task_prompt** | 做一个福尔摩斯的探案游戏，我扮演福尔摩斯，破一个案子  |
+| **with_task_specify** | False |
+| **model_type** | ModelType.GPT_3_5_TURBO |
+
+[2023-28-09 15:13:35 INFO] Script Tester: **[Start Chat]**
+
+[ChatRPG is a game studio powered by multiple intelligent agents, such as chief executive officer, chief human resources officer, chief product officer, chief game designer, etc, with a multi-agent organizational structure and the mission of "changing the digital world through gaming".
+You are Game Script Writer. we are both working at ChatRPG. We share a common interest in collaborating to successfully complete a task assigned by a new customer.
+You can write/create rpg game by providing a detailed script for the scene so that LLM can understand the script and play with the customer. You have extensive game design and background writing experience in many varieties of RPG games, such as trpg, crpg, jrpg, Murder mystery etc,.
+Here is a new customer's task: 做一个福尔摩斯的探案游戏，我扮演福尔摩斯，破一个案子 .
+To complete the task, you must write a response that appropriately solves the requested instruction based on your expertise and customer's needs.]
+
+According to the new user's task, our designed game category, languages and ideas, our developed first-edition scenes are listed below: 
+Task: "做一个福尔摩斯的探案游戏，我扮演福尔摩斯，破一个案子 ".
+Category: "detective".
+Language: " Chinese"
+Ideas: ""
+Scripts: 
+"background.md
+```english
+福尔摩斯的探案游戏背景
+在维多利亚时代的伦敦，福尔摩斯是一位著名的侦探，以其聪明才智和独特的推理能力而闻名于世。他的助手华生博士是他的忠实伙伴，与他一起解决了许多复杂的谜题和案件。
+在这个游戏中，你将扮演福尔摩斯，面临一起神秘的谋杀案。一位富有的商人在他的豪宅中被发现死亡，没有任何明显的线索。你的任务是解开这个谜团，找出凶手并为受害者伸张正义。
+你将需要运用你的观察力、推理能力和调查技巧来收集证据、审问嫌疑人，并分析线索以揭示真相。你将遇到各种各样的人物，包括目击者、嫌疑人和其他相关人员，他们可能会提供有关案件的重要信息。
+准备好了吗，福尔摩斯？开始你的探案之旅吧！
+```
+
+goal.md
+```english
+福尔摩斯的探案游戏目标
+你的目标是解开这起神秘的谋杀案，找出凶手并为受害者伸张正义。通过收集证据、审问嫌疑人和分析线索，你需要找到真相并将凶手绳之以法。
+在整个游戏过程中，你将面临各种挑战和难题，需要运用你的观察力、推理能力和调查技巧来解决。你需要仔细分析每个线索，与各个相关人员交谈，并在隐藏的细节中找到关键信息。
+只有通过深入调查和正确的推理，你才能揭示真相，找到凶手并完成你的使命。你的决策和行动将决定案件的结局，所以要谨慎行事，不要错过任何重要线索。
+祝你好运，福尔摩斯！
+```
+
+characters.md
+```english
+福尔摩斯的探案游戏角色
+1. 福尔摩斯（玩家角色）- 你将扮演福尔摩斯，一位聪明才智的侦探。你拥有敏锐的观察力和卓越的推理能力，是解决这起谋杀案的唯一希望。
+2. 华生博士（助手角色）- 华生博士是福尔摩斯的忠实伙伴和助手。他将与你一起调查案件，提供帮助和关键信息。
+3. 商人（受害者角色）- 商人是这起谋杀案的受害者。他在自己的豪宅中被发现死亡，你需要找出凶手并为他伸张正义。
+4. 嫌疑人（非玩家角色）- 游戏中将有多个嫌疑人，他们可能与谋杀案有关。你需要审问他们，收集证据，并找出真正的凶手。
+5. 目击者（非玩家角色）- 目击者可能提供关于案件的重要信息。你需要与他们交谈，了解他们的观察和见证。
+6. 其他相关人员（非玩家角色）- 游戏中还会有其他与案件相关的人员，他们可能提供线索或帮助你解决难题。
+每个角色都有自己的特点和背景故事，你需要与他们互动并利用他们的信息来推动故事的发展。
+```
+
+props.md
+```english
+福尔摩斯的探案游戏道具
+1. 推理笔记本 - 你将用推理笔记本记录收集到的线索、嫌疑人的证词和其他重要信息。这将帮助你整理思路、分析线索和推理出真相。
+2. 收集工具 - 你将使用各种收集工具，如放大镜、指纹粉末和显微镜，来寻找隐藏的线索和证据。这些工具将帮助你发现关键信息并解开谜团。
+3. 证据袋 - 你将用证据袋收集和保管收集到的证据。这些证据可能包括物品、文件、照片等，它们将成为你解决案件的重要依据。
+4. 问询技巧 - 你将使用问询技巧来与嫌疑人和目击者交谈，获取他们的证词和观察。通过合理的提问和观察，你可以获得有关案件的重要信息。
+5. 地图和平面图 - 你将使用地图和平面图来了解案发现场和其他相关地点的布局。这将帮助你理清线索和推理案件的发展。
+这些道具将成为你解决谋杀案的工具和辅助物品。合理利用它们，你将更有可能找到真相并成功破案。
+```
+
+comment.md
+```english
+福尔摩斯的探案游戏注释
+这个游戏将带你进入福尔摩斯的世界，让你亲身体验作为一名侦探的刺激和挑战。你将需要运用你的观察力、推理能力和调查技巧来解决这起神秘的谋杀案。
+通过与各个角色互动、收集证据和分析线索，你将逐渐揭开真相并找出凶手。你的决策和行动将决定案件的结局，所以要谨慎行事，不要错过任何重要线索。
+这个游戏将考验你的观察力、推理能力和决策能力。准备好迎接挑战了吗？让我们一起开始福尔摩斯的探案之旅吧！
+```
+
+"
+Comments on Scripts:
+" Finished."
+In the game, each file must strictly follow a markdown block format, where the following tokens must be replaced such that "FILENAME" is the lowercase file name including the file extension, "LANGUAGE" in the language, and "SCENE" is the original designed game script. Format:
+FILENAME
+```LANGUAGE
+SCENE
+```
+As the Script Writer, to satisfy the new user's demand and make the game playable, fun and robust, you should modify corresponding scenes according to the comments. Then, output the full and complete scenes with all comments fixed. Return all scenes strictly following the required format.
+
+[2023-28-09 15:14:02 INFO] **[OpenAI_Usage_Info Receive]**
+prompt_tokens: 2243
+completion_tokens: 1802
+total_tokens: 4045
+
+
+[2023-28-09 15:14:02 INFO] Script Writer: **Script Writer<->Script Tester on : SingleSceneModification, turn 0**
+
+[ChatRPG is a game studio powered by multiple intelligent agents, such as chief executive officer, chief human resources officer, chief product officer, chief game designer, etc, with a multi-agent organizational structure and the mission of "changing the digital world through gaming".
+You are Game Script Tester. we are both working at ChatRPG. We share a common interest in collaborating to successfully complete a task assigned by a new customer.
+You can help Script Writer to dryrun game scripts for story verification, role verification, logic verification, and offer proposals to improve the game design and to enhance the quality and playability of the game script.
+Here is a new customer's task: 做一个福尔摩斯的探案游戏，我扮演福尔摩斯，破一个案子 .
+To complete the task, you must write a response that appropriately solves the requested instruction based on your expertise and customer's needs.]
+
+background.md
+```chinese
+福尔摩斯的探案游戏背景
+在维多利亚时代的伦敦，福尔摩斯是一位著名的侦探，以其聪明才智和独特的推理能力而闻名于世。他的助手华生博士是他的忠实伙伴，与他一起解决了许多复杂的谜题和案件。
+
+在这个游戏中，你将扮演福尔摩斯，面临一起神秘的谋杀案。一位富有的商人在他的豪宅中被发现死亡，没有任何明显的线索。你的任务是解开这个谜团，找出凶手并为受害者伸张正义。
+
+你将需要运用你的观察力、推理能力和调查技巧来收集证据、审问嫌疑人，并分析线索以揭示真相。你将遇到各种各样的人物，包括目击者、嫌疑人和其他相关人员，他们可能会提供有关案件的重要信息。
+
+准备好了吗，福尔摩斯？开始你的探案之旅吧！
+```
+
+goal.md
+```chinese
+福尔摩斯的探案游戏目标
+你的目标是解开这起神秘的谋杀案，找出凶手并为受害者伸张正义。通过收集证据、审问嫌疑人和分析线索，你需要找到真相并将凶手绳之以法。
+
+在整个游戏过程中，你将面临各种挑战和难题，需要运用你的观察力、推理能力和调查技巧来解决。你需要仔细分析每个线索，与各个相关人员交谈，并在隐藏的细节中找到关键信息。
+
+只有通过深入调查和正确的推理，你才能揭示真相，找到凶手并完成你的使命。你的决策和行动将决定案件的结局，所以要谨慎行事，不要错过任何重要线索。
+
+祝你好运，福尔摩斯！
+```
+
+characters.md
+```chinese
+福尔摩斯的探案游戏角色
+1. 福尔摩斯（玩家角色）- 你将扮演福尔摩斯，一位聪明才智的侦探。你拥有敏锐的观察力和卓越的推理能力，是解决这起谋杀案的唯一希望。
+2. 华生博士（助手角色）- 华生博士是福尔摩斯的忠实伙伴和助手。他将与你一起调查案件，提供帮助和关键信息。
+3. 商人（受害者角色）- 商人是这起谋杀案的受害者。他在自己的豪宅中被发现死亡，你需要找出凶手并为他伸张正义。
+4. 嫌疑人（非玩家角色）- 游戏中将有多个嫌疑人，他们可能与谋杀案有关。你需要审问他们，收集证据，并找出真正的凶手。
+5. 目击者（非玩家角色）- 目击者可能提供关于案件的重要信息。你需要与他们交谈，了解他们的观察和见证。
+6. 其他相关人员（非玩家角色）- 游戏中还会有其他与案件相关的人员，他们可能提供线索或帮助你解决难题。
+
+每个角色都有自己的特点和背景故事，你需要与他们互动并利用他们的信息来推动故事的发展。
+```
+
+props.md
+```chinese
+福尔摩斯的探案游戏道具
+1. 推理笔记本 - 你将用推理笔记本记录收集到的线索、嫌疑人的证词和其他重要信息。这将帮助你整理思路、分析线索和推理出真相。
+2. 收集工具 - 你将使用各种收集工具，如放大镜、指纹粉末和显微镜，来寻找隐藏的线索和证据。这些工具将帮助你发现关键信息并解开谜团。
+3. 证据袋 - 你将用证据袋收集和保管收集到的证据。这些证据可能包括物品、文件、照片等，它们将成为你解决案件的重要依据。
+4. 问询技巧 - 你将使用问询技巧来与嫌疑人和目击者交谈，获取他们的证词和观察。通过合理的提问和观察，你可以获得有关案件的重要信息。
+5. 地图和平面图 - 你将使用地图和平面图来了解案发现场和其他相关地点的布局。这将帮助你理清线索和推理案件的发展。
+
+这些道具将成为你解决谋杀案的工具和辅助物品。合理利用它们，你将更有可能找到真相并成功破案。
+```
+
+comment.md
+```chinese
+福尔摩斯的探案游戏注释
+这个游戏将带你进入福尔摩斯的世界，让你亲身体验作为一名侦探的刺激和挑战。你将需要运用你的观察力、推理能力和调查技巧来解决这起神秘的谋杀案。
+
+通过与各个角色互动、收集证据和分析线索，你将逐渐揭开真相并找出凶手。你的决策和行动将决定案件的结局，所以要谨慎行事，不要错过任何重要线索。
+
+这个游戏将考验你的观察力、推理能力和决策能力。准备好迎接挑战了吗？让我们一起开始福尔摩斯的探案之旅吧！
+```
+
+
+
+[2023-28-09 15:14:02 INFO] **[Seminar Conclusion]**:
+
+ background.md
+```chinese
+福尔摩斯的探案游戏背景
+在维多利亚时代的伦敦，福尔摩斯是一位著名的侦探，以其聪明才智和独特的推理能力而闻名于世。他的助手华生博士是他的忠实伙伴，与他一起解决了许多复杂的谜题和案件。
+
+在这个游戏中，你将扮演福尔摩斯，面临一起神秘的谋杀案。一位富有的商人在他的豪宅中被发现死亡，没有任何明显的线索。你的任务是解开这个谜团，找出凶手并为受害者伸张正义。
+
+你将需要运用你的观察力、推理能力和调查技巧来收集证据、审问嫌疑人，并分析线索以揭示真相。你将遇到各种各样的人物，包括目击者、嫌疑人和其他相关人员，他们可能会提供有关案件的重要信息。
+
+准备好了吗，福尔摩斯？开始你的探案之旅吧！
+```
+
+goal.md
+```chinese
+福尔摩斯的探案游戏目标
+你的目标是解开这起神秘的谋杀案，找出凶手并为受害者伸张正义。通过收集证据、审问嫌疑人和分析线索，你需要找到真相并将凶手绳之以法。
+
+在整个游戏过程中，你将面临各种挑战和难题，需要运用你的观察力、推理能力和调查技巧来解决。你需要仔细分析每个线索，与各个相关人员交谈，并在隐藏的细节中找到关键信息。
+
+只有通过深入调查和正确的推理，你才能揭示真相，找到凶手并完成你的使命。你的决策和行动将决定案件的结局，所以要谨慎行事，不要错过任何重要线索。
+
+祝你好运，福尔摩斯！
+```
+
+characters.md
+```chinese
+福尔摩斯的探案游戏角色
+1. 福尔摩斯（玩家角色）- 你将扮演福尔摩斯，一位聪明才智的侦探。你拥有敏锐的观察力和卓越的推理能力，是解决这起谋杀案的唯一希望。
+2. 华生博士（助手角色）- 华生博士是福尔摩斯的忠实伙伴和助手。他将与你一起调查案件，提供帮助和关键信息。
+3. 商人（受害者角色）- 商人是这起谋杀案的受害者。他在自己的豪宅中被发现死亡，你需要找出凶手并为他伸张正义。
+4. 嫌疑人（非玩家角色）- 游戏中将有多个嫌疑人，他们可能与谋杀案有关。你需要审问他们，收集证据，并找出真正的凶手。
+5. 目击者（非玩家角色）- 目击者可能提供关于案件的重要信息。你需要与他们交谈，了解他们的观察和见证。
+6. 其他相关人员（非玩家角色）- 游戏中还会有其他与案件相关的人员，他们可能提供线索或帮助你解决难题。
+
+每个角色都有自己的特点和背景故事，你需要与他们互动并利用他们的信息来推动故事的发展。
+```
+
+props.md
+```chinese
+福尔摩斯的探案游戏道具
+1. 推理笔记本 - 你将用推理笔记本记录收集到的线索、嫌疑人的证词和其他重要信息。这将帮助你整理思路、分析线索和推理出真相。
+2. 收集工具 - 你将使用各种收集工具，如放大镜、指纹粉末和显微镜，来寻找隐藏的线索和证据。这些工具将帮助你发现关键信息并解开谜团。
+3. 证据袋 - 你将用证据袋收集和保管收集到的证据。这些证据可能包括物品、文件、照片等，它们将成为你解决案件的重要依据。
+4. 问询技巧 - 你将使用问询技巧来与嫌疑人和目击者交谈，获取他们的证词和观察。通过合理的提问和观察，你可以获得有关案件的重要信息。
+5. 地图和平面图 - 你将使用地图和平面图来了解案发现场和其他相关地点的布局。这将帮助你理清线索和推理案件的发展。
+
+这些道具将成为你解决谋杀案的工具和辅助物品。合理利用它们，你将更有可能找到真相并成功破案。
+```
+
+comment.md
+```chinese
+福尔摩斯的探案游戏注释
+这个游戏将带你进入福尔摩斯的世界，让你亲身体验作为一名侦探的刺激和挑战。你将需要运用你的观察力、推理能力和调查技巧来解决这起神秘的谋杀案。
+
+通过与各个角色互动、收集证据和分析线索，你将逐渐揭开真相并找出凶手。你的决策和行动将决定案件的结局，所以要谨慎行事，不要错过任何重要线索。
+
+这个游戏将考验你的观察力、推理能力和决策能力。准备好迎接挑战了吗？让我们一起开始福尔摩斯的探案之旅吧！
+```
+
+
+
+[2023-28-09 15:14:02 INFO] **[Rewrite Codes]**
+
+/mnt/c/Users/leizh/Src/rpg-test/WareHouse/detective_DefaultOrganization_20230928151213/background.md Wrote
+/mnt/c/Users/leizh/Src/rpg-test/WareHouse/detective_DefaultOrganization_20230928151213/goal.md Wrote
+/mnt/c/Users/leizh/Src/rpg-test/WareHouse/detective_DefaultOrganization_20230928151213/characters.md Wrote
+/mnt/c/Users/leizh/Src/rpg-test/WareHouse/detective_DefaultOrganization_20230928151213/props.md Wrote
+/mnt/c/Users/leizh/Src/rpg-test/WareHouse/detective_DefaultOrganization_20230928151213/comment.md Wrote
+
+
+[2023-28-09 15:14:02 INFO] **[Software Info]**:
+
+ 
+
+💰**cost**=$0.079096
+
+🔨**version_updates**=-1
+
+📃**num_code_files**=5
+
+🏞**num_png_files**=0
+
+📚**num_doc_files**=4
+
+📃**code_lines**=29
+
+📋**env_lines**=-1
+
+📒**manual_lines**=-1
+
+🗣**num_utterances**=20
+
+🤔**num_self_reflections**=0
+
+❓**num_prompt_tokens**=16500
+
+❗**num_completion_tokens**=7399
+
+🌟**num_total_tokens**=23899
+
+[2023-28-09 15:14:02 INFO] **[Post Info]**
+
+Software Info: 
+
+💰**cost**=$0.079096
+
+🔨**version_updates**=6.0
+
+📃**num_code_files**=5
+
+🏞**num_png_files**=0
+
+📚**num_doc_files**=5
+
+📃**code_lines**=29
+
+📋**env_lines**=-1
+
+📒**manual_lines**=-1
+
+🗣**num_utterances**=20
+
+🤔**num_self_reflections**=0
+
+❓**num_prompt_tokens**=16500
+
+❗**num_completion_tokens**=7399
+
+🌟**num_total_tokens**=23899
+
+🕑**duration**=109.00s
+
+ChatRPG Starts (20230928151213)
+
+ChatRPG Ends (20230928151402)
+
+
+

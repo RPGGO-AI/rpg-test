@@ -28,18 +28,13 @@ class Scripts:
             return file_name
 
         if generated_content != "":
-            print("generated content = " + generated_content)
-            print("fuck")
-            regex = r"(.+?)\n## .*?\n(.*?) ##"
+            regex = r"(.+?)\n```.*?\n(.*?)```"
             matches = re.finditer(regex, self.generated_content, re.DOTALL)
             for match in matches:
                 code = match.group(2)
-
-                print("code = " + code)
                 if "SCENE" in code:
                     continue
                 group1 = match.group(1)
-                print("group1 = " + group1)
                 filename = extract_filename_from_line(group1)
                 # if "__main__" in code:
                 #     filename = "main.md"
@@ -103,7 +98,7 @@ class Scripts:
         content = ""
         for filename in self.scriptbooks.keys():
             content += "{}\n```{}\n{}\n```\n\n".format(filename,
-                                                       "python" if filename.endswith(".md") else filename.split(".")[
+                                                       "english" if filename.endswith(".md") else filename.split(".")[
                                                            -1], self.scriptbooks[filename])
         return content
 
