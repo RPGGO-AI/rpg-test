@@ -2,22 +2,22 @@
 
 ## Quick Start Step By Step
 
-### 1. Install `ChatDev`:
+### 1. Install `ChatRPG`:
 
 - **Clone the GitHub Repository:** Begin by cloning the repository using the command:
    ```
-   git clone https://github.com/OpenBMB/ChatDev.git
+   git clone https://github.com/OpenBMB/ChatRPG.git
    ```
 - **Set Up Python Environment:** Ensure you have a Python environment of version 3.9 or higher. You can create and
-  activate this environment using the following commands, replacing `ChatDev_conda_env` with your preferred environment
+  activate this environment using the following commands, replacing `ChatRPG_conda_env` with your preferred environment
   name:
    ```
-   conda create -n ChatDev_conda_env python=3.9 -y
-   conda activate ChatDev_conda_env
+   conda create -n ChatRPG_conda_env python=3.9 -y
+   conda activate ChatRPG_conda_env
    ```
-- **Install Dependencies:** Move into the `ChatDev` directory and install the necessary dependencies by running:
+- **Install Dependencies:** Move into the `ChatRPG` directory and install the necessary dependencies by running:
    ```
-   cd ChatDev
+   cd ChatRPG
    pip3 install -r requirements.txt
    ```
 - **Set OpenAI API Key:** Export your OpenAI API key as an environment variable. Replace `"your_OpenAI_API_key"` with
@@ -116,15 +116,15 @@ then go to [Local Demo Website](http://127.0.0.1:8000/) to see an online visuali
     - Customize ChatChain
     - Customize Phase
     - Customize Role
-- Here is the overview architecture of ChatDev, which illustrates the relationships among above three classes:
+- Here is the overview architecture of ChatRPG, which illustrates the relationships among above three classes:
 
 ![arch](misc/arch.png)
 
 ### Customize ChatChain
 
 - see ``CompanyConfig/Default/ChatChainConfig.json``
-- You can easily pick and organize phases to formulate a ChatChain from all phases (from ``chatdev/phase.py``
-  or ``chatdev/composed_phase.py``)
+- You can easily pick and organize phases to formulate a ChatChain from all phases (from ``chatrpg/phase.py``
+  or ``chatrpg/composed_phase.py``)
   by modifying the json file
 
 ### Customize Phase
@@ -135,7 +135,7 @@ then go to [Local Demo Website](http://127.0.0.1:8000/) to see an online visuali
       class
     - config this phase in ``PhaseConfig.json``, including writing phase prompt and assigning roles for this phase
 - Customize SimplePhase
-    - see ``CompanyConfig/Default/PhaseConfig.json`` for configuration, see ``chatdev/phase.py`` for implementing your
+    - see ``CompanyConfig/Default/PhaseConfig.json`` for configuration, see ``chatrpg/phase.py`` for implementing your
       own phase
     - each phase contains three steps:
         - generate phase environment from the whole chatchain environment
@@ -183,7 +183,7 @@ then go to [Local Demo Website](http://127.0.0.1:8000/) to see an online visuali
           }
           ```
     - Customize ComposePhase
-        - see ``CompanyConfig/Default/ChatChainConfig.json`` for configuration and see ``chatdev/composed_phase.py`` for
+        - see ``CompanyConfig/Default/ChatChainConfig.json`` for configuration and see ``chatrpg/composed_phase.py`` for
           implementation.
         - **⚠️ Attention** We do not support Nested Composition yet so do not put ComposePhase in ComposePhase.
         - ComposePhase contains multiple SimplePhase, and can be conducted in loop.
@@ -259,13 +259,13 @@ then go to [Local Demo Website](http://127.0.0.1:8000/) to see an online visuali
 ## Project Structure
 
 ```commandline
-├── CompanyConfig # Configuration Files for ChatDev, including ChatChain, Phase and Role config json.
+├── CompanyConfig # Configuration Files for ChatRPG, including ChatChain, Phase and Role config json.
 ├── WareHouse # Folder for generated software
 ├── camel # Camel RolePlay component
-├── chatdev # ChatDev core code
+├── chatrpg # ChatRPG core code
 ├── misc # assets of example and demo
 ├── online_log # Demo Folder
-├── run.py # Entry of ChatDev
+├── run.py # Entry of ChatRPG
 ├── requirements.txt
 ├── README.md
 └── wiki.md
@@ -275,7 +275,7 @@ then go to [Local Demo Website](http://127.0.0.1:8000/) to see an online visuali
 
 ### Default
 ![demo](misc/ChatChain_Visualization_Default.png)
-- As shown in the ChatChain visualization of Default setting, ChatDev will produce a software in the order of:
+- As shown in the ChatChain visualization of Default setting, ChatRPG will produce a software in the order of:
   - Demand Analysis: decide the modality of the software
   - Language Choose: decide the programming language
   - Coding: write the code
@@ -297,11 +297,11 @@ then go to [Local Demo Website](http://127.0.0.1:8000/) to see an online visuali
 - Compared to Default, in ***Human-Agent-Interaction*** mode you can play as reviewer and asks programmer agent to modify the code based on your comments.
 - It adds a Phase called HumanAgentInteraction after the CodeReview Phase.
 - You can use ***Human-Agent-Interaction*** setting using ``python3 run.py --config "Human"``.
-- When chatdev executes to this Phase, on the command interface you will see a hint that ask for input.
+- When chatrpg executes to this Phase, on the command interface you will see a hint that ask for input.
 - You can run your software in the ``WareHouse/`` and see if it satisfies your need. Then you can type anything you want (bug fix or new feature) in the command interface, then press Enter:
 ![Human_command](misc/Human_command.png)
 - For example
-  - We first run the ChatDev with task "design a gomoku game"
+  - We first run the ChatRPG with task "design a gomoku game"
   - Then we type "Please add a restart button" in the HumanAgentInteraction Phase, adding the first feature
   - In the second loop of HumanAgentInteraction, we add another feature by typing "Please add a current status bar showing whose turn it is".
   - At last, we early exit this mode by typing "End".

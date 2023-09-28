@@ -9,9 +9,9 @@ import time
 from camel.agents import RolePlaying
 from camel.configs import ChatGPTConfig
 from camel.typing import TaskType, ModelType
-from chatdev.chat_env import ChatEnv, ChatEnvConfig
-from chatdev.statistics import get_info
-from chatdev.utils import log_and_print_online, now
+from chatrpg.chat_env import ChatEnv, ChatEnvConfig
+from chatrpg.statistics import get_info
+from chatrpg.utils import log_and_print_online, now
 
 
 def check_bool(s):
@@ -82,11 +82,11 @@ class ChatChain:
         self.start_time, self.log_filepath = self.get_logfilepath()
 
         # init SimplePhase instances
-        # import all used phases in PhaseConfig.json from chatdev.phase
+        # import all used phases in PhaseConfig.json from chatrpg.phase
         # note that in PhaseConfig.json there only exist SimplePhases
         # ComposedPhases are defined in ChatChainConfig.json and will be imported in self.execute_step
-        self.compose_phase_module = importlib.import_module("chatdev.composed_phase")
-        self.phase_module = importlib.import_module("chatdev.phase")
+        self.compose_phase_module = importlib.import_module("chatrpg.composed_phase")
+        self.phase_module = importlib.import_module("chatrpg.phase")
         self.phases = dict()
         for phase in self.config_phase:
             assistant_role_name = self.config_phase[phase]['assistant_role_name']
@@ -134,14 +134,14 @@ class ChatChain:
                                                            self.chat_turn_limit_default if max_turn_step <= 0 else max_turn_step,
                                                            need_reflect)
             else:
-                raise RuntimeError(f"Phase '{phase}' is not yet implemented in chatdev.phase")
+                raise RuntimeError(f"Phase '{phase}' is not yet implemented in chatrpg.phase")
         # For ComposedPhase, we create instance here then conduct the "ComposedPhase.execute" method
         elif phase_type == "ComposedPhase":
             cycle_num = phase_item['cycleNum']
             composition = phase_item['Composition']
             compose_phase_class = getattr(self.compose_phase_module, phase)
             if not compose_phase_class:
-                raise RuntimeError(f"Phase '{phase}' is not yet implemented in chatdev.compose_phase")
+                raise RuntimeError(f"Phase '{phase}' is not yet implemented in chatrpg.compose_phase")
             compose_phase_instance = compose_phase_class(phase_name=phase,
                                                          cycle_num=cycle_num,
                                                          composition=composition,
@@ -213,7 +213,7 @@ class ChatChain:
         preprocess_msg = "**[Preprocessing]**\n\n"
         chat_gpt_config = ChatGPTConfig()
 
-        preprocess_msg += "**ChatDev Starts** ({})\n\n".format(self.start_time)
+        preprocess_msg += "**ChatRPG Starts** ({})\n\n".format(self.start_time)
         preprocess_msg += "**Timestamp**: {}\n\n".format(self.start_time)
         preprocess_msg += "**config_path**: {}\n\n".format(self.config_path)
         preprocess_msg += "**config_phase_path**: {}\n\n".format(self.config_phase_path)
@@ -221,7 +221,7 @@ class ChatChain:
         preprocess_msg += "**task_prompt**: {}\n\n".format(self.task_prompt_raw)
         preprocess_msg += "**project_name**: {}\n\n".format(self.project_name)
         preprocess_msg += "**Log File**: {}\n\n".format(self.log_filepath)
-        preprocess_msg += "**ChatDevConfig**:\n {}\n\n".format(self.chat_env.config.__str__())
+        preprocess_msg += "**ChatRPGConfig**:\n {}\n\n".format(self.chat_env.config.__str__())
         preprocess_msg += "**ChatGPTConfig**:\n {}\n\n".format(chat_gpt_config)
         log_and_print_online(preprocess_msg)
 
@@ -253,8 +253,8 @@ class ChatChain:
         post_info += "Software Info: {}".format(
             get_info(self.chat_env.env_dict['directory'], self.log_filepath) + "\n\n🕑**duration**={:.2f}s\n\n".format(duration))
 
-        post_info += "ChatDev Starts ({})".format(self.start_time) + "\n\n"
-        post_info += "ChatDev Ends ({})".format(now_time) + "\n\n"
+        post_info += "ChatRPG Starts ({})".format(self.start_time) + "\n\n"
+        post_info += "ChatRPG Ends ({})".format(now_time) + "\n\n"
 
         if self.chat_env.config.clear_structure:
             directory = self.chat_env.env_dict['directory']

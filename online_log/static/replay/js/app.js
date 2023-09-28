@@ -200,7 +200,7 @@ function watchfileInput(files) {
             reader.readAsText(file);
             var filelable = document.getElementById("successupload");
             filelable.style.display = "block";
-            var info = "File uploaded (`" + file.name + "`). Please click **\"Replay\"** to show ChatDev's development process";
+            var info = "File uploaded (`" + file.name + "`). Please click **\"Replay\"** to show ChatRPG's development process";
             filename = file.name;
             filelable.innerHTML = md.render(info);
         }
@@ -229,8 +229,8 @@ function extraction(contents) {
     const regex_user = /(.*):(.*)(\[Start Chat\])([.\r\n\s\S\t\d\D]*?)\]([.\r\n\s\S\t\d\D]*)/g;
     const regex_prompt = /(Prompt Engineer):([\S\s]*)/g
 
-    const regex_end = /(AgentTech Ends|ChatDev Ends)/g;
-    const regex_start = /(ChatDev Starts)([\D\s])*(\d*)/g;
+    const regex_end = /(AgentTech Ends|ChatRPG Ends)/g;
+    const regex_start = /(ChatRPG Starts)([\D\s])*(\d*)/g;
 
     const regex_task = /(task_prompt)(.*):(.*)/g;
     const regex_info = /Software Info([\r\n\s\S\t\d\D]*)/g;

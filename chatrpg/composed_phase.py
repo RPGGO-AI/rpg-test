@@ -4,8 +4,8 @@ from abc import ABC, abstractmethod
 from collections import defaultdict
 
 from camel.typing import ModelType
-from chatdev.chat_env import ChatEnv
-from chatdev.utils import log_and_print_online
+from chatrpg.chat_env import ChatEnv
+from chatrpg.utils import log_and_print_online
 
 
 def check_bool(s):
@@ -58,7 +58,7 @@ class ComposedPhase(ABC):
             assistant_role_name = self.config_phase[phase]['assistant_role_name']
             user_role_name = self.config_phase[phase]['user_role_name']
             phase_prompt = "\n".join(self.config_phase[phase]['phase_prompt'])
-            phase_module = importlib.import_module("chatdev.phase")
+            phase_module = importlib.import_module("chatrpg.phase")
             phase_class = getattr(phase_module, phase)
             phase_instance = phase_class(assistant_role_name=assistant_role_name,
                                          user_role_name=user_role_name,
@@ -157,7 +157,7 @@ class ComposedPhase(ABC):
                 else:
                     print(f"Phase '{phase}' is not yet implemented. \
                             Please write its config in phaseConfig.json \
-                            and implement it in chatdev.phase")
+                            and implement it in chatrpg.phase")
         chat_env = self.update_chat_env(chat_env)
         return chat_env
 

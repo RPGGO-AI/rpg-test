@@ -9,10 +9,10 @@ from typing import Dict
 import openai
 import requests
 
-from chatdev.codes import Codes
-from chatdev.documents import Documents
-from chatdev.roster import Roster
-from chatdev.utils import log_and_print_online
+from chatrpg.codes import Codes
+from chatrpg.documents import Documents
+from chatrpg.roster import Roster
+from chatrpg.utils import log_and_print_online
 
 
 class ChatEnvConfig:

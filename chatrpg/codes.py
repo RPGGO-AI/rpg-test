@@ -1,7 +1,7 @@
 import os
 import re
 
-from chatdev.utils import log_and_print_online
+from chatrpg.utils import log_and_print_online
 import difflib
 
 class Codes:

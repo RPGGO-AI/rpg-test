@@ -21,7 +21,7 @@ from camel.typing import ModelType
 root = os.path.dirname(__file__)
 sys.path.append(root)
 
-from chatdev.chat_chain import ChatChain
+from chatrpg.chat_chain import ChatChain
 
 
 def get_config(company):
@@ -70,7 +70,7 @@ parser.add_argument('--model', type=str, default="GPT_3_5_TURBO",
                     help="GPT Model, choose from {'GPT_3_5_TURBO','GPT_4','GPT_4_32K'}")
 args = parser.parse_args()
 
-# Start ChatDev
+# Start ChatRPG
 
 # ----------------------------------------
 #          Init ChatChain

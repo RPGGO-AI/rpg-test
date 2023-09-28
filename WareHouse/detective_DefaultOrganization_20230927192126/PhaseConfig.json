@@ -3,7 +3,7 @@
     "assistant_role_name": "Chief Product Officer",
     "user_role_name": "Chief Executive Officer",
     "phase_prompt": [
-      "ChatDev has made products in the following form before:",
+      "ChatRPG has made products in the following form before:",
       "Document: can present information via .docx files.",
       "PDF: can present information via .pdf files.",
       "As the {assistant_role}, to satisfy the new user's demand and the product should be realizable, you should keep discussing with me to decide which product modality do we want the product to be?",
@@ -83,7 +83,7 @@
       "Ideas: \"{ideas}\"",
       "Codes:",
       "\"{codes}\"",
-      "As the {assistant_role}, to make the game directly operable without further coding, ChatDev have formulated the following regulations:",
+      "As the {assistant_role}, to make the game directly operable without further coding, ChatRPG have formulated the following regulations:",
       "1) all scene should have a goal",
       "2) all scene should have characters, and new character should have background desscription",
       "3) all scene should have background story;",

@@ -72,7 +72,7 @@
       "Ideas: \"{ideas}\"",
       "Codes:",
       "\"{codes}\"",
-      "As the {assistant_role}, to make the game directly operable without further coding, ChatDev have formulated the following regulations:",
+      "As the {assistant_role}, to make the game directly operable without further coding, ChatRPG have formulated the following regulations:",
       "1) all scene should have a goal",
       "2) all scene should have characters, and new character should have background desscription",
       "3) all scene should have background story;",

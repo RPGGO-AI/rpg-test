@@ -13,18 +13,18 @@
       "need_reflect": "True"
     },
     {
-      "phase": "Coding",
+      "phase": "SingleSceneWriting",
       "phaseType": "SimplePhase",
       "max_turn_step": 1,
       "need_reflect": "False"
     },
     {
-      "phase": "CodeCompleteAll",
+      "phase": "SingleSceneCompleteAll",
       "phaseType": "ComposedPhase",
       "cycleNum": 10,
       "Composition": [
         {
-          "phase": "CodeComplete",
+          "phase": "SingleSceneComplete",
           "phaseType": "SimplePhase",
           "max_turn_step": 1,
           "need_reflect": "False"
@@ -32,18 +32,18 @@
       ]
     },
     {
-      "phase": "CodeReview",
+      "phase": "SingleSceneReview",
       "phaseType": "ComposedPhase",
       "cycleNum": 3,
       "Composition": [
         {
-          "phase": "CodeReviewComment",
+          "phase": "SingleSceneReviewComment",
           "phaseType": "SimplePhase",
           "max_turn_step": 1,
           "need_reflect": "False"
         },
         {
-          "phase": "CodeReviewModification",
+          "phase": "SingleSceneModification",
           "phaseType": "SimplePhase",
           "max_turn_step": 1,
           "need_reflect": "False"
