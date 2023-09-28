@@ -179,7 +179,7 @@ class ChatChain:
         log_filepath = os.path.join(directory, "{}.log".format("_".join([self.project_name, self.org_name,start_time])))
         return start_time, log_filepath
 
-    def pre_processing(self):
+    def pre_processing(self): 
         """
         remove useless files and log some global config settings
         Returns: None
@@ -284,9 +284,9 @@ class ChatChain:
             revised_task_prompt: revised prompt from the prompt engineer agent
 
         """
-        self_task_improve_prompt = """I will give you a short description of a software design requirement, 
-please rewrite it into a detailed prompt that can make large language model know how to make this software better based this prompt,
-the prompt should ensure LLMs build a software that can be run correctly, which is the most import part you need to consider.
+        self_task_improve_prompt = """I will give you a short description of a rpg game requirement, 
+please rewrite it into a detailed prompt that can make large language model know how to make this rpg game better based this prompt,
+the prompt should ensure LLMs build a rpg game that is logically complete, rich in detail, and full of well-rounded characters, which is the most import part you need to consider.
 remember that the revised prompt should not contain more than 200 words, 
 here is the short description:\"{}\". 
 If the revised prompt is revised_version_of_the_description, 
@@ -295,7 +295,7 @@ then you should return a message in a format like \"<INFO> revised_version_of_th
         role_play_session = RolePlaying(
             assistant_role_name="Prompt Engineer",
             assistant_role_prompt="You are an professional prompt engineer that can improve user input prompt to make LLM better understand these prompts.",
-            user_role_prompt="You are an user that want to use LLM to build software.",
+            user_role_prompt="You are an user that want to use LLM to build rpg game.",
             user_role_name="User",
             task_type=TaskType.CHATDEV,
             task_prompt="Do prompt engineering on user query",
