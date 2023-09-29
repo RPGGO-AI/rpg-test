@@ -1,5 +1,5 @@
 Task:
-build a rpg game for me. I want to play as Sherlock Holmes and together with a child 
+做一个名侦探柯南的rpg游戏，我扮演怪盗基德，和柯南一起合作，破一个案子，最后赢得灰原哀的爱 
 
 Config:
 ChatEnvConfig.clear_structure: True
@@ -10,13 +10,13 @@ Roster:
 Chief Executive Officer, Counselor, Game Producer, Script Writer, Script Tester
 
 Category:
-mystery
+detective
 
 Ideas:
 
 
 Language:
- English
+ Chinese
 
 Code_Version:
 5.0

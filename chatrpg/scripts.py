@@ -19,20 +19,21 @@ class Scripts:
             return file_name
 
         def extract_filename_from_scene(code):
-            file_name = ""
-            regex_extract = r"class (\S+?):\n"
-            matches_extract = re.finditer(regex_extract, code, re.DOTALL)
-            for match_extract in matches_extract:
-                file_name = match_extract.group(1)
-            file_name = file_name.lower().split("(")[0] + ".md"
-            return file_name
+            # file_name = ""
+            # regex_extract = r"class (\S+?):\n"
+            # matches_extract = re.finditer(regex_extract, code, re.DOTALL)
+            # for match_extract in matches_extract:
+            #     file_name = match_extract.group(1)
+            # file_name = file_name.lower().split("(")[0] + ".md"
+            # return file_name
+            return "unknown.md"
 
         if generated_content != "":
             regex = r"(.+?)\n```.*?\n(.*?)```"
             matches = re.finditer(regex, self.generated_content, re.DOTALL)
             for match in matches:
                 code = match.group(2)
-                if "SCENE" in code:
+                if "SCRIPT" in code:
                     continue
                 group1 = match.group(1)
                 filename = extract_filename_from_line(group1)

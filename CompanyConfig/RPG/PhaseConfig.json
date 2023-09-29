@@ -39,8 +39,8 @@
       "Ideas:\"{ideas}\"",
       "We have decided to complete the task through a rpg game via {language}. As the {assistant_role}, to satisfy the new user's demands, you should write a script to construct the rpg game",
       "Think step by step and reason yourself to the right decisions to make sure we get it right.",
-      "You will first lay out the game by different parts, like background, goal, characters, props that will be necessary, as well as a quick comment on their purpose. Each part is a separated file",
-      "Then you will output the content of each file. Each file must strictly follow a markdown block format, where the following tokens must be replaced such that \"FILENAME\" is the lowercase game part name including the language as the file extension, \"LANGUAGE\" in the language, and \"SCRIPT\" is the original designed game script text:",
+      "You will first lay out the game by different parts, like background, goal, characters etc. that will be necessary, as well as a quick comment on their purpose. Each part is a separated file",
+      "Then you will output the content of each file. Each file must strictly follow a markdown block format, where the following tokens must be replaced such that \"FILENAME\" is the lowercase game part name formatted as $GamePartName.$language, \"LANGUAGE\" in the language, and \"SCRIPT\" is the original designed game script text:",
       "FILENAME",
       "```LANGUAGE",
       "SCRIPT",
@@ -68,7 +68,7 @@
       "SCRIPT",
       
       "```",
-      "As the {assistant_role}, to satisfy the complete function of our RPG game, you have to write all the script in the {unimplemented_file} file which contains an unimplemented part of the game. Now, write all details of the {unimplemented_file}, then output the fully implemented scene, strictly following the required format."
+      "As the {assistant_role}, to satisfy the complete function of our RPG game, you have to complete all the parts in the {unimplemented_file} file first. then output the completed parts of game, strictly following the required format."
     ]
   },
   "SingleSceneReviewComment": {
@@ -83,20 +83,20 @@
       "Scripts:",
       "\"{scripts}\"",
       "As the {assistant_role}, to make the game operable by LLM without further writing, ChatRPG have formulated the following regulations:",
-      "1) scene should have a goal",
-      "2) scene should have characters, and new character should have detailed description including background, occupation, plot, characteristics, loopholes,timelines, objective etc.",
-      "3) scene should have background story world;",
+      "1) game should have a goal, and define clearly what the player need to do to achieve",
+      "2) game should have characters, and each character should have detailed description including name, age, gender, country, city, background, occupation, description, plot, characteristics, motivations, loopholes,timelines, objective etc.",
+      "3) game background should include world setting, historical context, time, place, main characters and conflicts",
       "4) no potential logical bugs;",
       "5) The entire game design conforms to the tasks proposed by the user;",
-      "6) most importantly, do not only check the errors in the scene, but also the logic of the scene. Make sure that LLM can understand and replay this scene script and interact with users for an immersive rpg experience;",
-      "Now, you should check the above regulations one by one and review the scenes in detail, propose one comment with the highest priority about the scenes, and give me instructions on how to fix. Tell me your comment with the highest priority and corresponding suggestions on revision. If the scenes are perfect and you have no comment on them, return only one line like \"<INFO> Finished\"."
+      "6) most importantly, do not only check the errors in the game, but also the logic of the game. Make sure that LLM can understand and replay this designed script and interact with users for an immersive rpg experience;",
+      "Now, you should check the above regulations one by one and review the rpg game in detail, propose comments with the highest priority about the rpg game, and give me instructions on how to fix. Tell me your comment with the highest priority and corresponding suggestions on revision. If the game is perfect and you have no comment on it, return only one line like \"<INFO> Finished\"."
     ]
   },
   "SingleSceneModification": {
     "assistant_role_name": "Script Writer",
     "user_role_name": "Script Tester",
     "phase_prompt": [
-      "According to the new user's task, our designed game category, languages and ideas, our developed first-edition scenes are listed below: ",
+      "According to the new user's task, our designed game category, languages and ideas, our game design are listed below: ",
       "Task: \"{task}\".",
       "Category: \"{category}\".",
       "Language: \"{language}\"",
@@ -105,12 +105,12 @@
       "\"{scripts}\"",
       "Comments on Scripts:",
       "\"{comments}\"",
-      "In the game, each file must strictly follow a markdown block format, where the following tokens must be replaced such that \"FILENAME\" is the lowercase file name including the file extension, \"LANGUAGE\" in the language, and \"SCENE\" is the original designed game script. Format:",
+      "In the game, each file must strictly follow a markdown block format, where the following tokens must be replaced such that \"FILENAME\" is the lowercase file name including the file extension, \"LANGUAGE\" in the language, and \"SCRIPT\" is the original designed game script. Format:",
       "FILENAME",
       "```LANGUAGE",
-      "SCENE",
+      "SCRIPT",
       "```",
-      "As the {assistant_role}, to satisfy the new user's demand and make the game playable, fun and robust, you should modify corresponding scenes according to the comments. Then, output the full and complete scenes with all comments fixed. Return all scenes strictly following the required format."
+      "As the {assistant_role}, to satisfy the new user's demand and make the game playable, fun and robust, you should modify corresponding script according to the comments. Then, output the full and complete scripts with all comments fixed. Return all scripts strictly following the required format."
     ]
   } 
 }
