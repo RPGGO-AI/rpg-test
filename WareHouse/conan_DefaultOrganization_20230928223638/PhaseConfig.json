@@ -39,7 +39,7 @@
       "Ideas:\"{ideas}\"",
       "We have decided to complete the task through a rpg game via {language}. As the {assistant_role}, to satisfy the new user's demands, you should write a script to construct the rpg game",
       "Think step by step and reason yourself to the right decisions to make sure we get it right.",
-      "You will first lay out the game by different parts, like background, goal, characters that will be necessary, as well as a quick comment on their purpose. Each part is a separated file",
+      "You will first lay out the game by different parts, like background, goal, characters etc. that will be necessary, as well as a quick comment on their purpose. Each part is a separated file",
       "Then you will output the content of each file. Each file must strictly follow a markdown block format, where the following tokens must be replaced such that \"FILENAME\" is the lowercase game part name formatted as $GamePartName.$language, \"LANGUAGE\" in the language, and \"SCRIPT\" is the original designed game script text:",
       "FILENAME",
       "```LANGUAGE",
@@ -115,7 +115,7 @@
       "```LANGUAGE",
       "SCRIPT",
       "```",
-      "As the {assistant_role}, you should modify corresponding script according to the comments. Then, output the full and complete scripts with all comments fixed. Return all scripts strictly following the required format."
+      "As the {assistant_role}, to satisfy the new user's demand and make the game playable, fun and robust, you should modify corresponding script according to the comments. Then, output the full and complete scripts with all comments fixed. Return all scripts strictly following the required format."
     ]
   } 
 }

@@ -62,7 +62,7 @@
       "\"{scripts}\"",
       "Unimplemented File:",
       "\"{unimplemented_file}\"",
-      "In our game, each file must strictly follow a markdown block format, where the following tokens must be replaced such that \"FILENAME\" is the lowercase file name including the file extension, \"LANGUAGE\" in the user language, and \"SCRIPT\" is the original designed game script text:",
+      "In our game, each file must strictly follow a markdown block format, where the following tokens must be replaced such that \"FILENAME\" is the lowercase game part name formatted as $GamePartName.$language, \"LANGUAGE\" in the user language, and \"SCRIPT\" is the original designed game script text:",
       "FILENAME",
       "```LANGUAGE",
       "SCRIPT",
@@ -87,9 +87,14 @@
       "2) game should have characters, and each character should have detailed description including name, age, gender, country, city, background, occupation, description, plot, characteristics, motivations, loopholes,timelines, objective etc.",
       "3) game background should include world setting, historical context, time, place, main characters and conflicts",
       "4) no potential logical bugs;",
-      "5) The entire game design conforms to the tasks proposed by the user;",
-      "6) most importantly, do not only check the errors in the game, but also the logic of the game. Make sure that LLM can understand and replay this designed script and interact with users for an immersive rpg experience;",
-      "Now, you should check the above regulations one by one and review the rpg game in detail, propose comments with the highest priority about the rpg game, and give me instructions on how to fix. Tell me your comment with the highest priority and corresponding suggestions on revision. If the game is perfect and you have no comment on it, return only one line like \"<INFO> Finished\"."
+      "5) most importantly, do not only check the errors in the game, but also the logic of the game. Make sure that LLM can understand and replay this designed script and interact with users for an immersive rpg experience;",
+      "the comment of each script must strictly follow a markdown block format, where the following tokens must be replaced such that \"FILENAME\" is the lowercase game part name formatted as {$GamePartName}_comment.$language, \"LANGUAGE\" in the user language, and \"SCRIPT\" is the original designed game script text:",
+      "FILENAME",
+      "```LANGUAGE",
+      "COMMENT",
+      
+      "```",
+      "Now as the {assistant_role}, you should check the above regulations one by one and review the rpg game in detail, tell me your comment with the highest priority and corresponding suggestions on revision. If the game is perfect and you have no comment on it, return only one line like \"<INFO> Finished\"."
     ]
   },
   "SingleSceneModification": {
@@ -105,7 +110,7 @@
       "\"{scripts}\"",
       "Comments on Scripts:",
       "\"{comments}\"",
-      "In the game, each file must strictly follow a markdown block format, where the following tokens must be replaced such that \"FILENAME\" is the lowercase file name including the file extension, \"LANGUAGE\" in the language, and \"SCRIPT\" is the original designed game script. Format:",
+      "In the game, each file must strictly follow a markdown block format, where the following tokens must be replaced such that \"FILENAME\" is the lowercase game part name formatted as $GamePartName.$language, \"LANGUAGE\" in the language, and \"SCRIPT\" is the original designed game script. Format:",
       "FILENAME",
       "```LANGUAGE",
       "SCRIPT",
