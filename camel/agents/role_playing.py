@@ -12,6 +12,7 @@
 # limitations under the License.
 # =========== Copyright 2023 @ CAMEL-AI.org. All Rights Reserved. ===========
 import copy
+import logging
 from typing import Dict, List, Optional, Sequence, Tuple
 
 from camel.agents import (
@@ -23,7 +24,7 @@ from camel.agents.chat_agent import ChatAgentResponse
 from camel.messages import ChatMessage, UserChatMessage
 from camel.messages import SystemMessage
 from camel.typing import ModelType, RoleType, TaskType, PhaseType
-from chatdev.utils import log_arguments, log_and_print_online
+from chatrpg.utils import log_arguments, log_and_print_online
 
 
 @log_arguments
@@ -131,9 +132,9 @@ class RolePlaying:
 
         self.task_prompt = task_prompt
 
-        chatdev_prompt_template = "ChatDev is a software company powered by multiple intelligent agents, such as chief executive officer, chief human resources officer, chief product officer, chief technology officer, etc, with a multi-agent organizational structure and the mission of \"changing the digital world through programming\"."
+        chatrpg_prompt_template = "ChatRPG is a game studio powered by multiple intelligent agents, such as chief executive officer, chief human resources officer, chief product officer, chief game designer, etc, with a multi-agent organizational structure and the mission of \"changing the digital world through gaming\"."
 
-        sys_msg_meta_dicts = [dict(chatdev_prompt=chatdev_prompt_template, task=task_prompt)] * 2
+        sys_msg_meta_dicts = [dict(chatrpg_prompt=chatrpg_prompt_template, task=task_prompt)] * 2
         if (extend_sys_msg_meta_dicts is None and self.task_type in [TaskType.AI_SOCIETY, TaskType.MISALIGNMENT,
                                                                      TaskType.CHATDEV]):
             extend_sys_msg_meta_dicts = [dict(assistant_role=assistant_role_name, user_role=user_role_name)] * 2
@@ -184,7 +185,7 @@ class RolePlaying:
         self.assistant_agent.reset()
         self.user_agent.reset()
 
-        # refactored ChatDev
+        # refactored ChatRPG
         content = phase_prompt.format(
             **({"assistant_role": self.assistant_agent.role_name} | placeholders)
         )
@@ -237,32 +238,44 @@ class RolePlaying:
     ) -> Tuple[ChatAgentResponse, ChatAgentResponse]:
         assert isinstance(user_msg, ChatMessage), print("broken user_msg: " + str(user_msg))
 
-        # print("assistant...")
+        logging.debug("execute step..." + str(assistant_only))
+        logging.debug("assistant...")
         user_msg_rst = user_msg.set_user_role_at_backend()
         assistant_response = self.assistant_agent.step(user_msg_rst)
+        logging.debug("assistant_response")
+        logging.debug(assistant_response.msg)
         if assistant_response.terminated or assistant_response.msgs is None:
+            logging.debug("terminated")
             return (
                 ChatAgentResponse([assistant_response.msgs], assistant_response.terminated, assistant_response.info),
                 ChatAgentResponse([], False, {}))
         assistant_msg = self.process_messages(assistant_response.msgs)
         if self.assistant_agent.info:
+            logging.debug("null info")
             return (ChatAgentResponse([assistant_msg], assistant_response.terminated, assistant_response.info),
                     ChatAgentResponse([], False, {}))
         self.assistant_agent.update_messages(assistant_msg)
 
         if assistant_only:
+            logging.debug("assistant_only")
             return (
                 ChatAgentResponse([assistant_msg], assistant_response.terminated, assistant_response.info),
                 ChatAgentResponse([], False, {})
             )
 
-        # print("user...")
+        logging.debug("user...")
         assistant_msg_rst = assistant_msg.set_user_role_at_backend()
         user_response = self.user_agent.step(assistant_msg_rst)
+        logging.debug("user_response")
+        logging.debug(user_response.msg)
         if user_response.terminated or user_response.msgs is None:
+            logging.debug("terminated")
+            logging.debug(user_response.msg)
             return (ChatAgentResponse([assistant_msg], assistant_response.terminated, assistant_response.info),
                     ChatAgentResponse([user_response], user_response.terminated, user_response.info))
         user_msg = self.process_messages(user_response.msgs)
+        logging.debug(user_response.msgs)
+        logging.debug(user_msg)
         if self.user_agent.info:
             return (ChatAgentResponse([assistant_msg], assistant_response.terminated, assistant_response.info),
                     ChatAgentResponse([user_msg], user_response.terminated, user_response.info))

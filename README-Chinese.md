@@ -8,10 +8,10 @@
 
 ## 📖 概述
 
-- **ChatDev** 是一家**虚拟软件公司**，通过各种不同角色的**智能体**
-  运营，包括执行官、技术官、程序员、测试员等。这些智能体形成了一个多智能体组织结构，其使命是“通过编程改变数字世界”。ChatDev内的智能体通过参加专业的功能研讨会来
+- **ChatRPG** 是一家**虚拟软件公司**，通过各种不同角色的**智能体**
+  运营，包括执行官、技术官、程序员、测试员等。这些智能体形成了一个多智能体组织结构，其使命是“通过编程改变数字世界”。ChatRPG内的智能体通过参加专业的功能研讨会来
   **协作**，包括设计、编码、测试和文档编写等任务。
-- ChatDev的主要目标是提供一个基于大型语言模型（LLM）的**易于使用**、**高度可定制**并且**可扩展**的框架，它是研究群体智能的理想场景。
+- ChatRPG的主要目标是提供一个基于大型语言模型（LLM）的**易于使用**、**高度可定制**并且**可扩展**的框架，它是研究群体智能的理想场景。
 
 ## 📰 新闻
 
@@ -21,9 +21,9 @@
 - 2023年8月17日：V1.0.0版本已准备好发布。
 - 2023年7月30日：用户可以自定义ChatChain、Phase和Role设置。此外，现在支持在线Log模式和重放模式。
 - 2023年7月16日：与该项目相关的[预印本论文](https://arxiv.org/abs/2307.07924)已发表。
-- 2023年6月30日：发布了`ChatDev`仓库的初始版本。
+- 2023年6月30日：发布了`ChatRPG`仓库的初始版本。
 
-## ❓ ChatDev能做什么？
+## ❓ ChatRPG能做什么？
 
 ![intro](misc/intro.png)
 
@@ -39,7 +39,7 @@ https://github.com/OpenBMB/ChatDev/assets/11889052/80d01d2f-677b-4399-ad8b-f7af9
    git clone https://github.com/OpenBMB/ChatDev.git
    ```
 
-2. **设置Python环境：** 确保您具有3.9或更高版本的Python环境。您可以使用以下命令创建并激活环境，可以将`ChatDev_conda_env`
+2. **设置Python环境：** 确保您具有3.9或更高版本的Python环境。您可以使用以下命令创建并激活环境，可以将`ChatRPG_conda_env`
    替换为您喜欢的环境名称：
 
    ```
@@ -47,10 +47,10 @@ https://github.com/OpenBMB/ChatDev/assets/11889052/80d01d2f-677b-4399-ad8b-f7af9
    conda activate ChatDev_conda_env
    ```
 
-3. **安装依赖项：** 进入`ChatDev`目录并运行以下命令来安装必要的依赖项：
+3. **安装依赖项：** 进入`ChatRPG`目录并运行以下命令来安装必要的依赖项：
 
    ```
-   cd ChatDev
+   cd ChatRPG
    pip3 install -r requirements.txt
    ```
 
@@ -103,9 +103,9 @@ https://github.com/OpenBMB/ChatDev/assets/11889052/80d01d2f-677b-4399-ad8b-f7af9
 
 - 所有命令运行参数的介绍。
 - 一个简单的设置本地Web演示的指南，其中包括增强可视化日志、重放演示和简单的ChatChain可视化工具。
-- ChatDev框架的概述。
+- ChatRPG框架的概述。
 - ChatChain配置中的所有高级参数的全面介绍。
-- 自定义ChatDev的指南，包括：
+- 自定义ChatRPG的指南，包括：
     - ChatChain：设计您自己的软件开发流程（或任何其他流程），例如`DemandAnalysis -> Coding -> Testing -> Manual`。
     - Phase：在ChatChain内部设计您自己的Phase，比如`DemandAnalysis`。
     - Role：定义您公司内的各种智能体，例如“首席执行官”。
@@ -115,10 +115,10 @@ https://github.com/OpenBMB/ChatDev/assets/11889052/80d01d2f-677b-4399-ad8b-f7af9
 **代码：** 我们对您参与我们的开源项目表示热情欢迎。如果您遇到任何问题，请不要犹豫报告它们。如果您准备与我们分享您的工作，随时创建pull
 request！您的贡献非常宝贵。如果您需要帮助，请联系我们！
 
-**公司：** 创建自己定制的“ChatDev公司”非常简单。此个性化设置涉及三个简单的配置JSON文件。请查看`CompanyConfig/Default`
+**公司：** 创建自己定制的“ChatRPG公司”非常简单。此个性化设置涉及三个简单的配置JSON文件。请查看`CompanyConfig/Default`
 目录中提供的示例。有关自定义的详细说明，请参阅我们的[Wiki](wiki.md)。
 
-**软件：** 每当您使用ChatDev开发软件时，都会生成一个包含所有必要信息的相应文件夹。与我们分享您的工作就像创建一个pull
+**软件：** 每当您使用ChatRPG开发软件时，都会生成一个包含所有必要信息的相应文件夹。与我们分享您的工作就像创建一个pull
 request一样简单。这是一个示例：执行命令`python3 run.py --task "design a 2048 game" --name "2048" --org "THUNLP" --config "Default"`
 。这将创建一个软件包并生成一个名为`/WareHouse/2048_THUNLP_timestamp`的文件夹。其中包括：
 
@@ -152,13 +152,13 @@ request一样简单。这是一个示例：执行命令`python3 run.py --task "d
 
 ## ⚖️ 许可证
 
-- ChatDev的使用仅限于研究目的。
+- ChatRPG的使用仅限于研究目的。
 - 源代码采用Apache 2.0许可证授权。
 - 数据集采用CC BY NC 4.0许可证授权，仅允许非商业用途。请注意，使用这些数据集训练的任何模型不应用于研究以外的其他目的。
 
 ## 星标历史
 
-[![Star History Chart](https://api.star-history.com/svg?repos=openbmb/chatdev&type=Date)](https://star-history.com/#openbmb/chatdev&Date)
+[![Star History Chart](https://api.star-history.com/svg?repos=openbmb/chatdev&type=Date)](https://star-history.com/#openbmb/chatrpg&Date)
 
 ## 联系方式
 

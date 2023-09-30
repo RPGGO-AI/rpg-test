@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">
-    【English | <a href="README-Chinese.md">Chinese</a> | <a href="README-Japanese.md">Japanese</a> | <a href="README-Korean.md">Korean</a>】
+    【English】
 </p>
 <p align="center">
     【📚 <a href="wiki.md">Wiki</a> | 🚀 <a href="wiki.md#local-demo">Local Demo</a> | 👥 <a href="Contribution.md">Community Built Software</a> | 🔧 <a href="wiki.md#customization">Customization</a>】
@@ -14,17 +14,17 @@
 
 ## 📖 Overview
 
-- **ChatDev** stands as a **virtual software company** that operates through various **intelligent agents** holding
+- **ChatRPG** stands as a **virtual software company** that operates through various **intelligent agents** holding
   different roles, including Chief Executive Officer <img src='online_log/static/figures/ceo.png' height=20>, Chief Product Officer <img src='online_log/static/figures/cpo.png' height=20>, Chief Technology Officer <img src='online_log/static/figures/cto.png' height=20>, programmer <img src='online_log/static/figures/programmer.png' height=20>, reviewer <img src='online_log/static/figures/reviewer.png' height=20>, tester <img src='online_log/static/figures/tester.png' height=20>, art designer <img src='online_log/static/figures/designer.png' height=20>. These
   agents form a multi-agent organizational structure and are united by a mission to "revolutionize the digital world
-  through programming." The agents within ChatDev **collaborate** by participating in specialized functional seminars,
+  through programming." The agents within ChatRPG **collaborate** by participating in specialized functional seminars,
   including tasks such as designing, coding, testing, and documenting.
-- The primary objective of ChatDev is to offer an **easy-to-use**, **highly customizable** and **extendable** framework,
+- The primary objective of ChatRPG is to offer an **easy-to-use**, **highly customizable** and **extendable** framework,
   which is based on large language models (LLMs) and serves as an ideal scenario for studying collective intelligence.
 
 ## 📰 News
 
-* **September 20th, 2023: The *Human-Agent-Interaction* mode is now available! You can get involved with the ChatDev team by playing the role of reviewer <img src='online_log/static/figures/reviewer.png' height=20> and making suggestions to the programmer <img src='online_log/static/figures/programmer.png' height=20>;
+* **September 20th, 2023: The *Human-Agent-Interaction* mode is now available! You can get involved with the ChatRPG team by playing the role of reviewer <img src='online_log/static/figures/reviewer.png' height=20> and making suggestions to the programmer <img src='online_log/static/figures/programmer.png' height=20>;
   try ``python3 run.py --task [description_of_your_idea] --config "Human"``.** See [guide](wiki.md#human-agent-interaction) and [example](WareHouse/Gomoku_HumanAgentInteraction_20230920135038).
   <img src='misc/Human_intro.png' width=800>
 * September 1st, 2023: The *Art* mode is available now! You can activate the designer agent <img src='online_log/static/figures/designer.png' height=20> to generate images used in the software;
@@ -34,13 +34,13 @@
 * July 30th, 2023: Users can customize ChatChain, Phase, and Role settings. Additionally, both online Log mode and replay
   mode are now supported.
 * July 16th, 2023: The [preprint paper](https://arxiv.org/abs/2307.07924) associated with this project was published.
-* June 30th, 2023: The initial version of the `ChatDev` repository was released.
+* June 30th, 2023: The initial version of the `ChatRPG` repository was released.
 
-## ❓ What Can ChatDev Do?
+## ❓ What Can ChatRPG Do?
 
 ![intro](misc/intro.png)
 
-https://github.com/OpenBMB/ChatDev/assets/11889052/80d01d2f-677b-4399-ad8b-f7af9bb62b72
+https://github.com/OpenBMB/ChatRPG/assets/11889052/80d01d2f-677b-4399-ad8b-f7af9bb62b72
 
 ## ⚡️ Quickstart
 
@@ -48,18 +48,18 @@ To get started, follow these steps:
 
 1. **Clone the GitHub Repository:** Begin by cloning the repository using the command:
    ```
-   git clone https://github.com/OpenBMB/ChatDev.git
+   git clone https://github.com/OpenBMB/ChatRPG.git
    ```
 2. **Set Up Python Environment:** Ensure you have a version 3.9 or higher Python environment. You can create and
-   activate this environment using the following commands, replacing `ChatDev_conda_env` with your preferred environment
+   activate this environment using the following commands, replacing `ChatRPG_conda_env` with your preferred environment
    name:
    ```
-   conda create -n ChatDev_conda_env python=3.9 -y
-   conda activate ChatDev_conda_env
+   conda create -n ChatRPG_conda_env python=3.9 -y
+   conda activate ChatRPG_conda_env
    ```
-3. **Install Dependencies:** Move into the `ChatDev` directory and install the necessary dependencies by running:
+3. **Install Dependencies:** Move into the `ChatRPG` directory and install the necessary dependencies by running:
    ```
-   cd ChatDev
+   cd ChatRPG
    pip3 install -r requirements.txt
    ```
 4. **Set OpenAI API Key:** Export your OpenAI API key as an environment variable. Replace `"your_OpenAI_API_key"` with
@@ -105,9 +105,9 @@ For more detailed information, please refer to our [Wiki](wiki.md), where you ca
 - An introduction to all command run parameters.
 - A straightforward guide for setting up a local web demo, which includes enhanced visualized logs, a replay demo, and a
   simple ChatChain Visualizer.
-- An overview of the ChatDev framework.
+- An overview of the ChatRPG framework.
 - A comprehensive introduction to all advanced parameters in ChatChain configuration.
-- Guides for customizing ChatDev, including:
+- Guides for customizing ChatRPG, including:
     - ChatChain: Design your own software development process (or any other process), such
       as ``DemandAnalysis -> Coding -> Testing -> Manual``.
     - Phase: Design your own phase within ChatChain, like ``DemandAnalysis``.
@@ -120,11 +120,11 @@ problems, don't hesitate to report them. Feel free to create a pull request if y
 prepared to share your work with us! Your contributions are highly valued. Please let me know if there's anything else
 you need assistance!
 
-**Company**: Creating your own customized "ChatDev Company" is a breeze. This personalized setup involves three simple
+**Company**: Creating your own customized "ChatRPG Company" is a breeze. This personalized setup involves three simple
 configuration JSON files. Check out the example provided in the ``CompanyConfig/Default`` directory. For detailed
 instructions on customization, refer to our [Wiki](wiki.md).
 
-**Software**: Whenever you develop software using ChatDev, a corresponding folder is generated containing all the
+**Software**: Whenever you develop software using ChatRPG, a corresponding folder is generated containing all the
 essential information. Sharing your work with us is as simple as making a pull request. Here's an example: execute the
 command ``python3 run.py --task "design a 2048 game" --name "2048"  --org "THUNLP" --config "Default"``. This will
 create a software package and generate a folder named ``/WareHouse/2048_THUNLP_timestamp``. Inside, you'll find:
@@ -162,7 +162,7 @@ create a software package and generate a folder named ``/WareHouse/2048_THUNLP_t
 
 ## ⚖️ License
 
-- The purpose of ChatDev is exclusively for research purposes.
+- The purpose of ChatRPG is exclusively for research purposes.
 - The source code is licensed under Apache 2.0.
 - The datasets are licensed under CC BY NC 4.0, which allows for non-commercial use only. It is important to note that
   any models trained using these datasets should not be employed for purposes other than research.

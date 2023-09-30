@@ -18,7 +18,7 @@ import openai
 import tiktoken
 
 from camel.typing import ModelType
-from chatdev.utils import log_and_print_online
+from chatrpg.utils import log_and_print_online
 
 
 class ModelBackend(ABC):
