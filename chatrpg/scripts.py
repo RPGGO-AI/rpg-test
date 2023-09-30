@@ -1,3 +1,4 @@
+import logging
 import os
 import re
 
@@ -19,6 +20,8 @@ class Scripts:
             return file_name
 
         def extract_filename_from_scene(code):
+            logging.debug("extract name")
+            logging.debug(code)
             # file_name = ""
             # regex_extract = r"class (\S+?):\n"
             # matches_extract = re.finditer(regex_extract, code, re.DOTALL)
@@ -56,6 +59,8 @@ class Scripts:
             if key not in self.scriptbooks.keys() or self.scriptbooks[key] != new_codes.scriptbooks[key]:
                 update_codes_content = "**[Update Codes]**\n\n"
                 update_codes_content += "{} updated.\n".format(key)
+                logging.debug("diff key is " + key)
+                logging.debug(self.scriptbooks.keys())
                 old_codes_content = self.scriptbooks[key] if key in self.scriptbooks.keys() else "# None"
                 new_codes_content = new_codes.scriptbooks[key]
 

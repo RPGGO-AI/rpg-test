@@ -21,7 +21,7 @@
     {
       "phase": "SingleSceneCompleteAll",
       "phaseType": "ComposedPhase",
-      "cycleNum": 10,
+      "cycleNum": 1,
       "Composition": [
         {
           "phase": "SingleSceneComplete",
@@ -34,7 +34,7 @@
     {
       "phase": "SingleSceneReview",
       "phaseType": "ComposedPhase",
-      "cycleNum": 3,
+      "cycleNum": 1,
       "Composition": [
         {
           "phase": "SingleSceneReviewComment",
