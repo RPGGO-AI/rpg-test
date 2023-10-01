@@ -10,7 +10,7 @@ Roster:
 Chief Executive Officer, Counselor, Game Producer, Script Writer, Script Tester
 
 Category:
-detective, puzzle, narrative
+detective
 
 Ideas:
 

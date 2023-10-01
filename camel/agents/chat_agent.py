@@ -192,10 +192,7 @@ class ChatAgent(BaseAgent):
         logging.debug("current token is " + str(num_tokens))
         if num_tokens < self.model_token_limit:
             response = self.model_backend.run(messages=openai_messages)
-            logging.debug("gpt response is")
-            logging.debug(response)
             if not isinstance(response, dict):
-                logging.error("OpenAI returned unexpected struct")
                 raise RuntimeError("OpenAI returned unexpected struct")
             output_messages = [
                 ChatMessage(role_name=self.role_name, role_type=self.role_type,
@@ -209,8 +206,7 @@ class ChatAgent(BaseAgent):
                 [str(choice["finish_reason"]) for choice in response["choices"]],
                 num_tokens,
             )
-            logging.debug("gpt response choice is " )
-            logging.debug(response["choices"])
+
             # TODO strict <INFO> check, only in the beginning of the line
             # if "<INFO>" in output_messages[0].content:
             if output_messages[0].content.split("\n")[-1].startswith("<INFO>"):
@@ -225,7 +221,6 @@ class ChatAgent(BaseAgent):
                 ["max_tokens_exceeded_by_camel"],
                 num_tokens,
             )
-            logging.error("fuck token exceeds")
 
         return ChatAgentResponse(output_messages, self.terminated, info)
 
