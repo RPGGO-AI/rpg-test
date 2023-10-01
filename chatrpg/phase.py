@@ -129,15 +129,12 @@ class Phase(ABC):
             # 4. then input_assistant_msg send to LLM and get user_response
             # all above are done in role_play_session.step, which contains two interactions with LLM
             # the first interaction is logged in role_play_session.init_chat
-            logging.info("execute " + str(i))
             assistant_response, user_response = role_play_session.step(input_user_msg, chat_turn_limit == 1)
 
             conversation_meta = "**" + assistant_role_name + "<->" + user_role_name + " on : " + str(
                 phase_name) + ", turn " + str(i) + "**\n\n"
 
             # TODO: max_tokens_exceeded errors here
-            logging.debug("check assistant_response")
-            logging.debug(assistant_response.msg)
             if isinstance(assistant_response.msg, ChatMessage):
                 # we log the second interaction here
                 log_and_print_online(role_play_session.assistant_agent.role_name,
@@ -147,11 +144,7 @@ class Phase(ABC):
                     break
                 if assistant_response.terminated:
                     break
-            else:
-                logging.warn("assistant_response is empty")
             
-            logging.debug("check user_response")
-            logging.debug(user_response.msg)
             if isinstance(user_response.msg, ChatMessage):
                 # here is the result of the second interaction, which may be used to start the next chat turn
                 log_and_print_online(role_play_session.user_agent.role_name,
@@ -161,8 +154,6 @@ class Phase(ABC):
                     break
                 if user_response.terminated:
                     break
-            else:
-                logging.warn("user_response is empty")
 
             # continue the chat
             if chat_turn_limit > 1 and isinstance(user_response.msg, ChatMessage):

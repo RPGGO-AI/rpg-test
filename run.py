@@ -88,8 +88,8 @@ chat_chain = ChatChain(config_path=config_path,
 # ----------------------------------------
 #          Init Log
 # ----------------------------------------
-logging.basicConfig(filename=chat_chain.log_filepath, level=logging.DEBUG,
-                    format='[%(asctime)s %(levelname)s %(pathname)s:%(lineno)s - %(funcName)s()] %(message)s',
+logging.basicConfig(filename=chat_chain.log_filepath, level=logging.INFO,
+                    format='[%(asctime)s %(levelname)s] %(message)s',
                     datefmt='%Y-%d-%m %H:%M:%S', encoding="utf-8")
 
 # ----------------------------------------
